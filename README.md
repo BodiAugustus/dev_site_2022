@@ -6,4 +6,6 @@ Commits
 
 #3. Imported in the Navbar, Hero, Showcase, Skills, Services and Footer components into index.js. Forgot to make Skills.jsx so made that and setup initial component then added to the index.js export file. Created _document.js and setup according to NextJS documentation to allow Google Fonts import. Added a head component with a title to pages/index.js.
 
-#4. Installed npm react-icons package. Imported two react icons for the open/close menu bar. Created a photos folder inside of public folder. Brought in a logo and imported it to the Navbar component after compressing. Installed npm ethers package for blockchain manipulation. Imported useRouter inside the Navbar and used it to push to sprucey.dev when the logo is clicked.
+#4. Installed npm react-icons package. Imported two react icons for the open/close menu bar. Created a photos folder inside of public folder. Brought in a logo and imported it to the Navbar component after compressing. Installed npm ethers package for blockchain manipulation. Imported useRouter inside the Navbar and used it to push to sprucey.dev when the logo is clicked. 
+
+#5. Created the NavItem component and inserted into the Navbar component. Mapped over an array of made up links to populate the navbar for non-mobile. For mobile set up a useState, toggleMenu, to monitor if the menu is toggled to open or close. Setup conditional rendering of the menu buttons depending on useState value. Laid out basic structure of navigation and open/close menu functionality.
