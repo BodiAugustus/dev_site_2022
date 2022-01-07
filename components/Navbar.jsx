@@ -1,14 +1,15 @@
 import { useState } from "react"
+import { links } from "./data/data"
 
 import {GiAbstract092,GiAbstract093} from "react-icons/gi"
 import Image from 'next/image'
 import { useRouter } from "next/router"
 
-const NavItem = ({title, classProps}) => {
+const NavItem = ({title, classProps, url}) => {
     return (
-        <li className={`mx-4 cursor-pointer ${classProps}`}>
+        <a className={`mx-4 cursor-pointer ${classProps}`} href={url}>
             {title}
-        </li>
+        </a>
     )
 }
 
@@ -33,9 +34,9 @@ const Navbar = () => {
                </div>
                <div className="flex gap-3"><h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl">Bodi</h1>
                <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl">Augustus</h1></div>
-               <ul className="text-white bg-green-500 md:flex hidden list-none flex-row justify-between items-center flex-initial">
-                   {["A", "B", "C"].map((item, index) => (
-                       <NavItem key={item + index} title={item}/>
+               <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
+                   {links.map((item, index) => (
+                       <NavItem key={item + index} title={item.name} url={item.url}/>
                    ))}
                    <li className="bg-blue-500 shadow-lg shadow-blue-500/50  py-2 px-4 rounded-lg border-none outline-none cursor-pointer hover:bg-blue-600, hover:scale-110 active:scale-100">Connect Wallet</li>
                </ul>
@@ -53,8 +54,8 @@ const Navbar = () => {
                         <li className="text-xl w-full my-2">
                             <GiAbstract093 onClick={() => setToggleMenu(false)} />
                         </li>
-                        {["A", "B", "C"].map((item,index) => 
-                             <NavItem key={item + index} title={item} classProps="my-2 text-lg text-white"/>
+                        {links.map((item,index) => 
+                             <NavItem key={item + index} title={item.name} url={item.url} classProps="my-2 text-lg text-white"/>
                         )}
                     </ul>
                    )}
