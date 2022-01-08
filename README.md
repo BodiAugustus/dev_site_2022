@@ -15,3 +15,5 @@ Commits
 #7. I created Menu.jsx inside of components and extracted the menu portion of the return from Navbar. Then I imported the new component into Navbar and made the same as before. Created hooks folder inside of components. Created NavContext.jsx inside of that and set up a NavbarContext/Navbar.Provider so that I can pass the state about the menu being toggled open or close between the Navbar component and the Menu component from the context instead of occupying both components with redundant state.
 
 #8. The menu functionality was not working correctly so I added another conditional inside of the MobMenu.jsx file which was renamed from Menu and updated around the app. I removed the useContext until this bug was sorted and now will hook up the same functionality using the useContext hook on the next update. Still need to add background affects and change text positioning when MobMenu is open.
+
+#9. Connected the useContext hook and achieved the same functionality as before.

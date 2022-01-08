@@ -1,6 +1,7 @@
 import { useState, useContext } from "react"
 import { links } from "./data/data"
 import MobMenu from "./MobMenu"
+import { NavbarContext } from "./providers/NavContext"
 
 
 import {GiArcTriomphe, GiAncientColumns, GiAbacus} from "react-icons/gi"
@@ -16,7 +17,7 @@ export const NavItem = ({title, classProps, url}) => {
 }
 
 const Navbar = () => {
-const [toggleMenu, setToggleMenu] = useState(false)
+const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
 
 
     const sprucey = "https://www.sprucey.dev"

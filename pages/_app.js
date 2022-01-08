@@ -1,9 +1,14 @@
+
+
+import NavbarProvider from '../components/providers/NavContext'
 import '../styles/globals.css'
+
 
 function MyApp({ Component, pageProps }) {
   return (
-
-    <Component {...pageProps} />
+    <NavbarProvider>
+      <Component {...pageProps} />
+    </NavbarProvider>
  
   )
 

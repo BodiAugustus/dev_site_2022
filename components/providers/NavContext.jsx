@@ -1,15 +1,16 @@
-// import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
 
-// const NavbarContext = createContext(null)
+export const NavbarContext = createContext()
 
-// export default function NavbarProvider({children}){
-//     const [toggleMenu, setToggleMenu] = useState(false)
+export default function NavbarProvider({children}){
+    const [toggleMenu, setToggleMenu] = useState(false)
     
-//     return (
-//         <NavbarContext.Provider value={{test: "Hello"}}>{children}</NavbarContext.Provider>
-//     )
-// }
+    return (
+        <NavbarContext.Provider value={{toggleMenu, setToggleMenu}}>{children}</NavbarContext.Provider>
+    )
+}
+
 
 // export const useNavbarContext = () => {
 //     return useContext(NavbarContext)
