@@ -10,7 +10,7 @@ import { useRouter } from "next/router"
 
 export const NavItem = ({title, classProps, url}) => {
     return (
-        <a className={`mx-4 cursor-pointer ${classProps}`} href={url}>
+        <a className={`mx-4 cursor-pointer font-cinzel first-letter:text-5xl tracking-wider first-letter:underline first-letter:underline-offset-2 first-letter:decoration-2 first-letter:decoration-sky-200 ${classProps}`} href={url}>
             {title}
         </a>
     )

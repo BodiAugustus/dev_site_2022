@@ -17,3 +17,5 @@ Commits
 #8. The menu functionality was not working correctly so I added another conditional inside of the MobMenu.jsx file which was renamed from Menu and updated around the app. I removed the useContext until this bug was sorted and now will hook up the same functionality using the useContext hook on the next update. Still need to add background affects and change text positioning when MobMenu is open.
 
 #9. Connected the useContext hook and achieved the same functionality as before.
+
+#10. Brought in a minimized photo and set as the bg image for the mobile menu. Brought in and styled GitHub and Twitter icons. Finished mobile menu until final tweaks.
