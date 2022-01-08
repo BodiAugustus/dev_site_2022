@@ -1,11 +1,13 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { links } from "./data/data"
+import MobMenu from "./MobMenu"
 
-import {GiAbstract092,GiAbstract093} from "react-icons/gi"
+
+import {GiArcTriomphe, GiAncientColumns, GiAbacus} from "react-icons/gi"
 import Image from 'next/image'
 import { useRouter } from "next/router"
 
-const NavItem = ({title, classProps, url}) => {
+export const NavItem = ({title, classProps, url}) => {
     return (
         <a className={`mx-4 cursor-pointer ${classProps}`} href={url}>
             {title}
@@ -14,7 +16,8 @@ const NavItem = ({title, classProps, url}) => {
 }
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(false)
+const [toggleMenu, setToggleMenu] = useState(false)
+
 
     const sprucey = "https://www.sprucey.dev"
     const router = useRouter()
@@ -32,8 +35,8 @@ const Navbar = () => {
                     onClick={() => router.push(sprucey)}
                 />
                </div>
-               <div className="flex gap-3"><h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl">Bodi</h1>
-               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl">Augustus</h1></div>
+               <div className="flex gap-3"><h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel">Bodi</h1>
+               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel">Augustus</h1></div>
                <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
                    {links.map((item, index) => (
                        <NavItem key={item + index} title={item.name} url={item.url}/>
@@ -42,22 +45,13 @@ const Navbar = () => {
                </ul>
                
                <div className="">
-                   {toggleMenu ? (
-                   <GiAbstract092 fontSize={48} className="text-white md:hidden cursor-pointer mr-4" onClick={() => setToggleMenu(false)}/> )
-                        :
-                   
-                   <GiAbstract093 fontSize={48} className="text-white md:hidden cursor-pointer mr-4" onClick={() => setToggleMenu(true)}/>
+                   {!toggleMenu && (
+                   <GiAncientColumns fontSize={48} className="text-white md:hidden cursor-pointer mr-4" onClick={() => setToggleMenu(true)}/> )
+
                    }
 
                    {toggleMenu && (
-                    <ul className="z-10 fixed top-0 -right-0 p-3 w-[100vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start rounded-md bg-gradient-to-t from-slate-600 to-purple-700 text-red-600">
-                        <li className="text-xl w-full my-2">
-                            <GiAbstract093 onClick={() => setToggleMenu(false)} />
-                        </li>
-                        {links.map((item,index) => 
-                             <NavItem key={item + index} title={item.name} url={item.url} classProps="my-2 text-lg text-white"/>
-                        )}
-                    </ul>
+                        <MobMenu/>
                    )}
                </div>
             </div>

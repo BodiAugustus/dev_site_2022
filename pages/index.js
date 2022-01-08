@@ -3,9 +3,14 @@ import Image from 'next/image'
 import { Navbar, Hero, Showcase, Skills, Services, Footer } from '../components'
 
 
+
+
+
 export default function Home() {
   return (
+
     <div>
+
     <Head>
       <title>The Place of Bodi</title> 
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -16,6 +21,7 @@ export default function Home() {
       <meta name="msapplication-TileColor" content="#da532c"/>
       <meta name="theme-color" content="#ffffff"/> 
     </Head>
+    
     <div className="min-h-screen">
       <div className="bg-gradient-to-t from-teal-500 to-blue-700">
         <Navbar/>
@@ -26,6 +32,7 @@ export default function Home() {
       <Services/>
       <Footer/>
       </div>
+
     </div>
   )
 }
