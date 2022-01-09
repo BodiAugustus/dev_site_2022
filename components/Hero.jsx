@@ -2,12 +2,14 @@ import {AiFillPlayCircle} from 'react-icons/ai'
 import {SiEthereum} from 'react-icons/si'
 import {BsInfoCircle} from 'react-icons/bs'
 import { Loader } from '.'
-
-const commonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-wi[120px] flex justify-center items-center border-[0.5px] border-gray-700 text-white'
+import { useContext } from 'react'
+import { NavbarContext } from './providers/NavContext'
+import { CryptoCard } from '.'
+const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center items-center border-[1.5px] border- text-white'
 const Hero = () => {
+    const {toggleMenu} = useContext(NavbarContext)
 
     const connectWallet = () => {
-
     }
     
     return (
@@ -21,7 +23,15 @@ const Hero = () => {
                      type='button'
                      onClick={connectWallet}
                      >Connect Wallet</button>
-                     <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
+
+                    {!toggleMenu &&
+                        <CryptoCard/>
+                    }
+                    <h1>hi</h1>
+                </div>
+                
+                <div key='rightSideForDesktop'>
+                     <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-5 ml-3">
                          <div className={`rounded-tl-2xl ${commonStyles}`}>Ethereum | Fantom</div>
                          <div className={`${commonStyles} rounded-tr-2xl`}>Web3.0</div>
                          <div className={`${commonStyles} `}>dApps</div>
@@ -29,12 +39,7 @@ const Hero = () => {
                          <div className={`${commonStyles} rounded-bl-2xl`}>DeFi | Crypto</div>
                          <div className={`${commonStyles} rounded-br-2xl`}>Blockchain</div>
                      </div>
-                </div>
-                
-                <div key='rightSideForDesktop'>
-                    <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-10">
-                        <div className="p-3 justify-end items-start flex-col rounded-xl h-40 xs:w-72 w-full my-5 bg-slate-400 eth-card white-glassmorphism">a</div>
-                    </div>
+
                 </div>
             </div>
         </div>
