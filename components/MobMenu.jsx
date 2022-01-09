@@ -37,6 +37,7 @@ const MobMenu = () => {
       className="z-50"
     /> */}
       <Image 
+                    
                     src="/images/menuPic.jpg"
                     alt="logo"
                     
@@ -50,6 +51,7 @@ const MobMenu = () => {
             <li className="text-xl w-full my-2 text-slate-100 z-50"  >
         
                         <GiArcTriomphe 
+                        
                         className="hover:text-slate-300 hover:scale-105 active:scale-100 z-50"
                     fontSize={48}
                     onClick={() => setToggleMenu(false)}
@@ -69,22 +71,21 @@ const MobMenu = () => {
         </>
         )}
 
-    <div className="flex mt-40  justify-around  ">
+    <div className="flex xs:mt-24 sm:mt-20  justify-around  ">
         <a href="https://github.com/BodiAugustus" target="_blank" rel="noreferrer" className="z-50 cursor-pointer">
         <BsGithub fontSize={40} className="bg-transparent text-gray-200 hover:transition-all hover:text-slate-300 hover:scale-105 active:scale-100 cursor-pointer  "/>
         </a>
-        <Link href="/">
 
-             <a  className="text-white cursor-pointer tracking-wider font-cinzel text-4xl underline underline-offset-4 decoration-sky-300 decoration-2 z-50 hover:transition-all hover:scale-105 active:scale-100">Bodi Augstus</a>
-        </Link>
   
         <a href="https://twitter.com/BodiAugustus" target="_blank" rel="noreferrer" className="z-50 cursor-pointer">
         <BsTwitter fontSize={40} className="bg-transparent text-slate-200 z-50 cursor-pointer hover:transition-all hover:text-slate-300 hover:scale-105 active:scale-100" />
         </a>
-
-
-
-   
+    </div>
+    <div className="text-center xs:mt-20 sm:mt-16">
+    <Link href="/">
+        <a  className="text-white cursor-pointer tracking-wider font-cinzel text-4xl underline underline-offset-4 decoration-sky-300 decoration-2 z-50 hover:transition-all hover:scale-105 active:scale-100">Bodi Augstus</a>
+    </Link>
+    <h4 className="text-white font-thin">Web3 Developer & DeFi Financier</h4>
     </div>
     </ul>
         </div>
@@ -92,6 +93,7 @@ const MobMenu = () => {
 
         {       !toggleMenu &&                                   
                    <GiAncientColumns
+                   
                     fontSize={48} className="text-white md:hidden cursor-pointer mr-4" onClick={() => setToggleMenu(true)}/>
                     
                     }

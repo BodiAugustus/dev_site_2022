@@ -1,16 +1,15 @@
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import { links } from "./data/data"
 import MobMenu from "./MobMenu"
 import { NavbarContext } from "./providers/NavContext"
-
-
-import {GiArcTriomphe, GiAncientColumns, GiAbacus} from "react-icons/gi"
+import {GiAncientColumns} from "react-icons/gi"
 import Image from 'next/image'
 import { useRouter } from "next/router"
 
 export const NavItem = ({title, classProps, url}) => {
     return (
-        <a className={`mx-4 cursor-pointer font-cinzel first-letter:text-5xl tracking-wider first-letter:underline first-letter:underline-offset-2 first-letter:decoration-2 first-letter:decoration-sky-200 ${classProps}`} href={url}>
+        <a key={url} className={` cursor-pointer font-cinzel sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl lg:first-letter:no-underline lg:tracking-wide md:text-2xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4  first-letter:underline transition-all md:hover:bg-indigo-300 first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
+         ${classProps}`} href={url}>
             {title}
         </a>
     )
@@ -23,8 +22,8 @@ const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
     const sprucey = "https://www.sprucey.dev"
     const router = useRouter()
     return (
-        <nav className="w-full md:justify-center justify-between items-center">
-            <div className="md:flex-[0.5] flex relative justify-between items-center">
+        <nav className="w-full justify-between items-center">
+            <div className="flex relative lg:justify-between justify-between items-center">
                <div className="ml-2 mt-2 inline-block" >
                <Image 
                     src="/images/logo.png"
@@ -32,20 +31,21 @@ const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
                     height={60}
                     width={45}
                     layout="fixed"
-                    className="rounded-lg cursor-crosshair"
+                    className="rounded-lg cursor-pointer"
                     onClick={() => router.push(sprucey)}
                 />
                </div>
-               <div className="flex gap-3"><h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel">Bodi</h1>
-               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel">Augustus</h1></div>
-               <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
+               <div className="flex gap-3"><h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl
+                first-letter:text-indigo-300 font-cinzel">Bodi</h1>
+               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-indigo-300">Augustus</h1></div>
+               <ul className="text-white md:flex hidden  ">
                    {links.map((item, index) => (
-                       <NavItem key={item + index} title={item.name} url={item.url}/>
+                       <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
-                   <li className="bg-blue-500 shadow-lg shadow-blue-500/50  py-2 px-4 rounded-lg border-none outline-none cursor-pointer hover:bg-blue-600, hover:scale-110 active:scale-100">Connect Wallet</li>
                </ul>
+                   <li key="connect" className="bg-blue-500 shadow-lg shadow-blue-500/75  py-2 px-4 rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-20 text-white font-medium">Connect Wallet</li>
                
-               <div className="">
+               <div >
                    {!toggleMenu && (
                    <GiAncientColumns fontSize={48} className="text-white md:hidden cursor-pointer mr-4" onClick={() => setToggleMenu(true)}/> )
 

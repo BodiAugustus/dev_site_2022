@@ -19,3 +19,5 @@ Commits
 #9. Connected the useContext hook and achieved the same functionality as before.
 
 #10. Brought in a minimized photo and set as the bg image for the mobile menu. Brought in and styled GitHub and Twitter icons. Finished mobile menu until final tweaks.
+
+#11. Did lots of styling tweaks to the navbar to make it responsive and correct on mobile, medium and large screens. The Navbar setup is now finished excepting for final touches and connecting the links & connect button.
