@@ -15,7 +15,12 @@ module.exports = {
     extend: {
       fontFamily: {
         cinzel: "'Cinzel', serif",
-        swan: "'swan', cursive"
+        fatFace: "Abril Fatface, cursive ",
+        bebes: "Bebas Neue, cursive",
+        monte: "Montserrat Subrayada, sans-serif",
+        russon : "Russo One, sans-serif"
+
+
       },
     },
 

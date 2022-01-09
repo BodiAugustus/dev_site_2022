@@ -21,3 +21,7 @@ Commits
 #10. Brought in a minimized photo and set as the bg image for the mobile menu. Brought in and styled GitHub and Twitter icons. Finished mobile menu until final tweaks.
 
 #11. Did lots of styling tweaks to the navbar to make it responsive and correct on mobile, medium and large screens. The Navbar setup is now finished excepting for final touches and connecting the links & connect button.
+
+#12. Did more style changes to Navbar.
+
+#13. Started work on the Hero component. Brought in 3 react icons. Imported the Loader component to use during data fetching. Added in some Hero text and styled. Added in a button type button for mobile to connect wallet. Started set up of the connect button's onClick function connectWallet. Added a radial gradient generated from css.hero as well as a glassmorphism. Added a future component which will be the cryptocard displaying user TX's.

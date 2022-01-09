@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.eth-card {
+  
+  background-image:#ffd599;background-image:  
+radial-gradient(at 20% 24%, hsla(224,62%,65%,1) 0, transparent 59%),  
+radial-gradient(at 87% 41%, hsla(239,86%,68%,1) 0, transparent 56%),  
+radial-gradient(at 93% 25%, hsla(162,92%,69%,1) 0, transparent 52%),  
+radial-gradient(at 30% 31%, hsla(241,72%,61%,1) 0, transparent 49%),  
+radial-gradient(at 40% 33%, hsla(43,82%,71%,1) 0, transparent 59%),  
+radial-gradient(at 84% 53%, hsla(260,88%,73%,1) 0, transparent 47%),  
+radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
+}

@@ -23,10 +23,10 @@ export default function Home() {
     </Head>
     
     <div className="min-h-screen">
-      <div className="bg-gradient-to-r from-stone-400 to-slate-400">
+      <div className="bg-gradient-to-r from-stone-400 to-slate-500">
         <Navbar/>
-      </div>
         <Hero/>
+      </div>
       <Showcase/>
       <Skills/>
       <Services/>
