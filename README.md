@@ -28,4 +28,4 @@ Commits
 
 #14. Worked on setting up the cryptocard with hardcoded values/icons. Added a json.config file and set the compiler options to use smart file routing. Created CCard.jsx inside of components and extracted the cryptocard there. Then imported back into the Hero and inserted.
 
-#15. 
+#15. Created Input component inside Hero.jsx. Used it to populate the Hero with multiple input fields inside the return. Set up the initial state for a Loader component. Created a new state to monitor whether isLoading is set to true or not. The render is conditonal with either a loader message or a button. Setup the handleSubmit function used as an onclick inside the conditionally rendered button. Created Input.jsx and moved the form into there before extracting back into the Hero.

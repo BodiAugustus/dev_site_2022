@@ -5,11 +5,22 @@ import { Loader } from '.'
 import { useContext } from 'react'
 import { NavbarContext } from './providers/NavContext'
 import { CryptoCard } from '.'
+import { Input } from '.'
+
+
 const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center items-center border-[1.5px] border- text-white'
+
+
+
+
 const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
 
     const connectWallet = () => {
+    }
+
+    const handleSubmit = () => {
+
     }
     
     return (
@@ -27,10 +38,44 @@ const Hero = () => {
                     {!toggleMenu &&
                         <CryptoCard/>
                     }
-                    <h1>hi</h1>
+                    <div className="p-5 w-full flex flex-col justify-start items-center  rounded-lg"> 
+
+                        <h4 className="text-white">Send a Payment <span className="font-bebes">( Only FTM Accepted! )</span>:</h4>
+
+                        {!toggleMenu && 
+                        <>
+                         <Input placeholder="Address To:" name="addressTo" type="text" handleChange={() => {}} /> 
+
+                         <Input placeholder="Amount in FTM:" name="amount" type="number" handleChange={() => console.log("hi")} />
+
+                         <Input placeholder="Keyword (Gif)" name="key" type="text" handleChange={() => {}} /> 
+
+                         <Input placeholder="Enter Message" name="message" type="text" handleChange={() => {}} /> 
+
+                        </>
+                        }
+
+                         <div className="h-[1px] w-full bg-gray-300 my-2"/>
+
+                         {false ? (
+                            <Loader/>
+                         ) :
+                         (<button type="button"
+                         onClick={handleSubmit}
+                         className="text-white w-full mt-2 border-[2px] p-2 border-[#3d4f7c] rounded-full cursor-pointer font-russon"
+                         >
+                            Send Now 
+                         </button>)
+                         }
+
+                     </div> 
+
                 </div>
+                 
                 
                 <div key='rightSideForDesktop'>
+
+
                      <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-5 ml-3">
                          <div className={`rounded-tl-2xl ${commonStyles}`}>Ethereum | Fantom</div>
                          <div className={`${commonStyles} rounded-tr-2xl`}>Web3.0</div>
