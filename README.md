@@ -27,3 +27,5 @@ Commits
 #13. Started work on the Hero component. Brought in 3 react icons. Imported the Loader component to use during data fetching. Added in some Hero text and styled. Added in a button type button for mobile to connect wallet. Started set up of the connect button's onClick function connectWallet. Added a radial gradient generated from css.hero as well as a glassmorphism. Added a future component which will be the cryptocard displaying user TX's.
 
 #14. Worked on setting up the cryptocard with hardcoded values/icons. Added a json.config file and set the compiler options to use smart file routing. Created CCard.jsx inside of components and extracted the cryptocard there. Then imported back into the Hero and inserted.
+
+#15. 
