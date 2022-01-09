@@ -23,7 +23,7 @@ export default function Home() {
     </Head>
     
     <div className="min-h-screen">
-      <div className="bg-gradient-to-r from-blue-700 to-sky-400">
+      <div className="bg-gradient-to-r from-stone-400 to-slate-400">
         <Navbar/>
       </div>
         <Hero/>

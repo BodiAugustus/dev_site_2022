@@ -5,7 +5,6 @@ import { NavItem } from "./Navbar"
 import {links} from './data/data'
 import { NavbarContext } from "./providers/NavContext"
 import Image from 'next/image'
-import Sparkles from 'react-sparkle'
 
 import Link from 'next/link'
 

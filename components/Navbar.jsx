@@ -8,7 +8,7 @@ import { useRouter } from "next/router"
 
 export const NavItem = ({title, classProps, url}) => {
     return (
-        <a key={url} className={` cursor-pointer font-cinzel sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl lg:first-letter:no-underline lg:tracking-wide md:text-2xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4  first-letter:underline transition-all md:hover:bg-indigo-300 first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
+        <a key={url} className={` cursor-pointer font-cinzel sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4   first-letter:underline transition-all md:hover:bg-gray-500 first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
          ${classProps}`} href={url}>
             {title}
         </a>
@@ -35,19 +35,19 @@ const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
                     onClick={() => router.push(sprucey)}
                 />
                </div>
-               <div className="flex gap-3"><h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl
-                first-letter:text-indigo-300 font-cinzel">Bodi</h1>
-               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-indigo-300">Augustus</h1></div>
-               <ul className="text-white md:flex hidden  ">
+               <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl
+                first-letter:text-stone-200 font-cinzel ">Bodi</h1>
+               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-200">Augustus</h1></div>
+               <ul className="relative xs:l-10 text-white md:flex hidden  ">
                    {links.map((item, index) => (
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>
-                   <li key="connect" className="bg-blue-500 shadow-lg shadow-blue-500/75  py-2 px-4 rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-20 text-white font-medium">Connect Wallet</li>
+                   <li key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 px-4 rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-16 text-white xs:invisible xs:hidden md:inline-block md:visible  font-medium">Connect Wallet</li>
                
                <div >
                    {!toggleMenu && (
-                   <GiAncientColumns fontSize={48} className="text-white md:hidden cursor-pointer mr-4" onClick={() => setToggleMenu(true)}/> )
+                   <GiAncientColumns fontSize={48} className="text-white md:hidden cursor-pointer mr-4 hover:scale-105 active:scale-100" onClick={() => setToggleMenu(true)}/> )
 
                    }
 
