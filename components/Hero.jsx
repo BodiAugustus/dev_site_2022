@@ -16,7 +16,7 @@ const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center ite
 const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
-    const {connectWallet} = useContext(PaymentsContext)
+    const {connectWallet, currentAccount} = useContext(PaymentsContext)
 
 
 
@@ -39,11 +39,13 @@ const Hero = () => {
                 <div className="flex flex-1 justify-start flex-col md:mr-10">
                     <h1 className='text-3xl xs:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
                     <h4 className='text-slate-50 mt-1 font-cinzel'>NextJS | Solidity</h4>
+                    {!currentAccount && (
                     <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-1/2 mt-6 -mb-5
                      rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider"
                      type='button'
                      onClick={connectWallet}
                      >Connect Wallet</button>
+                    )}
 
                     {!toggleMenu &&
                         <CryptoCard/>

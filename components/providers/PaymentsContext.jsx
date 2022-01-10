@@ -22,11 +22,24 @@ export const PaymentsProvider = ({children}) => {
     const [currentAccount, setCurrentAccount] = useState("")
 
     const isWalletConnected = async () => {
-        if(!ethereum) return alert("Please install MetaMask!")
+     
+        try {
+            if(!ethereum) return alert("Please install MetaMask!")
 
-        const accounts = await ethereum.request({method: "eth_accounts"})
-
-        console.log(accounts);
+            const accounts = await ethereum.request({method: "eth_accounts"})
+    
+            if(accounts.length){
+                setCurrentAccount(accounts[0])
+                // getAllTransactions();
+            } else{
+                console.log("No accounts found!");
+            }
+    
+            
+        } catch (error) {
+            console.error(error)
+            throw new Error("No ethereum object dectected.")
+        }
     }
 
     const connectWallet = async () => {
@@ -46,7 +59,7 @@ export const PaymentsProvider = ({children}) => {
     }, [])
 
     return (
-        <PaymentsContext.Provider value={{connectWallet}}>
+        <PaymentsContext.Provider value={{connectWallet, currentAccount}}>
             {children}
         </PaymentsContext.Provider>
     )
