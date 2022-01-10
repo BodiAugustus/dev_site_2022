@@ -19,6 +19,7 @@ const getEthereumContract = () => {
 }
 
 export const PaymentsProvider = ({children}) => {
+    const [currentAccount, setCurrentAccount] = useState("")
 
     const isWalletConnected = async () => {
         if(!ethereum) return alert("Please install MetaMask!")
@@ -28,12 +29,24 @@ export const PaymentsProvider = ({children}) => {
         console.log(accounts);
     }
 
+    const connectWallet = async () => {
+        try {
+            if(!ethereum) return alert("Please install MetaMask wallet extension.")
+            const accounts = await ethereum.request({method: 'eth_requestAccounts'})
+            setCurrentAccount(accounts[0])
+        } catch (error) {
+            console.error(error)
+            throw new Error("No ethereum object dectected.")
+            
+        }
+    }
+
     useEffect(() => {
         isWalletConnected()
     }, [])
 
     return (
-        <PaymentsContext.Provider value={{value: 'test'}}>
+        <PaymentsContext.Provider value={{connectWallet}}>
             {children}
         </PaymentsContext.Provider>
     )

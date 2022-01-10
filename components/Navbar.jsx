@@ -5,6 +5,7 @@ import { NavbarContext } from "./providers/NavContext"
 import {GiAncientColumns} from "react-icons/gi"
 import Image from 'next/image'
 import { useRouter } from "next/router"
+import { PaymentsContext } from "./providers/PaymentsContext"
 
 export const NavItem = ({title, classProps, url}) => {
     return (
@@ -17,6 +18,7 @@ export const NavItem = ({title, classProps, url}) => {
 
 const Navbar = () => {
 const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
+const {connectWallet} = useContext(PaymentsContext)
 
 
     const sprucey = "https://www.sprucey.dev"
@@ -43,7 +45,7 @@ const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>
-                   <li key="connect" className="bg-blue-600 shadow-2xl shadow-zinc-300/75  py-2 px-4 rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-16 text-white xs:invisible xs:hidden md:inline-block md:visible  font-medium">Connect Wallet</li>
+                   <button onClick={connectWallet} key="connect" className="bg-blue-600 shadow-2xl shadow-zinc-300/75  py-2 px-4 rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-16 text-white xs:invisible xs:hidden md:inline-block md:visible  font-medium">Connect Wallet</button>
                
                <div >
                    {!toggleMenu && (

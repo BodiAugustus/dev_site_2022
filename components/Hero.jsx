@@ -16,12 +16,11 @@ const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center ite
 const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
-    const {value} = useContext(PaymentsContext)
+    const {connectWallet} = useContext(PaymentsContext)
 
-    console.log(value);
 
-    const connectWallet = () => {
-    }
+
+  
 
     const handleSubmit = (e) => {
         setIsLoading(true)

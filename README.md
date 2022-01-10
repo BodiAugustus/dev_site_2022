@@ -41,3 +41,5 @@ Commits
 #20. Created utils folder. Created constants.js. c&p Payments.json into utils/Payments.json (new file). Imported abi from Payments.json. Exported contractABI and contractAddress. Created new context folder. Created PaymentsContext.jsx inside of it.
 
 #21. Started setting up PaymentsContext. Imported ethers and the contractABI and contractAddress. Created getEthereumContract function. Settup the PaymentsProvider. Wrapped around app inside of _app.js. Imported the context into Hero.jsx. Deleted context folder and moved PaymentsContext.jsx into the providers folder. Created isWalletConnected function. Setup a useEffect to run isWalletConnected. Started setup - console logged active account.
+
+#22. Setup functionality for connect metamask button inside of the context file. Did this using connectWallet function. Created a new state, currentAccount/setCurrentAccount to keep track of active user accnt. Passed connectWallet to Hero.jsx and used inside with the button. Also connected the same functionality on the navbar button for large screens as well. Both buttons open the metamask wallet extension.
