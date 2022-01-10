@@ -41,7 +41,7 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #999;
+  background-color: #fff;
   border-radius: 100%;
   
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;

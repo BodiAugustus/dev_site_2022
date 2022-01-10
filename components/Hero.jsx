@@ -16,13 +16,19 @@ const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center ite
 const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
-    const {connectWallet, currentAccount} = useContext(PaymentsContext)
+    const {connectWallet, currentAccount, formData, sendPayment, handleChange} = useContext(PaymentsContext)
 
 
 
   
 
     const handleSubmit = (e) => {
+        const {addressTo, amount, message} = formData
+        e.preventDefault()
+
+        if(!addressTo || !amount || !message) return;
+
+        sendPayment()
         setIsLoading(true)
 
     }
@@ -56,12 +62,12 @@ const Hero = () => {
 
                         {!toggleMenu && 
                         <>
-                         <Input placeholder="Address To:" name="addressTo" type="text" handleChange={() => {}} /> 
+                         <Input placeholder="Address To:" name="addressTo" type="text" handleChange={handleChange} /> 
 
-                         <Input placeholder="Amount in FTM:" name="amount" type="number" handleChange={() => console.log("hi")} />
+                         <Input placeholder="Amount in FTM:" name="amount" type="number" handleChange={handleChange} />
 
 
-                         <Input placeholder="Enter Message:" name="message" type="text" handleChange={() => {}} /> 
+                         <Input placeholder="Enter Message:" name="message" type="text" handleChange={handleChange} /> 
 
                         </>
                         }

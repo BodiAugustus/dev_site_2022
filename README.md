@@ -46,4 +46,4 @@ Commits
 
 #23. Set to ensure the active account always starts with account0. Conditionally rendered the connect button to disappear on small screens when actively signed in. Changed button text on nav button during sign in for larger screens.
 
-#24. Created sendPayment function. 
+#24. Created sendPayment function. Created new state formData/setFormData to deal with importing form fields. Created handleChange function, passed through context. Finished handleSubmit function. Added a useState isLoading/SetIsLoading for the hero page during blockchain transactions. Created new useState transactioinCount/setTransactionCount to monitor the number of transactions.

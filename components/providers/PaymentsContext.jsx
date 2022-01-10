@@ -13,13 +13,21 @@ const getEthereumContract = () => {
     const signer = provider.getSigner()
     const paymentsContract = new ethers.Contract(contractAddress, contractABI, signer)
 
-    console.log({
-        provider,signer, paymentsContract
-    })
+    // console.log({
+    //     provider,signer, paymentsContract
+    // })
+    return paymentsContract
 }
 
 export const PaymentsProvider = ({children}) => {
     const [currentAccount, setCurrentAccount] = useState("")
+    const [formData, setFormData] = useState({addressTo: '', amount: '', message: ''})
+    const [isLoading, setIsLoading] = useState(false)
+    const [transactionCount, setTransactionCount] = useState(localStorage.getItem('transactionCount'))
+
+    const handleChange = (e, name) => {
+        setFormData((prevState) => ({...prevState, [name]: e.target.value}))
+    }
 
     const isWalletConnected = async () => {
      
@@ -54,12 +62,48 @@ export const PaymentsProvider = ({children}) => {
         }
     }
 
+    const sendPayment = async () => {
+        try {
+            if(!ethereum) return alert("Please install MetaMask wallet extension.")
+
+            //get form data
+            const {addressTo, amount, message} = formData
+            const paymentContract = getEthereumContract()
+            const parsedAmount = ethers.utils.parseEther(amount)
+
+            await ethereum.request({
+                method: 'eth_sendTransaction',
+                params: [{
+                    from: currentAccount,
+                    to: addressTo,
+                    gas: '0x5208',
+                    value: parsedAmount._hex,
+                }]
+            })
+
+            const txHash = await paymentContract.addToChain(addressTo, parsedAmount, message)
+
+            setIsLoading(true)
+            console.log(`Loading - ${txHash.hash}`);
+            await txHash.wait()
+            setIsLoading(false)
+            console.log(`Success - ${txHash.hash}`);
+
+            const txCount = await paymentContract.getTXCount()
+            setTransactionCount(txCount.toNumber())
+            
+        } catch (error) {
+            console.error(error)
+            throw new Error("No ethereum object dectected.")
+        }
+    }
+
     useEffect(() => {
         isWalletConnected()
     }, [])
 
     return (
-        <PaymentsContext.Provider value={{connectWallet, currentAccount}}>
+        <PaymentsContext.Provider value={{connectWallet, currentAccount, formData, setFormData, handleChange, sendPayment}}>
             {children}
         </PaymentsContext.Provider>
     )
