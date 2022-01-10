@@ -38,4 +38,4 @@ Commits
 
 #19. Renamed sample-scripts.js to deploy.js inside of scripts folder. Cleaned up file. Created runMain function. Set up to deploy Payments.sol. Used Ropsten test faucet to acquire some ETH for contract testing. Used Alchemy to set up a testing network. Deleted hardhat.config.js file and recreated for my needs. Deployed to ropsten network using hardhat: npx hardhat run scripts/deploy.js --network ropsten. 
 
-#20.
+#20. Created utils folder. Created constants.js. c&p Payments.json into utils/Payments.json (new file). Imported abi from Payments.json. Exported contractABI and contractAddress. Created new context folder. Created PaymentsContext.jsx inside of it.
