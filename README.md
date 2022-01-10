@@ -45,3 +45,5 @@ Commits
 #22. Setup functionality for connect metamask button inside of the context file. Did this using connectWallet function. Created a new state, currentAccount/setCurrentAccount to keep track of active user accnt. Passed connectWallet to Hero.jsx and used inside with the button. Also connected the same functionality on the navbar button for large screens as well. Both buttons open the metamask wallet extension.
 
 #23. Set to ensure the active account always starts with account0. Conditionally rendered the connect button to disappear on small screens when actively signed in. Changed button text on nav button during sign in for larger screens.
+
+#24. Created sendPayment function. 
