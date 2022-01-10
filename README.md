@@ -35,3 +35,7 @@ Commits
 #17. Created new smartContract folder and cd'd into. npm i hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ether packages. Used Hardhat for the smart contract development to create new setup. Created Payments.sol. Created Payments contract. Created Payment event. Created PaymentStruct to give properties to our payments.
 
 #18. Created a payments array to store all transaction objects. Created addToChain, getAllTXs, and getTXCount functions.
+
+#19. Renamed sample-scripts.js to deploy.js inside of scripts folder. Cleaned up file. Created runMain function. Set up to deploy Payments.sol. Used Ropsten test faucet to acquire some ETH for contract testing. Used Alchemy to set up a testing network. Deleted hardhat.config.js file and recreated for my needs. Deployed to ropsten network using hardhat: npx hardhat run scripts/deploy.js --network ropsten. 
+
+#20.
