@@ -7,8 +7,9 @@ const CryptoCard = () => {
         <div className="p-3 justify-end items-start flex-col rounded-xl h-40 xs:w-72 w-full my-5 bg-slate-400 eth-card white-glassmorphism">
             <div className="flex justify-between flex-col w-full h-full">
                 <div className="flex justify-between items-start">
-                    <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
-                        <SiEthereum fontSize={21} color='#fff'/>
+                    <div className="w-12 h-12 rounded-full border-2 border-white flex justify-center items-center text-white tracking-wide">
+                        
+                        <h4>DeFi</h4>
 
                     </div>
                     <BsInfoCircle fontSize={17} color="#fff"/>

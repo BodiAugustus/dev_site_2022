@@ -36,14 +36,14 @@ const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
                 />
                </div>
                <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl
-                first-letter:text-stone-200 font-cinzel ">Bodi</h1>
-               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-200">Augustus</h1></div>
+                first-letter:text-stone-100 font-cinzel ">Bodi</h1>
+               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-100">Augustus</h1></div>
                <ul className="relative xs:l-10 text-white md:flex hidden  ">
                    {links.map((item, index) => (
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>
-                   <li key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 px-4 rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-16 text-white xs:invisible xs:hidden md:inline-block md:visible  font-medium">Connect Wallet</li>
+                   <li key="connect" className="bg-blue-600 shadow-2xl shadow-zinc-300/75  py-2 px-4 rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-16 text-white xs:invisible xs:hidden md:inline-block md:visible  font-medium">Connect Wallet</li>
                
                <div >
                    {!toggleMenu && (
