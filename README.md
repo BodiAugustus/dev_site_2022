@@ -33,3 +33,5 @@ Commits
 #16. Styled Send Now button. Set up Loader component and imported to the hero for use. Brought in an outside loader from spinkit. Brought in a hero image and set as the background. Did some styling adjustments to suit the adjustment.
 
 #17. Created new smartContract folder and cd'd into. npm i hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ether packages. Used Hardhat for the smart contract development to create new setup. Created Payments.sol. Created Payments contract. Created Payment event. Created PaymentStruct to give properties to our payments.
+
+#18. Created a payments array to store all transaction objects. Created addToChain, getAllTXs, and getTXCount functions.
