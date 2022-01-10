@@ -27,8 +27,8 @@ export default function Home() {
       ">
         <Navbar/>
         <Hero/>
-      </div>
       <Showcase/>
+      </div>
       <Skills/>
       <Services/>
       <Footer/>

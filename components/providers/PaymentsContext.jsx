@@ -23,7 +23,7 @@ export const PaymentsProvider = ({children}) => {
     const [currentAccount, setCurrentAccount] = useState("")
     const [formData, setFormData] = useState({addressTo: '', amount: '', message: ''})
     const [isLoading, setIsLoading] = useState(false)
-    const [transactionCount, setTransactionCount] = useState(localStorage.getItem('transactionCount'))
+    const [transactionCount, setTransactionCount] = useState(0)
 
     const handleChange = (e, name) => {
         setFormData((prevState) => ({...prevState, [name]: e.target.value}))
@@ -90,6 +90,7 @@ export const PaymentsProvider = ({children}) => {
             console.log(`Success - ${txHash.hash}`);
 
             const txCount = await paymentContract.getTXCount()
+
             setTransactionCount(txCount.toNumber())
             
         } catch (error) {
