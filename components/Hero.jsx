@@ -5,6 +5,7 @@ import { NavbarContext } from './providers/NavContext'
 import { CryptoCard } from '.'
 import { Input } from '.'
 import Image from 'next/image'
+import {PaymentsContext} from './providers/PaymentsContext'
 
 
 const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center items-center border-[1.5px] border- text-white'
@@ -15,6 +16,9 @@ const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center ite
 const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
+    const {value} = useContext(PaymentsContext)
+
+    console.log(value);
 
     const connectWallet = () => {
     }
