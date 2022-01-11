@@ -18,7 +18,7 @@ module.exports = {
         fatFace: "Abril Fatface, cursive ",
         bebes: "Bebas Neue, cursive",
         monte: "Montserrat Subrayada, sans-serif",
-        russon : "Russo One, sans-serif"
+        marcellus : "Marcellus, serif"
 
 
       },

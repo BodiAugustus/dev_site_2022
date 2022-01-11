@@ -76,3 +76,14 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
 .card-image {
   border: 6px black solid
 }
+
+.active-btn {
+  border: 2px black solid;
+  background-color: #888;
+  border-radius: .5rem;
+  border-color: #041C32;
+  padding: 0 5px 2px 5px;
+  color: #041C32;
+  
+  
+}

@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { links } from "./data/data"
 import MobMenu from "./MobMenu"
 import { NavbarContext } from "./providers/NavContext"
-import {GiAncientColumns} from "react-icons/gi"
+import {GiGreekTemple} from "react-icons/gi"
 import Image from 'next/image'
 import { useRouter } from "next/router"
 import { PaymentsContext } from "./providers/PaymentsContext"
@@ -49,7 +49,7 @@ const {connectWallet, currentAccount} = useContext(PaymentsContext)
                
                <div >
                    {!toggleMenu && (
-                   <GiAncientColumns fontSize={48} className="text-white md:hidden cursor-pointer mr-4 hover:scale-105 active:scale-100" onClick={() => setToggleMenu(true)}/> )
+                   <GiGreekTemple fontSize={48} className="text-white md:hidden cursor-pointer mr-4 hover:scale-105 active:scale-100" onClick={() => setToggleMenu(true)}/> )
 
                    }
 

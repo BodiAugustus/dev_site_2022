@@ -1,10 +1,10 @@
 
-import { useContext, useState} from 'react'
+import { useContext, useEffect, useState} from 'react'
 import { NavbarContext } from './providers/NavContext'
 import { Input, Showcase, CryptoCard, Loader,  } from '.'
 import Image from 'next/image'
 import {PaymentsContext} from './providers/PaymentsContext'
-import SingleCard from './providers/HeroContext'
+
 import { HeroContext } from './providers/HeroContext'
 
 
@@ -12,7 +12,7 @@ import { HeroContext } from './providers/HeroContext'
 const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center items-center border-[1.5px] border- text-white'
 
 
-
+ 
 
 const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
@@ -94,8 +94,8 @@ const Hero = () => {
                 
                 <div key='rightSideForDesktop'>
 
-
-                     <div className="grid sm:grid-cols-2 grid-cols-2 w-full mt-5 ">
+                        <h2 className='text-2xl font-marcellus text-white text-center underline underline-offset-8 mt-2 -mb-4'>At A Glance Services:</h2>
+                     <div className="grid sm:grid-cols-2 grid-cols-2 w-full mt-8 ">
                          <div className={`rounded-tl-2xl ${commonStyles}`}>Ethereum | Fantom</div>
                          <div className={`${commonStyles} rounded-tr-2xl`}>Web3.0</div>
                          <div className={`${commonStyles} `}>dApps</div>
@@ -104,8 +104,11 @@ const Hero = () => {
                          <div className={`${commonStyles} rounded-br-2xl`}>Blockchain</div>
                      </div>
                      <div className="md:grid md:grid-cols-2">
-                         
+                        
                      <Showcase/>
+                     
+                    
+                    
 
                      </div>
 
