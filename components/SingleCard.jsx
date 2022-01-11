@@ -1,20 +1,8 @@
+import { FiGithub } from "react-icons/fi"
 import Image from 'next/image'
-import {FiGithub} from 'react-icons/fi'
-import {showcase} from './data/data'
-import {  useContext } from 'react'
-import { HeroContext } from './providers/HeroContext'
 
-const Showcase = () => {
-    const {readMore, setReadMore} = useContext(HeroContext)
-    
+const SingleCard = () => {
     return(
-        <>
-
-        
-
-  {showcase.map((item) => {
-    const {id, name, image, link, github, description, date} = item;
-      return (
         <div key={id} className="flex flex-col md:flexjustify-center xs:w-3/4 md:w-[92%]   xs:mx-auto border-4 border-slate-100 rounded-md bg-slate-400 items-center  xs:mb-0 xs:mt-10">
         <div className="items-center justify-center p-4 ">
         <div className="border-2 border-sky-900 rounded-md">
@@ -35,7 +23,7 @@ const Showcase = () => {
             <div className="flex text-center p-3">
                 <h4>{ readMore ?
                     description :
-                    `${description.substring(0, 100)}...`
+                    `${description.substring(0, 120)}...`
                     }</h4>
             </div>
             <div className="flex items-center text-white bg-sky-900 justify-between w-full p-3">
@@ -48,14 +36,7 @@ const Showcase = () => {
             </div>
         </div>
     </div>
-      )
-  })}
-    
-
-  </>
     )
-     
-    
 }
 
-export default Showcase
+export default SingleCard

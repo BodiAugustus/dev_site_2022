@@ -12,4 +12,6 @@ export {default as Skills} from './Skills'
 export {default as MobMenu} from './MobMenu'
 export {default as CryptoCard} from './CCard'
 export {default as Input} from './Input'
+export {default as SingleCard} from './SingleCard'
+
 

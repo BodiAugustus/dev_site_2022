@@ -40,4 +40,5 @@ export const showcase = [
     date: "2021",
     github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
 },
+
 ]

@@ -1,11 +1,12 @@
 
-import { Loader } from '.'
 import { useContext, useState} from 'react'
 import { NavbarContext } from './providers/NavContext'
-import { CryptoCard } from '.'
-import { Input } from '.'
+import { Input, Showcase, CryptoCard, Loader,  } from '.'
 import Image from 'next/image'
 import {PaymentsContext} from './providers/PaymentsContext'
+import SingleCard from './providers/HeroContext'
+import { HeroContext } from './providers/HeroContext'
+
 
 
 const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center items-center border-[1.5px] border- text-white'
@@ -17,6 +18,7 @@ const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
     const {connectWallet, currentAccount, formData, sendPayment, handleChange} = useContext(PaymentsContext)
+    const {readMore, setReadMore} = useContext(HeroContext)
 
 
 
@@ -93,13 +95,18 @@ const Hero = () => {
                 <div key='rightSideForDesktop'>
 
 
-                     <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-5 ml-3">
+                     <div className="grid sm:grid-cols-2 grid-cols-2 w-full mt-5 ">
                          <div className={`rounded-tl-2xl ${commonStyles}`}>Ethereum | Fantom</div>
                          <div className={`${commonStyles} rounded-tr-2xl`}>Web3.0</div>
                          <div className={`${commonStyles} `}>dApps</div>
                          <div className={`${commonStyles} `}>MetaMask</div>
                          <div className={`${commonStyles} rounded-bl-2xl`}>DeFi | Crypto</div>
                          <div className={`${commonStyles} rounded-br-2xl`}>Blockchain</div>
+                     </div>
+                     <div className="md:grid md:grid-cols-2">
+                         
+                     <Showcase/>
+
                      </div>
 
                 </div>
