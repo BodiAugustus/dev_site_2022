@@ -53,3 +53,5 @@ Commits
 #26. Finished styling the showcase cards. Added a state variable readMore/setReadMore for the showcase cards to keep the cards the same length regardless of description size. Created SingleCard.JSX to conditionally render an extra showcase card on larger screens. Also created a HeroContext.jsx to keep control of the readMore/setReadMore state variable which is being used by both Showcase and SingleCard.
 
 #27. Styled showcase cards. Finished excepting for the conditional rendering. Added skills to data.jsx for rendering to the SkillsList component. Built out skills list component and added heading to showcase and table. Imported two icons for the skillsets component. Finished skillsets component.
+
+#28. Started Services component. Created cards and displayed with styling. Also constructed the footer component as well. Got both components set up and started styling.
