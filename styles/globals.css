@@ -79,11 +79,11 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
 
 .active-btn {
   border: 2px black solid;
-  background-color: #888;
+  background-color: #22577E;
   border-radius: .5rem;
-  border-color: #041C32;
+  border-color: #4FBDBA;
   padding: 0 5px 2px 5px;
-  color: #041C32;
+  color: #4FBDBA;
   
   
 }
@@ -91,7 +91,7 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
 .neonP {
   /* animation: p 0.11s ease-in-out 10s infinite alternate; */
   border: 0.2rem solid #fff;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 2rem;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #3340b1,
     0 0 0.8rem #2729a8, 0 0 2.8rem #431cc2, inset 0 0 1.3rem #6765db;

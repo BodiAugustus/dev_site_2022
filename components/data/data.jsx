@@ -60,8 +60,8 @@ export const skills = [
       experience: "3+ Years",
       stack: [
         "HTML, CSS, SASS, Tailwind, JavaScript, React, NextJS",
-        "UI | UX responsive, custom designs",
-        "Git | Version control, testing & debugging",
+        "UI | UX responsive & custom designs",
+        "Git | Version control with testing & debugging",
         "Testing & debugging",
       ],
       label: "Front End",
@@ -74,7 +74,7 @@ export const skills = [
       stack: [
         "NodeJS, Express, MongoDB, Mongoose, PUG, NextJS",
         "Authentication, verification, validation, authorization, security",
-        "Database management, web hosting",
+        "Database management & web hosting",
         "Web hosting",
       ],
       label: "Back End",
@@ -87,7 +87,7 @@ export const skills = [
       stack: [
         "Solidity, Hardhat, Truffle, Remix, OpenZeppelin, Alchemy",
         "Ethereum, Fantom, Ropsten and other testing blockchains",
-        "MetaMask, web3js, DeFi, crypto",
+        "MetaMask, web3js, ERC-20, DeFi, crypto",
         "Solidity",
         "RUST",
       ],

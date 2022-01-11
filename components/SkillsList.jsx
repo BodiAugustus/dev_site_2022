@@ -18,15 +18,15 @@ const SkillsList = () => {
            <div className=" relative">
            <div className="flex px-2 py-1 justify-center text-2xl text-sky-900   -mt-4">
                 {skills.map((skill, index) => {
-                    return <button key={skill.id+1} className={`m-1 ${index === value && 'active-btn'} p-1`} onClick={() => setValue(index)}>{skill.title}</button>
+                    return <button key={skill.id+1} className={`m-2 ${index === value && 'active-btn'} px-2`} onClick={() => setValue(index)}>{skill.title}</button>
                 })}
             </div>
             <div className="w-80 mx-auto max-w-screen-xl pb-3">
-                <article className='relative basis-4 pt-2 pb-4 text-sky-900 font-medium'>
+                <article className='relative basis-4 pt-2 pb-4 text-sky-900 font-medium text-lg'>
                     <div className="flex justify-between text-xl">
                     <div className="flex-col">
                     <h3  className='mt-1'>{title}</h3>
-                    <h4 className='mt-1 bg-sky-900 text-white px-2 rounded-xl py-1 '>{label}</h4>
+                    <h4 className='mt-1 bg-sky-900 text-white px-3 rounded-full py-[8px] '>{label}</h4>
                     <p className='mt-1'>{experience}</p>
                     </div>
                    {value === 0 && 
@@ -48,6 +48,7 @@ const SkillsList = () => {
                         )
                     })}
                 </article>
+                <hr className='mt-2'/>
             </div>
            </div>
 
