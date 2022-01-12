@@ -56,4 +56,4 @@ Commits
 
 #28. Started Services component. Created cards and displayed with styling. Also constructed the footer component as well. Got both components set up and started styling.
 
-#29. Finished styling the Services and Footer components.
+#29. Finished styling the Services and Footer components. Finished styling most of the main page with responsive design.

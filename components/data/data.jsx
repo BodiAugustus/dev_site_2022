@@ -73,7 +73,7 @@ export const skills = [
       experience: "2+ Years",
       stack: [
         "NodeJS, Express, MongoDB, Mongoose, PUG, NextJS",
-        "Authentication, verification, validation, authorization, security",
+        "Authentication, verification, validation, security",
         "Database management & web hosting",
         "Web hosting",
       ],
@@ -85,7 +85,7 @@ export const skills = [
       title: "Web3",
       experience: "1+ Years",
       stack: [
-        "Solidity, Hardhat, Truffle, Remix, OpenZeppelin, Alchemy",
+        "Solidity, Hardhat, Truffle, Remix, OpenZeppelin, Infura",
         "Ethereum, Fantom, Ropsten and other testing blockchains",
         "MetaMask, web3js, ERC-20, DeFi, crypto",
         "Solidity",

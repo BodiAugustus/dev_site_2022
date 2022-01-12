@@ -9,7 +9,7 @@ import { HeroContext } from './providers/HeroContext'
 
 
 
-const commonStyles = 'min-h-[70px] px-2 xs:min-w-[120px] flex justify-center items-center border-[1.5px] border- text-white'
+const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[1.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
 
  
@@ -18,7 +18,7 @@ const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
     const {connectWallet, currentAccount, formData, sendPayment, handleChange} = useContext(PaymentsContext)
-    const {readMore, setReadMore} = useContext(HeroContext)
+ 
 
 
 
@@ -37,30 +37,32 @@ const Hero = () => {
     
     return (
         <div className="flex w-full justify-center items-center">
-            <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
+            <div className="flex  flex-col lg:flex-row items-start justify-between md:p-20 py-10 md:py-8 px-4 xl:p-16">
                 {/* <Image
                     src="/images/test.png"
                     layout="fill"
                     alt="Hero BG"
                     className="relative -z-[0]"
                 /> */}
-                <div className="flex flex-1 justify-start flex-col md:mr-10">
-                    <h1 className='text-3xl xs:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
-                    <h4 className='text-slate-50 mt-1 font-cinzel'>NextJS | Solidity</h4>
+                <div className="flex  justify-start flex-col sm:w-full md:mr-10 ">
+                    
+                    <h1 className=' xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace sm:text-center'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
+                    <h4 className='text-slate-50 mt-1 font-cinzel sm:mx-auto sm:text-2xl md:text-3xl xl:mx-0'>NextJS | Solidity</h4>
                     {!currentAccount && (
-                    <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-1/2 mt-6 -mb-5
-                     rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider"
+                    <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
+                     rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider border-2 border-sky-400"
                      type='button'
                      onClick={connectWallet}
                      >Connect Wallet</button>
                     )}
+                 
 
                     {!toggleMenu &&
                         <CryptoCard/>
                     }
-                    <div className="p-5 w-full flex flex-col justify-start items-center  rounded-lg"> 
+                    <div className="p-5 w-full sm:w-[70%] md:w-[80%] lg:w-[100%] sm:mx-auto flex flex-col justify-start items-center  rounded-lg"> 
 
-                        <h4 className="text-white">Send a Payment <span className="font-bebes">( Only FTM Accepted )</span>:</h4>
+                        <h4 className="text-white md:text-2xl lg:text-xl lg:text-left lg:-mt-7">Send a Payment <span className="font-bebes">( Only FTM Accepted )</span>:</h4>
 
                         {!toggleMenu && 
                         <>
@@ -81,7 +83,7 @@ const Hero = () => {
                          ) :
                          (<button type="button"
                          onClick={handleSubmit}
-                         className="text-white w-1/2 bg-blue-600 shadow-sm shadow-zinc-400/75 mt-4 border-[2px] p-2 border-slate-300 rounded-full cursor-pointer font-russon transition-all hover:-translate-y-[2.5px] active:translate-y-1 tracking-wide"
+                         className="text-white w-[35%] md:w-[45%] bg-blue-600 shadow-md shadow-blue-500/75 mt-4 border-[2px] p-2 border-sky-400 rounded-full cursor-pointer font-russon transition-all hover:scale-110 active:scale-100 tracking-wide sm:px-3 md:text-2xl md:py-2  md:mt-8 lg:w-[70%] xl:w-[50%] lg:pb-3"
                          >
                             Send Now 
                          </button>)
@@ -94,8 +96,8 @@ const Hero = () => {
                 
                 <div key='rightSideForDesktop'>
 
-                        <h2 className='text-2xl font-marcellus text-white text-center underline underline-offset-8 mt-2 -mb-4'>At A Glance Services:</h2>
-                     <div className="grid sm:grid-cols-2 grid-cols-2 w-full mt-8 ">
+                        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-marcellus text-white text-center underline underline-offset-8 mt-2 -mb-4 sm:-mb-1'>At A Glance Services:</h2>
+                     <div className="grid sm:grid-cols-2 grid-cols-2 w-full xl:w-[75%] xl:mx-auto mt-8 ">
                          <div className={`rounded-tl-2xl ${commonStyles}`}>Ethereum | Fantom</div>
                          <div className={`${commonStyles} rounded-tr-2xl`}>Web3.0</div>
                          <div className={`${commonStyles} `}>dApps</div>
@@ -103,8 +105,8 @@ const Hero = () => {
                          <div className={`${commonStyles} rounded-bl-2xl`}>DeFi | Crypto</div>
                          <div className={`${commonStyles} rounded-br-2xl`}>Blockchain</div>
                      </div>
-                     <div className="md:grid md:grid-cols-2">
-                        
+                     <h1 className='text-white text-center mt-8 -mb-2  underline underline-offset-8 text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-marcellus xl:mt-4 xl:-mb-4'>Featured Projects</h1>
+                     <div className="sm:grid sm:grid-cols-2">
                      <Showcase/>
                      
                     

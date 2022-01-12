@@ -9,7 +9,7 @@ import { PaymentsContext } from "./providers/PaymentsContext"
 
 export const NavItem = ({title, classProps, url}) => {
     return (
-        <a key={url} className={` cursor-pointer font-cinzel sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4   first-letter:underline transition-all md:hover:bg-gray-500 first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
+        <a key={url} className={` cursor-pointer font-cinzel sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl xl:text-3xl xl:first-letter:text-4xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4   first-letter:underline transition-all md:hover:bg-sky-600 hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
          ${classProps}`} href={url}>
             {title}
         </a>
@@ -37,15 +37,15 @@ const {connectWallet, currentAccount} = useContext(PaymentsContext)
                     onClick={() => router.push(sprucey)}
                 />
                </div>
-               <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl
-                first-letter:text-stone-100 font-cinzel ">Bodi</h1>
-               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-100">Augustus</h1></div>
+               <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl xl:first-letter:text-5xl
+                first-letter:text-stone-100 font-cinzel  xl:text-2xl ">Bodi</h1>
+               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-100 xl:first-letter:text-5xl xl:text-2xl">Augustus</h1></div>
                <ul className="relative xs:l-10 text-white md:flex hidden  ">
                    {links.map((item, index) => (
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>
-                   <button onClick={connectWallet} key="connect" className="bg-blue-600 shadow-2xl shadow-zinc-300/75  py-2 px-4 rounded-lg border-none outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-16 text-white xs:invisible xs:hidden md:inline-block md:visible  font-medium">{!currentAccount ? "Connect Wallet" : "Hello Friend"}</button>
+                   <button onClick={connectWallet} key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75  py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 text-white xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-sky-400 border-[3px]">{!currentAccount ? "Connect Wallet" : "Hello Friend"}</button>
                
                <div >
                    {!toggleMenu && (
