@@ -57,3 +57,6 @@ Commits
 #28. Started Services component. Created cards and displayed with styling. Also constructed the footer component as well. Got both components set up and started styling.
 
 #29. Finished styling the Services and Footer components. Finished styling most of the main page with responsive design.
+
+#30. Finished styling the main home page for all screen sizes. All finished. Then created Modal.jsx and started creating a modal component. Finished the modal component and did a ton of styling for all the screen sizes. Finished completely the page. Forgot to commit to get Git and already started the about page. Imported the Navbar and Footer components, set the bg, and now am preparing to work on the Main component.
+

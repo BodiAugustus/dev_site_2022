@@ -4,12 +4,17 @@ import { NavbarContext } from './providers/NavContext'
 import { Input, Showcase, CryptoCard, Loader,  } from '.'
 import Image from 'next/image'
 import {PaymentsContext} from './providers/PaymentsContext'
-
+import  Modal  from './modals/Modal'
+import  Modal2 from './modals/Modal2'
+import  Modal3 from './modals/Modal3'
+import  Modal4 from './modals/Modal4'
+import  Modal5 from './modals/Modal5'
+import  Modal6 from './modals/Modal6'
 import { HeroContext } from './providers/HeroContext'
 
 
 
-const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[1.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
+const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[2.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
 
  
@@ -18,6 +23,7 @@ const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
     const {connectWallet, currentAccount, formData, sendPayment, handleChange} = useContext(PaymentsContext)
+    const {openModal, closeModal, openModal2, closeModal2, openModal3, closeModal3, openModal4, closeModal4, openModal5, closeModal5,openModal6, closeModal6} = useContext(HeroContext) 
  
 
 
@@ -46,7 +52,7 @@ const Hero = () => {
                 /> */}
                 <div className="flex  justify-start flex-col sm:w-full md:mr-10 ">
                     
-                    <h1 className=' xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace sm:text-center'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
+                    <h1 className=' xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl  lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace sm:text-center xl:-mt-8'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
                     <h4 className='text-slate-50 mt-1 font-cinzel sm:mx-auto sm:text-2xl md:text-3xl xl:mx-0'>NextJS | Solidity</h4>
                     {!currentAccount && (
                     <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
@@ -96,16 +102,45 @@ const Hero = () => {
                 
                 <div key='rightSideForDesktop'>
 
-                        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-marcellus text-white text-center underline underline-offset-8 mt-2 -mb-4 sm:-mb-1'>At A Glance Services:</h2>
-                     <div className="grid sm:grid-cols-2 grid-cols-2 w-full xl:w-[75%] xl:mx-auto mt-8 ">
-                         <div className={`rounded-tl-2xl ${commonStyles}`}>Ethereum | Fantom</div>
-                         <div className={`${commonStyles} rounded-tr-2xl`}>Web3.0</div>
-                         <div className={`${commonStyles} `}>dApps</div>
-                         <div className={`${commonStyles} `}>MetaMask</div>
-                         <div className={`${commonStyles} rounded-bl-2xl`}>DeFi | Crypto</div>
-                         <div className={`${commonStyles} rounded-br-2xl`}>Blockchain</div>
+                        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bebes text-white text-center underline underline-offset-8 mt-2 -mb-4 xl:-mb-4 sm:-mb-1'>At A Glance Services:</h2>
+                       
+                       
+                      
+                    
+                     <div className="grid sm:grid-cols-2 grid-cols-2 w-full xl:w-[85%] xl:mx-auto mt-8 cursor-pointer">
+                         <div   onClick={openModal} className={`rounded-tl-2xl ${commonStyles}`}>Ethereum | Fantom  
+                         
+                         </div>
+                         <Modal 
+                        
+                         className='text-white'
+                         />
+                         <div className={`${commonStyles} rounded-tr-2xl`} onClick={openModal2}>Web3.0</div>
+                         <Modal2
+                             message="please work"
+                         />
+                         
+                        
+                         <div className={`${commonStyles} `} onClick={openModal3}>dApps</div>
+                         <Modal3
+                             message="hi from 3"
+                         />
+                       
+                         <div className={`${commonStyles} `}
+                         onClick={openModal4}>MetaMask</div>
+                         <Modal4 
+                             message="hi from 4"
+                         />
+                         <div className={`${commonStyles} rounded-bl-2xl`} onClick={openModal5}>DeFi | Crypto</div>
+                         <Modal5 
+                             message="hi from 5"
+                         />
+                         <div className={`${commonStyles} rounded-br-2xl`} onClick={openModal6}>Blockchain</div>
+                         <Modal6
+                         message='hi from 6'
+                         />
                      </div>
-                     <h1 className='text-white text-center mt-8 -mb-2  underline underline-offset-8 text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-marcellus xl:mt-4 xl:-mb-4'>Featured Projects</h1>
+                     <h1 className='text-white text-center mt-8 -mb-2  underline underline-offset-8 text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bebes xl:mt-8 xl:-mb-6'>Featured Projects</h1>
                      <div className="sm:grid sm:grid-cols-2">
                      <Showcase/>
                      

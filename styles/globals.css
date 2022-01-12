@@ -110,3 +110,12 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0829be,
     0 0 82px #0d2bb1, 0 0 92px #0c28a8, 0 0 102px #092086, 0 0 151px #050d33;
 }
+
+.show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+.hide-modal {
+  visibility: invisible;
+  z-index: -10;
+}

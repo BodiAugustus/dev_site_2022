@@ -1,0 +1,6 @@
+export {default as Modal} from './Modal'
+export {default as Modal2} from './modals/Modal2'
+export {default as Modal3} from './modals/Modal3'
+export {default as Modal4} from './modals/Modal4'
+export {default as Modal5} from './modals/Modal5'
+export {default as Modal6} from './modals/Modal6'
