@@ -34,7 +34,7 @@ const ImgBox = () => {
                 </h2>
             </div>
            <div className="w-[90vw] my-2 mx-auto">
-           <div className="my-0 mx-auto mt-2 w-[80vw] h-[450px] max-w-[800px] text-center relative overflow-hidden flex border-4 rounded-xl border-[#00bfff]">
+           <div className="my-0 mx-auto mt-2 w-[90vw] h-[500px] max-w-[800px] text-center relative overflow-hidden flex border-4 rounded-xl border-[#00bfff]">
                 {picturesArray.map((picture, pictureIndex) => {
                     const {id, image, title, location} = picture
                     let position = 'nextSlide'
@@ -55,7 +55,7 @@ const ImgBox = () => {
                     
                     />
                    <div className="flex flex-col bg-[#142F43] h-full font-marcellus ">
-                   <h4 className='text-white text-center text-2xl mt-6 '>{title}</h4>
+                   <h4 className='text-white text-center text-2xl mt-8 '>{title}</h4>
                     <p className='text-white text-center text-lg'>{location}</p>
                    </div>
                     

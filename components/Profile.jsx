@@ -13,6 +13,7 @@ const Profile = () => {
                 height="40%"
                 layout='responsive'
                 className='rounded-full '
+                priority
                 />
                 
                 

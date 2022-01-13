@@ -65,3 +65,5 @@ Commits
 #32. Constructed the ImgBox component. Created images/setImages useState to keep the image data. Created index/setIndex to keep track of images in the slide. Mapped over images.
 
 #33. Finished ImgBox component. Used a useEffect to handle the last slide in the array. Created the 2nd useEffect for the autoslide functionality. Finished all styling and adding in the picture data. Component complete.
+
+#34. Started on BookBox component. Used WebViewer to allow PDF embedding into the component using npm install @pdftron/webviewer --save. Copied public and core folders from node_modules into this project and paste them inside the public folder. Created new folder inside public called lib (library) and put ui and core folders inside it. Finished setting up the embedded pdf document - used imported code from the webViewer docs. Did styling. Component finished.
