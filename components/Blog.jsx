@@ -2,15 +2,17 @@ import {blogsPost} from './data/data'
 import Image from 'next/image'
 import { useState, useEffect, useContext } from 'react'
 import { HeroContext } from './providers/HeroContext'
+import { NavbarContext } from './providers/NavContext'
 
 import {CgChevronLeftR, CgChevronRightR} from 'react-icons/cg'
-import {CgChevronRightO} from 'react-icons/cg'
+
 
 
 const Blog = () => {
     const {readMore, setReadMore} = useContext(HeroContext)
     const [images, setImages] = useState(blogsPost)
     const [index, setIndex] = useState(0)
+    const {toggleMenu} = useContext(NavbarContext)
 
     useEffect(() => {
        const lastIndex = images.length - 1
@@ -30,11 +32,13 @@ const Blog = () => {
         return () => clearInterval(slider)
     }, [index, ])
     return (
-        <section>
+       <>
+           {!toggleMenu &&
+            <section>
             <div className="">
                 <h2 className='text-white text-center text-3xl mb-2 mt-8'>
                    
-                    and I really ❤ DeFi...
+                    and I really ❤ DeFi!
                 </h2>
             </div>
            <div className="w-[90vw] h-[90vh] my-2 mx-auto">
@@ -66,9 +70,9 @@ const Blog = () => {
                         <h4 className='text-white indent-8 first-letter:text-3xl px-2 font-medium overflow-y-scroll '>
                         { readMore ?
                             content :
-                            `${content.substring(0, 650)}...`
+                            `${content.substring(0, 620)}...`
                             }
-                             <button className='px-2 my-2 mx-2   text-md text-sky-900 pb-[2px] bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base xl:mt-3' onClick={() => setReadMore(!readMore)}>{readMore ? "Show Less" : "Show More"}
+                             <button className='px-2 my-2 mx-2   text-md text-sky-900 pb-[2px] bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base xl:mt-3 mb-4' onClick={() => setReadMore(!readMore)}>{readMore ? "Show Less" : "Show More"}
                              </button>
                         </h4>
                     </div>
@@ -87,6 +91,8 @@ const Blog = () => {
             </div>
            </div>
         </section>
+           }
+       </>
     )
 }
 

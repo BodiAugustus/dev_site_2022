@@ -1,13 +1,14 @@
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import {picturesArray} from './data/data'
 import {CgChevronLeftR, CgChevronRightR} from 'react-icons/cg'
-import {CgChevronRightO} from 'react-icons/cg'
+import { NavbarContext } from './providers/NavContext'
 
 
 const ImgBox = () => {
     const [images, setImages] = useState(picturesArray)
     const [index, setIndex] = useState(0)
+    const {toggleMenu} = useContext(NavbarContext)
 
     useEffect(() => {
        const lastIndex = images.length - 1
@@ -26,7 +27,9 @@ const ImgBox = () => {
         return () => clearInterval(slider)
     }, [index])
     return (
-        <section>
+        <>
+        {!toggleMenu &&
+            <section>
             <div className="">
                 <h2 className='text-white text-center text-3xl mb-2'>
                    
@@ -72,6 +75,8 @@ const ImgBox = () => {
             </div>
            </div>
         </section>
+        }
+        </>
     )
 }
 
