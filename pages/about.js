@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { Navbar, Footer, Profile, ImgBox, BookBox } from "../components"
+import { Navbar, Footer, Profile, ImgBox, BookBox, Blog } from "../components"
 
 
 export default function About(){
@@ -19,6 +19,7 @@ export default function About(){
             <Profile/>
             <ImgBox/>
             <BookBox/>
+            <Blog/>
             <Footer/>
         </div>
     )

@@ -15,5 +15,6 @@ export {default as Input} from './Input'
 export {default as SingleCard} from './SingleCard'
 export {default as Modal} from './modals/Modal'
 export {default as Profile} from './Profile'
+export {default as Blog} from './Blog'
 
 

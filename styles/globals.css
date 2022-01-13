@@ -153,6 +153,27 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
   cursor: pointer;
   transition: all;
 }
+.prevA,
+.nextA {
+  position: absolute;
+  top: 120px;
+  left: 293px;
+  transform: translateX(-10%);
+  margin:0 1rem;
+
+  
+  color: #00bfff;
+  
+  width: 2.95rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all;
+}
 
 .prev {
   left: 0;
@@ -160,3 +181,10 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
 .next {
   right: 0;
 }
+.prevA {
+  left: 0;
+}
+.nextA {
+  right: 0;
+}
+
