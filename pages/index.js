@@ -23,7 +23,7 @@ export default function Home() {
     </Head>
     
     <div className="min-h-screen">
-      <div className="bg-[url('/images/test.png')]
+      <div className="bg-[url('https://res.cloudinary.com/bodi-web3/image/upload/v1642024685/test_jdkem4.png')]
       ">
         <Navbar/>
         <Hero/>

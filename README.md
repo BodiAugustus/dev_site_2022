@@ -60,3 +60,5 @@ Commits
 
 #30. Finished styling the main home page for all screen sizes. All finished. Then created Modal.jsx and started creating a modal component. Finished the modal component and did a ton of styling for all the screen sizes. Finished completely the page. Forgot to commit to get Git and already started the about page. Imported the Navbar and Footer components, set the bg, and now am preparing to work on the Main component.
 
+#31. Created Profile.jsx component and completed. Then added a new array of objects to data.js containing the images for the ImgBox component.
+

@@ -119,3 +119,8 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
   visibility: invisible;
   z-index: -10;
 }
+
+.img{
+  shape-outside: url('/images/Bodi.jpg');
+  shape-margin: 15px;
+}

@@ -1,5 +1,6 @@
 import Head from "next/head"
-import { Navbar,Footer } from "../components"
+import { Navbar, Footer, Profile, ImgBox } from "../components"
+
 
 export default function About(){
     return (
@@ -15,6 +16,8 @@ export default function About(){
                 <meta name="theme-color" content="#ffffff"/> 
             </Head>
             <Navbar />
+            <Profile/>
+            <ImgBox/>
             <Footer/>
         </div>
     )
