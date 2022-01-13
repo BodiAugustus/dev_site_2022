@@ -120,7 +120,43 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
   z-index: -10;
 }
 
-.img{
-  shape-outside: url('/images/Bodi.jpg');
-  shape-margin: 15px;
+
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+.lastSlide {
+  transform: translateX(-100%);
+}
+.nextSlide {
+  transform: translateX(100%);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 200px;
+  margin:0 1rem;
+  transform: translateY(-100%);
+  background: blue;
+  color: white;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all;
+}
+.prev:hover,
+.next:hover {
+  background: red;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
 }

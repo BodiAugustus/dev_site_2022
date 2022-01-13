@@ -96,19 +96,14 @@ export const skills = [
     },
   ];
   
-export const images = [
+export const picturesArray = [
   {
     id: "as3f",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026662/wedding_r5qyja.jpg",
     title: "Best Man",
     location: "Bangkok, Thailand"
   },
-  {
-    id: "f465",
-    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026661/sunset2_fb7ing.jpg",
-    title: "Perfect Sunset",
-    location: "Koh Phi Phi, Thailand"
-  },
+
   {
     id: "f465",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026661/sunset2_fb7ing.jpg",
@@ -119,7 +114,7 @@ export const images = [
     id: "ffg4",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026661/temple_pgf8wp.jpg",
     title: "Inner Sanctum",
-    location: "Adzmom Monastary, Nepal"
+    location: "Adzom Monastary, Nepal"
   },
   {
     id: "f45f",
@@ -149,7 +144,7 @@ export const images = [
     id: "btwh",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026640/captain_cahzyt.jpg",
     title: "Skipper",
-    location: "Gulf Stream, Bahamas"
+    location: "Gulf Stream, Florida"
   },
   {
     id: "bruh",
@@ -178,7 +173,7 @@ export const images = [
   {
     id: "j443",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026640/chess_vhcauk.jpg",
-    title: "Focus",
+    title: "Focused",
     location: "Pisar, Micronesia"
   },
   {
@@ -196,7 +191,7 @@ export const images = [
   {
     id: "fg6gf",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/insideBoat_kjwf7i.jpg",
-    title: "Solo Sailor",
+    title: "Solo Sailing",
     location: "New Smyrna Beach, USA"
   },
   {
@@ -226,13 +221,13 @@ export const images = [
   {
     id: "7h4f",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026642/NotreDame_bjcebi.jpg",
-    title: "Touristy",
+    title: "Pleasant",
     location: "Paris, France"
   },
   {
     id: "45hg",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026603/boysclub_u9tiui.jpg",
-    title: "Local",
+    title: "Local Crew",
     location: "Wedo, Micronesia"
   },
   {

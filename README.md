@@ -62,3 +62,4 @@ Commits
 
 #31. Created Profile.jsx component and completed. Then added a new array of objects to data.js containing the images for the ImgBox component.
 
+#32. Constructed the ImgBox component. Created images/setImages useState to keep the image data. Created index/setIndex to keep track of images in the slide. Mapped over images.
