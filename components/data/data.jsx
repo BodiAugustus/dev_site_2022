@@ -98,18 +98,18 @@ export const skills = [
   
 export const picturesArray = [
   {
+    id: "f465",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026661/sunset2_fb7ing.jpg",
+    title: "A Perfect Sunset",
+    location: "Koh Phi Phi, Thailand"
+  },
+  {
     id: "as3f",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026662/wedding_r5qyja.jpg",
-    title: "Best Man",
+    title: "The Best Man",
     location: "Bangkok, Thailand"
   },
 
-  {
-    id: "f465",
-    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026661/sunset2_fb7ing.jpg",
-    title: "Perfect Sunset",
-    location: "Koh Phi Phi, Thailand"
-  },
   {
     id: "ffg4",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026661/temple_pgf8wp.jpg",
@@ -117,9 +117,15 @@ export const picturesArray = [
     location: "Adzom Monastary, Nepal"
   },
   {
+    id: "f48jh",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042993/myLove_l0k3vy.jpg",
+    title: "My Love",
+    location: "The Cocoon, Koh Samui"
+  },
+  {
     id: "f45f",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026642/sailboat2_jbuecg.jpg",
-    title: "Blue Water",
+    title: "Blue Water Sailing",
     location: "Chuuk Lagoon, Micronesia"
   },
   {
@@ -131,13 +137,13 @@ export const picturesArray = [
   {
     id: "s99f",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/OstiaAntia_l1vpdb.jpg",
-    title: "Ruins",
+    title: "Roman Ruins",
     location: "Ostia Antica, Italy"
   },
   {
     id: "spph",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/jamBay_pef8tu.jpg",
-    title: "Fun Day",
+    title: "Friends at the Beach",
     location: "Jam Bay, Thailand"
   },
   {
@@ -149,26 +155,44 @@ export const picturesArray = [
   {
     id: "bruh",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026605/lighthouse_uic2fv.jpg",
-    title: "Lighthouse",
+    title: "Japanese Lighthouse",
     location: "Chuuk, Micronesia"
+  },
+  {
+    id: "65hf3",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042994/stormClouds_xlajw6.jpg",
+    title: "Storm Clouds",
+    location: "Coral Hill, Koh Samui"
   },
   {
     id: "hallow",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/Halloween_czlqdw.jpg",
-    title: "Halloween",
+    title: "Halloween Party",
     location: "Koh Samui, Thailand"
   },
   {
-    id: "hallow",
+    id: "893hs",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/littleMonk_gjrvrh.jpg",
-    title: "Little Monk",
+    title: "A Little Monk",
     location: "Dallu, Nepal"
+  },
+  {
+    id: "46fds",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042993/Hagia_inffdn.jpg",
+    title: "The Hagia Sophia",
+    location: "Istanbul, Turkey"
   },
   {
     id: "j633",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/jungleHideout_hwgbah.jpg",
-    title: "Beach Bar",
+    title: "Secluded Beach Bar",
     location: "Koh Poda, Thailand"
+  },
+  {
+    id: "5g35f",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042994/wilson_qd1g4b.jpg",
+    title: "Wilson",
+    location: "Coral Hill, Koh Samui"
   },
   {
     id: "j443",
@@ -179,13 +203,19 @@ export const picturesArray = [
   {
     id: "8943",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026642/Penang_vq7ybg.jpg",
-    title: "Art",
+    title: "Penang Street Art",
     location: "Penang, Malaysia"
+  },
+  {
+    id: "4g6788",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042993/crew_uoldfs.jpg",
+    title: "OG Crew",
+    location: "Chuuk, Micronesia"
   },
   {
     id: "k56gf",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026642/studies_ij0p3b.jpg",
-    title: "Studies",
+    title: "Self Studies",
     location: "Dnipro, Ukraine"
   },
   {
@@ -197,7 +227,7 @@ export const picturesArray = [
   {
     id: "pt65",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026838/volley2_l9c6rp.jpg",
-    title: "Nice Picture",
+    title: "Good Game",
     location: "Jam Bay, Thailand"
   },
   {
@@ -209,19 +239,19 @@ export const picturesArray = [
   {
     id: "l53d",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/haadYuan_bzyt8v.jpg",
-    title: "Favorite Beach",
+    title: "My Favorite Beach",
     location: "Koh Phang An, Thailand"
   },
   {
     id: "k465",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026606/shipwreck_1_nraugw.jpg",
-    title: "Shipwreck",
+    title: "Shallow Shipwreck",
     location: "Chuuk, Micronesia"
   },
   {
     id: "7h4f",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026642/NotreDame_bjcebi.jpg",
-    title: "Pleasant",
+    title: "Pleasant Memories",
     location: "Paris, France"
   },
   {
@@ -233,25 +263,127 @@ export const picturesArray = [
   {
     id: "y53d",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026604/jungleWalkPohn_mucqik.jpg",
-    title: "Lovely Trail",
+    title: "A Jungle Trail",
     location: "Pohnpei, Micronesia"
   },
   {
     id: "4gf5",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026605/pisarBoatride_pe2f49.jpg",
-    title: "Boat Ride",
+    title: "Pisar Boat Ride",
     location: "Pisar, Micronesia"
   },
   {
     id: "hhgg",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/kohTao_xgugbt.jpg",
-    title: "Lovely View",
+    title: "Dank Sunset",
     location: "Koh Tao, Thailand"
   },
   {
     id: "53h6",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026641/nepalMnts_ozbvxd.jpg",
-    title: "Hills",
+    title: "Carpeted Hills",
     location: "Dnipro, Ukraine"
+  },
+  {
+    id: "35hfd",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042994/riverView_pwgpk7.jpg",
+    title: "River View",
+    location: "Dnipro, Ukraine"
+  },
+  {
+    id: "4dh54",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042993/gathering_pwt2ku.jpg",
+    title: "Dusk Time",
+    location: "Bee's Bar, Koh Samui"
+  },
+  {
+    id: "3f7654",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042993/home_yee05h.jpg",
+    title: "A Garden View",
+    location: "Coral Hill, Koh Samui"
+  },
+  {
+    id: "e38gf",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642087963/bhutaneseFriends_w9pono.jpg",
+    title: "Bhutanese Friends",
+    location: "Kathmandu, Nepal"
+  },
+  {
+    id: "z56jh",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642087962/mayaBay_a9w3o8.jpg",
+    title: "The Beach",
+    location: "Maya Bay, Thailand"
+  },
+  {
+    id: "8ks2v",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642087963/monks_klh8jc.jpg",
+    title: "Little Monks",
+    location: "Adzom Monastary, Nepal"
+  },
+  {
+    id: "ddd23",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642087963/smile_ydq01c.jpg",
+    title: "A Sandy Coat",
+    location: "Koh Samui, Thailand"
+  },
+  {
+    id: "8kdv3",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642087963/notre_ieziyi.jpg",
+    title: "Notre Dame",
+    location: "Paris, France"
+  },
+  {
+    id: "5g2df",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642087963/Kayak_bjjowd.jpg",
+    title: "Kayaking to Caves",
+    location: "Siam Reap, Cambodia"
+  },
+  {
+    id: "57jvvcx",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642087963/boats_rp7zch.jpg",
+    title: "Boats for Fishing",
+    location: "Koh Tao, Thailand"
+  },
+  {
+    id: "sdfss",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642042994/sunflowers_wr7on6.jpg",
+    title: "Love's Sunflower's",
+    location: "Coral Hill, Thailand"
+  },
+  {
+    id: "43g6hf",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026640/gayPride_poo4pn.jpg",
+    title: "Showing Love",
+    location: "Koh Samui, Thailand"
+  },
+  {
+    id: "dggk87",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026606/PohnpeiJungle_bqgl9c.jpg",
+    title: "Blazing a Trail",
+    location: "Pohnpei, Micronesia"
+  },
+  {
+    id: "f5edft",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026605/pisar_mbezvz.jpg",
+    title: "Pisar",
+    location: "Pisar, Micronesia"
+  },
+  {
+    id: "33slmo",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642026606/seascape_cx8vjh.jpg",
+    title: "Chuuk Lagoon",
+    location: "Chuuk, Micronesia"
+  },
+  {
+    id: "xxxs25",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642088745/strongBack_husvbn.jpg",
+    title: "Strong Back",
+    location: "Jacksonville, FL"
+  },
+  {
+    id: "ty789",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642088745/Boo_fa2epi.jpg",
+    title: "My Reason",
+    location: "Koh Samui, Thailand"
   },
 ]
