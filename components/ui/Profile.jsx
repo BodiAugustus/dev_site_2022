@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useContext } from 'react'
-import { NavbarContext } from './providers/NavContext'
+import { NavbarContext } from '../providers/NavContext'
 
 const Profile = () => {
     const {toggleMenu} = useContext(NavbarContext)

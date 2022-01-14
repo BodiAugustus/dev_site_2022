@@ -77,3 +77,5 @@ Commits
 #38. Created contact.js page. Downloaded npm i react-tsparticles. Downloaded npm install @emailjs/browser. Styled Contact page for responsive viewing. FRONT END OF SITE IS FINISHED - excepting for a change to the layout for the about page which will need to be redone but which I will do after building out the backend first.
 
 #39. Created jsconfig.json file in root and created new compiler options to allow path aliases for each of the folders, components, public and style. Then went and changed the routes to the new form using @.
+
+#40. Created Web3Provider.jsx inside of providers folder. Moved all UI/layout component files into that folder. 

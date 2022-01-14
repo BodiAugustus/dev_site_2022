@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import {FiGithub} from 'react-icons/fi'
-import {showcase} from './data/data'
+import {showcase} from '../data/data'
 import {  useContext } from 'react'
-import { HeroContext } from './providers/HeroContext'
-import { NavbarContext } from './providers/NavContext'
+import { HeroContext } from '../providers/HeroContext'
+import { NavbarContext } from '../providers/NavContext'
 
 const Showcase = () => {
     const {readMore, setReadMore} = useContext(HeroContext)

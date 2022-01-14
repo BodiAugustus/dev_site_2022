@@ -1,8 +1,8 @@
-import {blogsPost} from './data/data'
+import {blogsPost} from '../data/data'
 import Image from 'next/image'
 import { useState, useEffect, useContext } from 'react'
-import { HeroContext } from './providers/HeroContext'
-import { NavbarContext } from './providers/NavContext'
+import { HeroContext } from '../providers/HeroContext'
+import { NavbarContext } from '../providers/NavContext'
 
 import {CgChevronLeftR, CgChevronRightR} from 'react-icons/cg'
 

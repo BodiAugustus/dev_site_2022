@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {skills} from './data/data'
+import {skills} from '../data/data'
 import {FiChevronsRight} from 'react-icons/fi'
 import {GiBlacksmith, GiScrollQuill, GiSpaceShuttle} from 'react-icons/gi'
 

@@ -1,18 +1,23 @@
 import { useContext } from "react"
-import { links } from "./data/data"
+import { links } from "../data/data"
 import MobMenu from "./MobMenu"
-import { NavbarContext } from "./providers/NavContext"
+import { NavbarContext } from "../providers/NavContext"
 import {GiGreekTemple} from "react-icons/gi"
 import Image from 'next/image'
 import { useRouter } from "next/router"
-import { PaymentsContext } from "./providers/PaymentsContext"
+import { PaymentsContext } from "../providers/PaymentsContext"
+import Link from "next/link"
 
 export const NavItem = ({title, classProps, url, id}) => {
     return (
-        <a key={id} className={` cursor-pointer font-marcellus sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl xl:text-3xl xl:first-letter:text-4xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4   first-letter:underline transition-all md:hover:bg-blue-600 rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
-         ${classProps}`} href={url}>
+       <>
+           <Link href={url}>
+           <a key={id} className={` cursor-pointer font-marcellus sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl xl:text-3xl xl:first-letter:text-4xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4   first-letter:underline transition-all md:hover:bg-blue-600 rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
+         ${classProps}`} >
             {title}
         </a>
+           </Link>
+       </>
     )
 }
 

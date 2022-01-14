@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { HeroContext } from "../providers/HeroContext"
+import { HeroContext } from "../../providers/HeroContext"
 
 
 const Modal4 = () => {

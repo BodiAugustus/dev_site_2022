@@ -1,16 +1,16 @@
 
 import { useContext, useEffect, useState} from 'react'
-import { NavbarContext } from './providers/NavContext'
-import { Input, Showcase, CryptoCard, Loader,  } from '.'
+import { NavbarContext } from '../providers/NavContext'
+import { Input, Showcase, CryptoCard, Loader,  } from '..'
 import Image from 'next/image'
-import {PaymentsContext} from './providers/PaymentsContext'
+import {PaymentsContext} from '../providers/PaymentsContext'
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'
 import  Modal3 from './modals/Modal3'
 import  Modal4 from './modals/Modal4'
 import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
-import { HeroContext } from './providers/HeroContext'
+import { HeroContext } from '../providers/HeroContext'
 
 
 

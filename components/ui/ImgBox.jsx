@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { useState, useEffect, useContext } from 'react'
-import {picturesArray} from './data/data'
+import {picturesArray} from '../data/data'
 import {CgChevronLeftR, CgChevronRightR} from 'react-icons/cg'
-import { NavbarContext } from './providers/NavContext'
+import { NavbarContext } from '../providers/NavContext'
 
 
 const ImgBox = () => {
