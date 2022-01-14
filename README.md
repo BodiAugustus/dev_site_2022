@@ -73,3 +73,5 @@ Commits
 #36. Added and styled the WhatElse component. Created WhatElse.jsx to do so. Also added toggleMenu from the NavigationContext to keep the Profile, ImgBox, and Bookbox from being displayed on the mobile menu.
 
 #37. Carried out the styling changes for responsive layouts. Finished the About page.
+
+#38. Created contact.js page. Downloaded npm i react-tsparticles. Downloaded npm install @emailjs/browser. Styled Contact page for responsive viewing. FRONT END OF SITE IS FINISHED - excepting for a change to the layout for the about page which will need to be redone but which I will do after building out the backend first.

@@ -59,15 +59,20 @@ const MobMenu = () => {
                     </li>
  
  
-        {links.map((item,index) => 
-        <>
+        {links.map((item,index) => {
+            const {id, name, url} = item
+        return (
 
-        
-             <NavItem key={item + index} title={item.name} url={item.url} classProps="my-0 text-lg text-white text-3xl text-center mt-8
+             <NavItem key={id} title={name} url={url} classProps="my-0 text-lg text-white text-3xl text-center mt-8
              hover:transition-all hover:duration-700
               hover:bg-slate-300  hover:underline-offset-4 hover:decoration-2 z-50 hover:bg-opacity-20" />
+        )
+
+        
               
-        </>
+    
+        }
+   
         )}
 
     <div className="flex xs:mt-24 sm:mt-20  justify-around  ">
