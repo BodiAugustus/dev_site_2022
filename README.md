@@ -71,3 +71,5 @@ Commits
 #35. Started on Blog.jsx. Added blogsPost data into the data.jsx file. I do not want to add unneccessary task to this project and so for now instead of converting all of the blogs I have into markup and then building out a blog component I will simply reuse the slider component from the images and allow the post to be selected and red by button click. Will rerender using a markup built component after the next project is finished which actually requires one and it is not critical that this one be like that before launch. To do this I brought in the readMore/setReadMore from the HeroContext to use to toggle the button to display the full length text. Styled the buttons and card to make different from the slider above. Component finished.
 
 #36. Added and styled the WhatElse component. Created WhatElse.jsx to do so. Also added toggleMenu from the NavigationContext to keep the Profile, ImgBox, and Bookbox from being displayed on the mobile menu.
+
+#37. Carried out the styling changes for responsive layouts. Finished the About page.

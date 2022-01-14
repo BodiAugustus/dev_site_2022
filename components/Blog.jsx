@@ -36,13 +36,13 @@ const Blog = () => {
            {!toggleMenu &&
             <section>
             <div className="">
-                <h2 className='text-white text-center text-3xl mb-2 mt-8'>
+                <h2 className='text-white text-center text-3xl mb-2 mt-8 md:text-4xl lg:text-5xl lg:mb-3'>
                    
                     and I really ❤ DeFi!
                 </h2>
             </div>
-           <div className="w-[90vw] h-[90vh] my-2 mx-auto">
-           <div className="my-0 mx-auto mt-2 w-[90vw] h-[90vh] max-w-[800px] text-center relative overflow-hidden flex border-4 rounded-xl border-[#00bfff]">
+           <div className="w-[90vw] h-[90vh] md:h-[75vh]  my-2 mx-auto">
+           <div className="my-0 mx-auto mt-2 w-[90vw] h-[90vh] max-w-[850px] md:h-[70vh] lg:h-[124vh] xl:h-[105vh] text-center relative overflow-hidden flex border-4 rounded-xl  border-[#00bfff]">
                 {blogsPost.map((blog, blogIndex) => {
                     const {id, image, content, date} = blog
                     let position = 'nextSlide'
@@ -54,7 +54,7 @@ const Blog = () => {
                     }
                     return (
                     <article key={id} className={`absolute top-0 left-0 w-[100%] h-[100%] opacity-0 ${position} `}>
-                    <div className="w-[100%] h-[28%]">
+                    <div className="w-[100%] h-[28%] md:h-[37%] lg:h-[45%] xl:h-[41%]">
                     <Image
                     src={image}
                     width="100%"
@@ -64,10 +64,10 @@ const Blog = () => {
                     
                     />
                     </div>
-                   <div className="flex flex-col bg-[#142F43] h-full font-marcellus ">
-                   <div className="flex flex-col text-center p-3 md:text-lg lg:text-base overflow-y-scroll h-[480px]">
-                        <h2 className='text-white font-marcellus text-xl underline underline-offset-4'>{date}</h2>
-                        <h4 className='text-white indent-8 first-letter:text-3xl px-2 font-medium overflow-y-scroll '>
+                   <div className="flex flex-col bg-[#142F43] h-full font-marcellus md:mt-20 ">
+                   <div className="flex flex-col text-center p-3 md:text-lg lg:text-base overflow-y-scroll h-[480px] md:h-[380px]">
+                        <h2 className='text-white font-marcellus text-xl md:text-2xl underline underline-offset-4 md:mb-1 xl:text-3xl lg:mt-4'>{date}</h2>
+                        <h4 className='text-white indent-8 first-letter:text-3xl px-2 font-medium overflow-y-scroll md:text-xl xl:text-2xl xl:px-4 '>
                         { readMore ?
                             content :
                             `${content.substring(0, 620)}...`
@@ -81,11 +81,11 @@ const Blog = () => {
                     </article>
                     )
                 })}
-                <button className='prevA' onClick={() => {setIndex(index - 1)}}>
+                <button className='absolute top-[120px] md:top-[280px] l-[293px] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff] ' onClick={() => {setIndex(index - 1)}}>
                     <CgChevronLeftR className='hover:bg-sky-900 rounded-xl transition-all'/>
                     
                 </button>
-                <button className='nextA' onClick={() => {setIndex(index + 1)}}>
+                <button className='absolute top-[120px] md:top-[280px] left-[298px] md:left-[615px] lg:left-[775px] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff]' onClick={() => {setIndex(index + 1)}}>
                     <CgChevronRightR className='hover:bg-sky-900 rounded-xl transition-all'/>    
                 </button>
             </div>
