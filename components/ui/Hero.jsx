@@ -62,7 +62,7 @@ const Hero = () => {
                    
                    {isLoadingWeb3 ?
                     <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
-                     rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider border-2 border-sky-400"
+                     rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider border-2 border-sky-400 disabled:opacity-50 disabled:cursor-pointer"
                      
                      onClick={connect}
                      >Loading...</button> : isWeb3Loaded ?
@@ -76,7 +76,7 @@ const Hero = () => {
                      <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
                      rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider border-2 border-sky-400"
                      type='button'
-                     onClick={connect}
+                     onClick={() => window.open("https://metamask.io/download.html", "_blank")}
                      >Install MetaMask</button> 
                     }
                  

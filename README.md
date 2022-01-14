@@ -91,3 +91,5 @@ Commits
 #45. Conditionally rendered messages for the wallet connect buttons depending on if web3provider is loading/present or not. Created isWeb3Loaded property inside _web3Api.
 
 #46. Created button folder and index.js inside of it. Created Button component. Swapped out button/> for Button/> inside Hero and Navbar. Added another conditional to the ternary operators (made dbl ternary) to display a loading message on the button during web3 init.
+
+#47. Disabled the button during certain condition. Extended tailwinds functionality in config.js to allow opacity to accept disabled as a property. Same for the cursor. Set disabled to the connect meta buttons during web3loading state. Set the install metamask buttons to direct to the metamask homepage using onclick handlers.
