@@ -1,7 +1,6 @@
 export {default as Loader} from './Loader'
 export {default as BookBox} from './BookBox'
 export {default as Footer} from './Footer'
-export {default as Form} from './Form'
 export {default as Hero} from './Hero'
 export {default as ImgBox} from './ImgBox'
 export {default as Navbar} from './Navbar'
