@@ -5,7 +5,6 @@ import { NavbarContext } from "../providers/NavContext"
 import {GiGreekTemple} from "react-icons/gi"
 import Image from 'next/image'
 import { useRouter } from "next/router"
-import { PaymentsContext } from "../providers/PaymentsContext"
 import Link from "next/link"
 
 export const NavItem = ({title, classProps, url, id}) => {
@@ -23,7 +22,7 @@ export const NavItem = ({title, classProps, url, id}) => {
 
 const Navbar = () => {
 const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
-const {connectWallet, currentAccount} = useContext(PaymentsContext)
+
 
 
     const sprucey = "https://www.sprucey.dev"
@@ -50,7 +49,7 @@ const {connectWallet, currentAccount} = useContext(PaymentsContext)
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>
-                   <button onClick={connectWallet} key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75  py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 text-white xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-sky-400 border-[3px]">{!currentAccount ? "Connect Wallet" : "Hello Friend"}</button>
+                   <button  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75  py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 text-white xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-sky-400 border-[3px]">Hello!</button>
                
                <div >
                    {!toggleMenu && (

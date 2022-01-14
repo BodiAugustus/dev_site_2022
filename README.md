@@ -84,4 +84,4 @@ Commits
 
 #42. Already have metamask provider installed. Installed npm i web3 as well. Created a useEffect to load the provider and web3Api/setWeb3Api as new state variables to keep the key/values stored. Setup the web3Api and passed it through the context as a child.
 
-#43. 
+#43. Deleted the old PaymentsProvider and the smartContracts directory. Will start from sctratch. Tested provider and for web3 being loaded - test successful. 

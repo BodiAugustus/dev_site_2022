@@ -3,7 +3,7 @@ import { useContext, useEffect, useState} from 'react'
 import { NavbarContext } from '../providers/NavContext'
 import { Input, Showcase, CryptoCard, Loader,  } from '..'
 import Image from 'next/image'
-import {PaymentsContext} from '../providers/PaymentsContext'
+
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'
 import  Modal3 from './modals/Modal3'
@@ -22,12 +22,13 @@ const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center
 const Hero = () => {
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
-    const {connectWallet, currentAccount, formData, sendPayment, handleChange} = useContext(PaymentsContext)
+    const [currentAccount, setCurrentAcount] = useState(true)
+
     const {openModal, closeModal, openModal2, closeModal2, openModal3, closeModal3, openModal4, closeModal4, openModal5, closeModal5,openModal6, closeModal6} = useContext(HeroContext) 
  
 
 
-
+    const [formData, setFormData] = useState({addressTo: '', amount: '', message: ''})
   
 
     const handleSubmit = (e) => {
@@ -36,9 +37,14 @@ const Hero = () => {
 
         if(!addressTo || !amount || !message) return;
 
-        sendPayment()
+        setFormData({addressTo: "d ", amount: ' d', message: 'd '})
         setIsLoading(true)
+        alert('payment sent')
 
+        
+    }
+    const handleChange = (e, name) => {
+        setFormData((prevState) => ({...prevState, [name]: e.target.value}))
     }
     
     return (

@@ -1,11 +1,13 @@
 import Head from "next/head"
 import { Navbar, Footer, Profile, ImgBox, BookBox, WhatElse } from "../components"
 import { Blog } from "../components"
+import { useWeb3 } from "@components/providers/web3/index"
 
 
 
 export default function About(){
-    
+    const {isInitialized, web3} = useWeb3()
+    console.log(web3)
     return (
         <div className="bg-sky-900">
             <Head>
@@ -20,6 +22,7 @@ export default function About(){
             </Head>
             <Navbar />
             <Profile/>
+            {isInitialized ? "WORKING" : "BROKEN"}
             <ImgBox/>
             <BookBox/>
             <Blog/>
