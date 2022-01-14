@@ -3,7 +3,9 @@ import { Navbar, Footer, Profile, ImgBox, BookBox, WhatElse } from "../component
 import { Blog } from "../components"
 
 
+
 export default function About(){
+    
     return (
         <div className="bg-sky-900">
             <Head>

@@ -79,3 +79,5 @@ Commits
 #39. Created jsconfig.json file in root and created new compiler options to allow path aliases for each of the folders, components, public and style. Then went and changed the routes to the new form using @.
 
 #40. Created Web3Provider.jsx inside of providers folder. Created a ui folder inside of components folder. Moved all UI/layout component files into that folder. 
+
+#41. Created web3 folder inside of providers folder. Created index.js to relace Web3Provder.jsx. Created Web3Context. Inside index.js I set up another useContext. Exported the finished context as useWeb3() function. Wrapped the application inside the Web3 provider. Tested the context to make sure props were passed successfully.
