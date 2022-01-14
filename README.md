@@ -86,4 +86,4 @@ Commits
 
 #43. Deleted the old PaymentsProvider and the smartContracts directory. Will start from sctratch. Tested provider and for web3 being loaded - test successful. 
 
-#44. 
+#44. changed isInitialized to isLoading, changed the values around. Connected MetaMask to the connect buttons. Did this using useMemo and eth_requestAccounts. bug occurs bc only can open Meta once from click before error due to ongoing process. Fixed with location.reload().

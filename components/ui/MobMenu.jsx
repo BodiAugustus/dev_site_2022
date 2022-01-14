@@ -66,9 +66,7 @@ const MobMenu = () => {
              <NavItem key={id} title={name} url={url} classProps="my-0 text-lg text-white text-3xl text-center mt-8
              hover:transition-all hover:duration-700
               hover:bg-slate-300  hover:underline-offset-4 hover:decoration-2 z-50 hover:bg-opacity-20" 
-              onClick={() => {
-                  window.r
-              }} />
+              onClick={!toggleMenu} />
         )
 
         

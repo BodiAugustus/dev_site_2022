@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState} from 'react'
 import { NavbarContext } from '../providers/NavContext'
 import { Input, Showcase, CryptoCard, Loader,  } from '..'
-import Image from 'next/image'
+
 
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'
@@ -12,14 +12,10 @@ import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
 import { HeroContext } from '../providers/HeroContext'
 
-
-
 const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[2.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
-
- 
-
 const Hero = () => {
+
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
     const [currentAccount, setCurrentAcount] = useState(true)
@@ -64,7 +60,7 @@ const Hero = () => {
                     <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
                      rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider border-2 border-sky-400"
                      type='button'
-                     onClick={connectWallet}
+                     onClick={connect}
                      >Connect Wallet</button>
                     )}
                  
