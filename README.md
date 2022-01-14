@@ -81,3 +81,5 @@ Commits
 #40. Created Web3Provider.jsx inside of providers folder. Created a ui folder inside of components folder. Moved all UI/layout component files into that folder. 
 
 #41. Created web3 folder inside of providers folder. Created index.js to relace Web3Provder.jsx. Created Web3Context. Inside index.js I set up another useContext. Exported the finished context as useWeb3() function. Wrapped the application inside the Web3 provider. Tested the context to make sure props were passed successfully.
+
+#42. Already have metamask provider installed. Installed npm i web3 as well. Created a useEffect to load the provider and web3Api/setWeb3Api as new state variables to keep the key/values stored. Setup the web3Api and passed it through the context as a child.
