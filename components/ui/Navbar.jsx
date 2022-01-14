@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { useRouter } from "next/router"
 import Link from "next/link"
 import { useWeb3 } from "@components/providers"
+import { Button } from "@components/ui"
 
 export const NavItem = ({title, classProps, url, id}) => {
   
@@ -23,7 +24,7 @@ export const NavItem = ({title, classProps, url, id}) => {
 }
 
 const Navbar = () => {
-    const {connect, isWeb3Loaded} = useWeb3()
+    const {connect, isWeb3Loaded, isLoadingWeb3} = useWeb3()
 const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
 
 
@@ -46,15 +47,17 @@ const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
                </div>
                <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl xl:first-letter:text-5xl
                 first-letter:text-stone-100 font-cinzel  xl:text-2xl ">Bodi</h1>
+                
                <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-100 xl:first-letter:text-5xl xl:text-2xl">Augustus</h1></div>
                <ul className="relative xs:l-10 text-white md:flex hidden  ">
                    {links.map((item, index) => (
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>
-                   {isWeb3Loaded ?
-                    <button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75  py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 text-white xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-sky-400 border-[3px]">Connect Wallet</button> :
-                    <button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75  py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 text-white xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-sky-400 border-[3px]">Install MetaMask</button>
+                   {isLoadingWeb3 ?
+                    <Button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75 border-sky-400 text-white py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14  xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-[3px]">Loading...</Button> : isWeb3Loaded ?
+                    <Button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75 border-sky-400 text-white py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14  xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-[3px]">Connect Wallet</Button> :
+                    <Button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75 border-sky-400 text-white py-2 px-4 rounded-lg outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 xs:invisible xs:hidden md:inline-block md:visible md:text-xl font-medium border-[3px]">Install MetaMask</Button>
                    
                    }
                
