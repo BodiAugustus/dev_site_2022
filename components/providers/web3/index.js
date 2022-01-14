@@ -10,7 +10,7 @@ export default function Web3Provider({children}){
         provider: null,
         web3: null,
         contract: null, 
-        isLoading: true
+        isLoadingWeb3: true
     })
 
     useEffect(() => {
@@ -23,12 +23,12 @@ export default function Web3Provider({children}){
                     provider,
                     web3,
                     contract: null,
-                    isLoading: false
+                    isLoadingWeb3: false
                 })
 
             }else{
                 setWeb3Api(api => ({
-                    ...api, isLoading:false
+                    ...api, isLoadingWeb3:false
                 }))
                 console.error("Please install MetaMask!");
             }
@@ -39,6 +39,7 @@ export default function Web3Provider({children}){
     const _web3Api = useMemo( () => {
         return {
             ...web3Api,
+            isWeb3Loaded: !web3Api.isLoadingWeb3 && web3Api.web3,
             connect: web3Api.provider ? 
             async () => {
                 try {

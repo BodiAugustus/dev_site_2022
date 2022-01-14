@@ -87,3 +87,5 @@ Commits
 #43. Deleted the old PaymentsProvider and the smartContracts directory. Will start from sctratch. Tested provider and for web3 being loaded - test successful. 
 
 #44. changed isInitialized to isLoading, changed the values around. Connected MetaMask to the connect buttons. Did this using useMemo and eth_requestAccounts. bug occurs bc only can open Meta once from click before error due to ongoing process. Fixed with location.reload().
+
+#45. Conditionally rendered messages for the wallet connect buttons depending on if web3provider is loading/present or not. Created isWeb3Loaded property inside _web3Api.

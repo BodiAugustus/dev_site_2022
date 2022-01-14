@@ -23,7 +23,7 @@ export const NavItem = ({title, classProps, url, id}) => {
 }
 
 const Navbar = () => {
-    const {connect} = useWeb3()
+    const {connect, isWeb3Loaded} = useWeb3()
 const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
 
 
@@ -52,7 +52,11 @@ const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>
-                   <button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75  py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 text-white xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-sky-400 border-[3px]">Hello!</button>
+                   {isWeb3Loaded ?
+                    <button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75  py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 text-white xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-sky-400 border-[3px]">Connect Wallet</button> :
+                    <button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75  py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 text-white xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-sky-400 border-[3px]">Install MetaMask</button>
+                   
+                   }
                
                <div >
                    {!toggleMenu && (
