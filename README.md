@@ -103,3 +103,8 @@ Commits
 #51. Changed connect button text to display greeting to signed in user by amending the ternary ops in hero and navbar. Hooked up the useAccount to display to the CCard component. Removed button display from hero during sign in since is redundant with the ui card display.
 
 #52. Setup handlerToGetUserMetaAccnt to rerender on account changes. Did this using another useEffect inside of useAccount.js.
+
+#53. Used swr package to handle data fetching instead of current useEffect scheme. npm i swr.
+
+#54. Added admin property to the use account to display admin greeting or guest greeting in ui. Setup admin account to TESTING account using adminAddresses. 
+

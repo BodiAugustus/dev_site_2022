@@ -91,7 +91,7 @@ export const skills = [
       stack: [
         "Solidity, Hardhat, Truffle, Remix, OpenZeppelin, Infura",
         "Ethereum, Fantom, Ropsten and other testing blockchains",
-        "MetaMask, web3js, ERC-20, DeFi, crypto",
+        "MetaMask, web3js, ethers, ERC-20, DeFi",
         "Solidity",
         "RUST",
       ],

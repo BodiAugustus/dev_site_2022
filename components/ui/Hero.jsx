@@ -27,6 +27,7 @@ const Hero = () => {
     // const {account} = hooks.useAccount(web3)
     const {openModal, openModal2, openModal3, openModal4, openModal5,openModal6} = useContext(HeroContext) 
     const {account} = handlerToGetUserMetaAccnt(web3)()
+    
  
 
 
@@ -70,7 +71,7 @@ const Hero = () => {
                      
                      onClick={connect}
                      >Loading...</button> : isWeb3Loaded ?
-                     account ?
+                     account.data ?
                     null
                      :
 
