@@ -1,7 +1,12 @@
 import { SiEthereum } from "react-icons/si"
 import { BsInfoCircle } from "react-icons/bs"
+import { useWeb3Context } from "@components/providers"
+import { handlerToGetUserMetaAccnt } from "@components/providers/web3/hooks/useAccount"
 
 const CryptoCard = () => {
+    const {web3} = useWeb3Context()
+    const {account} = handlerToGetUserMetaAccnt(web3)()
+
     return (
         <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-10 ">
         <div className="p-3 justify-end items-start flex-col rounded-xl h-40 xs:w-72 sm:h-52 sm:w-96 md:h-60 md:w-2/3 lg:w-full lg:h-44 xl:h-56  my-5 lg:my-4 bg-slate-400 eth-card white-glassmorphism">
@@ -15,7 +20,7 @@ const CryptoCard = () => {
                     <BsInfoCircle className="xs:text-lg md:text-2xl" color="#fff"/>
                 </div>
                 <div>
-                    <p className="text-white font-light text-sm md:text-lg">0xf73jd8s4...</p>
+                    <p className="text-white font-light text-sm md:text-lg">{account ? `Hi ${account}` : "Guest Card (Connect to MetaMask)"}</p>
                     <p className="text-white font-semibold text-lg md:text-xl mt-1">FTM Address</p>
                 </div>
                 
