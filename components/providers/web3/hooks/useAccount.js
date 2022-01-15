@@ -4,8 +4,10 @@
 import { useEffect, useState } from "react"
 
 
-export const handlerToGetUserMetaAccnt = (web3) => () => {
+export const handlerToGetUserMetaAccnt = (web3, provider) => () => {
     const [account, setAccount] = useState(null)
+
+    
 
     useEffect(() => {
         const getAccount = async () => {
@@ -14,6 +16,12 @@ export const handlerToGetUserMetaAccnt = (web3) => () => {
         }
         web3 && getAccount()
     },[web3])
+
+    useEffect(() => {
+        window.ethereum &&
+        window.ethereum.on("accountsChanged",
+        accounts => setAccount(accounts[0] ?? null))
+    },[])
     return {account}
 
 }

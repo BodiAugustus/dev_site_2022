@@ -17,6 +17,7 @@ export default function Web3Provider({children}){
     useEffect(() => {
         const loadProvider = async () => {
             const provider = await detectEthereumProvider()
+            
             if(provider){
                 const web3 = new Web3(provider)
                
@@ -39,17 +40,19 @@ export default function Web3Provider({children}){
 
     const _web3Api = useMemo( () => {
         const {web3, provider} = web3Api
+    
         return {
             ...web3Api,
             isWeb3Loaded: web3 != null,
             // hooks: setupHooks(web3),
-            getHooks: () => setupHooks(web3),
+            getHooks: () => setupHooks(web3, provider),
             connect: provider ? 
             async () => {
                 try {
                 await provider.request({method: "eth_requestAccounts"})
                 } catch (error) {
                     location.reload()
+                
                 }
             } :
             () => console.error("Cannot connect to MetaMask!")

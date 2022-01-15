@@ -101,3 +101,5 @@ Commits
 #50. Added use state to handlerToGetUserMetaAccnt function to keep track of current meta account user. Created a useEffect in same function to create side effects to get accounts using getAccount. Successfully displayed to UI.
 
 #51. Changed connect button text to display greeting to signed in user by amending the ternary ops in hero and navbar. Hooked up the useAccount to display to the CCard component. Removed button display from hero during sign in since is redundant with the ui card display.
+
+#52. Setup handlerToGetUserMetaAccnt to rerender on account changes. Did this using another useEffect inside of useAccount.js.
