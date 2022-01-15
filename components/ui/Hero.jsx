@@ -19,7 +19,7 @@ const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center
 
 
 const Hero = () => {
-    const {connect, isWeb3Loaded, isLoadingWeb3} = useWeb3()
+    const {connect, isWeb3Loaded, isLoadingWeb3, hooks} = useWeb3()
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
 

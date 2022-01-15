@@ -9,7 +9,11 @@ import Link from "next/link"
 import { useWeb3 } from "@components/providers"
 import { Button } from "@components/ui"
 
+
+
+
 export const NavItem = ({title, classProps, url, id}) => {
+
   
     return (
        <>
@@ -24,8 +28,10 @@ export const NavItem = ({title, classProps, url, id}) => {
 }
 
 const Navbar = () => {
-    const {connect, isWeb3Loaded, isLoadingWeb3} = useWeb3()
-const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
+    const {connect, isWeb3Loaded, isLoadingWeb3, hooks, web3} = useWeb3()
+    const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
+    const {account} = hooks.useAccount(web3)
+
 
 
 
@@ -34,6 +40,8 @@ const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
     return (
         <nav className="w-full justify-between items-center">
             <div className="flex relative lg:justify-between justify-between items-center">
+
+            {account}
                <div className="ml-2 mt-2 inline-block" >
                <Image 
                     src="/images/logo.png"
