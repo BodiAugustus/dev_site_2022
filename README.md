@@ -97,3 +97,5 @@ Commits
 #48. Got the active metamask user as well as the chain id to determine what chain is connected. Created hooks folder inside of web3 folder. Created useAccount.js inside. Also created setupHooks.js in same folder. Created setupHooks function. Embedded hooks into the provider. setHooks takes web3 which it uses to call useAccount with web3 as the parameter which will then be built out next to actual retrieve the active metamask user account.
 
 #49. Created web3 folder inside components. Then created folder called hooks. Then created useAccount.js. Created setupHooks() inside of the web3 provider. succesffuly pssed the useAccount hook to the hero, currently is just a string of text.
+
+#50. Added use state to handlerToGetUserMetaAccnt function to keep track of current meta account user. Created a useEffect in same function to create side effects to get accounts using getAccount. Successfully displayed to UI.

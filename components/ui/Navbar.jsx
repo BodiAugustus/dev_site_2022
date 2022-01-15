@@ -41,7 +41,7 @@ const Navbar = () => {
         <nav className="w-full justify-between items-center">
             <div className="flex relative lg:justify-between justify-between items-center">
 
-            {account}
+            {/* {account} */}
                <div className="ml-2 mt-2 inline-block" >
                <Image 
                     src="/images/logo.png"

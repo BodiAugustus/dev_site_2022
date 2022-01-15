@@ -67,7 +67,7 @@ export function useWeb3Context(){
     return useContext(Web3Context)
 }  
 
-export function useHooks(cb){
+export function useHooks(callback){
     const { getHooks } = useWeb3Context()
-    return cb(getHooks)
+    return callback(getHooks)
 }
