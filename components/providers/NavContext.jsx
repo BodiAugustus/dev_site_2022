@@ -12,6 +12,6 @@ export default function NavbarProvider({children}){
 }
 
 
-// export const useNavbarContext = () => {
-//     return useContext(NavbarContext)
-// }
+export const useNavbarContext = () => {
+    return useContext(NavbarContext)
+}

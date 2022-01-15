@@ -6,8 +6,12 @@ import {GiGreekTemple} from "react-icons/gi"
 import Image from 'next/image'
 import { useRouter } from "next/router"
 import Link from "next/link"
-import { useWeb3 } from "@components/providers"
+import { useWeb3Context } from "@components/providers"
 import { Button } from "@components/ui"
+import { handlerToGetUserMetaAccnt } from "@components/providers/web3/hooks/useAccount"
+import { userAccount } from "@components/web3/hooks/useAccount"
+
+
 
 
 
@@ -28,15 +32,11 @@ export const NavItem = ({title, classProps, url, id}) => {
 }
 
 const Navbar = () => {
-    const {connect, isWeb3Loaded, isLoadingWeb3, hooks, web3} = useWeb3()
+    const {connect, isWeb3Loaded, isLoadingWeb3, web3} = useWeb3Context()
     const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
-    const {account} = hooks.useAccount(web3)
-
-
-
-
     const sprucey = "https://www.sprucey.dev"
     const router = useRouter()
+    const {account} = handlerToGetUserMetaAccnt(web3)()
     return (
         <nav className="w-full justify-between items-center">
             <div className="flex relative lg:justify-between justify-between items-center">
@@ -54,6 +54,7 @@ const Navbar = () => {
                 />
                </div>
                <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl xl:first-letter:text-5xl
+              
                 first-letter:text-stone-100 font-cinzel  xl:text-2xl ">Bodi</h1>
                 
                <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-100 xl:first-letter:text-5xl xl:text-2xl">Augustus</h1></div>
@@ -63,7 +64,8 @@ const Navbar = () => {
                    ))}
                </ul>
                    {isLoadingWeb3 ?
-                    <Button disabled={true} onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75 border-sky-400 text-white py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14  xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-[3px]">Loading...</Button> : isWeb3Loaded ?
+                    <Button disabled={true} onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75 border-sky-400 text-white py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14  xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-[3px]">Loading...</Button> : 
+                    isWeb3Loaded ?
                     <Button onClick={connect}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75 border-sky-400 text-white py-2 px-4 rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14  xs:invisible xs:hidden md:inline-block md:visible  md:text-xl font-medium border-[3px]">Connect Wallet</Button> :
                     <Button onClick={() => window.open('https://metamask.io/download.html', '_blank')}  key="connect" className="bg-blue-600 shadow-2xl shadow-blue-500/75 border-sky-400 text-white py-2 px-4 rounded-lg outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 xs:invisible xs:hidden md:inline-block md:visible md:text-xl font-medium border-[3px]">Install MetaMask</Button>
                    

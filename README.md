@@ -95,3 +95,5 @@ Commits
 #47. Disabled the button during certain condition. Extended tailwinds functionality in config.js to allow opacity to accept disabled as a property. Same for the cursor. Set disabled to the connect meta buttons during web3loading state. Set the install metamask buttons to direct to the metamask homepage using onclick handlers.
 
 #48. Got the active metamask user as well as the chain id to determine what chain is connected. Created hooks folder inside of web3 folder. Created useAccount.js inside. Also created setupHooks.js in same folder. Created setupHooks function. Embedded hooks into the provider. setHooks takes web3 which it uses to call useAccount with web3 as the parameter which will then be built out next to actual retrieve the active metamask user account.
+
+#49. Created web3 folder inside components. Then created folder called hooks. Then created useAccount.js. Created setupHooks() inside of the web3 provider. succesffuly pssed the useAccount hook to the hero, currently is just a string of text.

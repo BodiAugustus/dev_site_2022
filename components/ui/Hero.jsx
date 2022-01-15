@@ -3,8 +3,8 @@ import { useContext, useState} from 'react'
 import { NavbarContext } from '../providers/NavContext'
 import { HeroContext } from '../providers/HeroContext'
 import { Input, Showcase, CryptoCard, Loader,  } from '..'
-import { useWeb3 } from "@components/providers"
-import { Button } from "@components/ui"
+import { useWeb3Context } from "@components/providers"
+
 
 
 import  Modal  from './modals/Modal'
@@ -13,17 +13,20 @@ import  Modal3 from './modals/Modal3'
 import  Modal4 from './modals/Modal4'
 import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
+import { handlerToGetUserMetaAccnt } from '@components/providers/web3/hooks/useAccount'
+// import { UseAccount } from '@components/providers/web3/hooks/useAccount'
 
 
 const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[2.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
 
 const Hero = () => {
-    const {connect, isWeb3Loaded, isLoadingWeb3, hooks} = useWeb3()
+    const {connect, isWeb3Loaded, isLoadingWeb3, hooks, web3} = useWeb3Context()
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
-
+    // const {account} = hooks.useAccount(web3)
     const {openModal, openModal2, openModal3, openModal4, openModal5,openModal6} = useContext(HeroContext) 
+    const {account} = handlerToGetUserMetaAccnt(web3)()
  
 
 
@@ -59,6 +62,7 @@ const Hero = () => {
                     
                     <h1 className=' xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl  lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace sm:text-center xl:-mt-8'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
                     <h4 className='text-slate-50 mt-1 font-cinzel sm:mx-auto sm:text-2xl md:text-3xl xl:mx-0'>NextJS | Solidity</h4>
+                    {/* {account} */}
                    
                    {isLoadingWeb3 ?
                     <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
