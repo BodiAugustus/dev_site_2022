@@ -9,7 +9,7 @@ import Link from "next/link"
 import { useWeb3Context } from "@components/providers"
 import { Button } from "@components/ui"
 import { handlerToGetUserMetaAccnt } from "@components/providers/web3/hooks/useAccount"
-import { userAccount } from "@components/web3/hooks/useAccount"
+import { userAccount } from "@components/hooks/web3/useAccount"
 
 
 

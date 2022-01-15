@@ -108,3 +108,4 @@ Commits
 
 #54. Added admin property to the use account to display admin greeting or guest greeting in ui. Setup admin account to TESTING account using adminAddresses. 
 
+#55. Hashed the admin address for adminAddresses using keccek256. Changed file tree. Created new hooks folder inside components and then inside hooks created web3 folder. Moved useAccount.js from the web3/hooks into the hooks/web3 folders and then deleted the web3/hooks folders.

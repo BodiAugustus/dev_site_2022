@@ -5,7 +5,7 @@ import { useEffect } from "react"
 import useSWR from 'swr'
 
 const adminAddresses = {
-    "0x07A99C98f464b836e0ad5aB4925114f3FCE21A7f": true
+    "0xe1a4051152619c458ea339081747d92a7792fc6adda99a0218bb059bf21554ec": true
 }
 
 
@@ -27,7 +27,7 @@ export const handlerToGetUserMetaAccnt = (web3, provider) => () => {
     return {
         account: { 
             data,
-            isAdmin: (data && adminAddresses[data]) ?? false,
+            isAdmin: (data && adminAddresses[web3.utils.keccak256(data)]) ?? false,
             mutate,
              ...rest
              }
