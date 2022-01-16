@@ -34,7 +34,7 @@ const CryptoCard = () => {
                     {/* Hi {account.data} */}
                     </p>
                     <p className="text-white font-medium text-md  mt-1">Currently on <span className="md:text-xl">{network.data}</span></p>
-                    <button >TEST</button>
+                    
                 </div>
 
                 
