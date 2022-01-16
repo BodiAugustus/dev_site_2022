@@ -3,9 +3,9 @@ import { useContext, useState} from 'react'
 import { NavbarContext } from '../providers/NavContext'
 import { HeroContext } from '../providers/HeroContext'
 import { Input, Showcase, CryptoCard, Loader,  } from '..'
-import { useWeb3Context } from "@components/providers"
-
-
+import { useWeb3 } from '@components/providers/web3'
+import { ButtonHero, ButtonSend } from "@components/ui"
+import { useAccount } from '@components/hooks/web3/useAccount'
 
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'
@@ -13,20 +13,20 @@ import  Modal3 from './modals/Modal3'
 import  Modal4 from './modals/Modal4'
 import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
-import { handlerToGetUserMetaAccnt } from '@components/providers/web3/hooks/useAccount'
-// import { UseAccount } from '@components/providers/web3/hooks/useAccount'
+
 
 
 const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[2.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
 
 const Hero = () => {
-    const {connect, isWeb3Loaded, isLoadingWeb3, hooks, web3} = useWeb3Context()
+const {isWeb3Loaded, isWeb3Loading, connect, } = useWeb3()
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
-    // const {account} = hooks.useAccount(web3)
     const {openModal, openModal2, openModal3, openModal4, openModal5,openModal6} = useContext(HeroContext) 
-    const {account} = handlerToGetUserMetaAccnt(web3)()
+    const {account} = useAccount()
+
+
     
  
 
@@ -65,28 +65,19 @@ const Hero = () => {
                     <h4 className='text-slate-50 mt-1 font-cinzel sm:mx-auto sm:text-2xl md:text-3xl xl:mx-0'>NextJS | Solidity</h4>
                     {/* {account} */}
                    
-                   {isLoadingWeb3 ?
-                    <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
-                     rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider border-2 border-sky-400 disabled:opacity-50 disabled:cursor-pointer"
-                     
-                     onClick={connect}
-                     >Loading...</button> : isWeb3Loaded ?
-                     account.data ?
-                    null
-                     :
-
-                    <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
-                     rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider border-2 border-sky-400"
-                     
-                     onClick={connect}
-                     >Connect Wallet</button> 
-                     :
-                     <button key="connect" className="bg-blue-600 shadow-lg shadow-blue-500/75  py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
-                     rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  text-white  md:hidden md:invisible  font-medium tracking-wider border-2 border-sky-400"
-                     type='button'
-                     onClick={() => window.open("https://metamask.io/download.html", "_blank")}
-                     >Install MetaMask</button> 
+                    { isWeb3Loading ? 
+                    <ButtonHero disabled={true} onClick={connect}>Loading...</ButtonHero> 
+                    : isWeb3Loaded ?
+                    account ?
+                    <ButtonHero hoverable={false} className='cursor-default hover:scale-100'>Hi friend!</ButtonHero> 
+                    :
+                    <ButtonHero onClick={connect}>Connect MetaMask</ButtonHero> 
+                    :
+                    <ButtonHero onClick={() => window.open("https://metamask.io/download.html", "_blank")}>Install MetaMask</ButtonHero> 
                     }
+                  
+
+                    
                  
                  
 
@@ -114,12 +105,12 @@ const Hero = () => {
                          {isLoading && !toggleMenu ? (
                             <Loader/>
                          ) :
-                         (<button type="button"
-                         onClick={handleSubmit}
-                         className="text-white w-[35%] md:w-[45%] bg-blue-600 shadow-md shadow-blue-500/75 mt-4 border-[2px] p-2 border-sky-400 rounded-full cursor-pointer font-russon transition-all hover:scale-110 active:scale-100 tracking-wide sm:px-3 md:text-2xl md:py-2  md:mt-8 lg:w-[70%] xl:w-[50%] lg:pb-3"
+                         (<ButtonSend type="button"
+
+                     
                          >
                             Send Now 
-                         </button>)
+                         </ButtonSend>)
                          }
 
                      </div> 

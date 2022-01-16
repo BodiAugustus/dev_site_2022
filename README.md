@@ -109,3 +109,5 @@ Commits
 #54. Added admin property to the use account to display admin greeting or guest greeting in ui. Setup admin account to TESTING account using adminAddresses. 
 
 #55. Hashed the admin address for adminAddresses using keccek256. Changed file tree. Created new hooks folder inside components and then inside hooks created web3 folder. Moved useAccount.js from the web3/hooks into the hooks/web3 folders and then deleted the web3/hooks folders.
+
+#56. Begin setting up the finctionality to display the active network to the CCard component. Created useNetwork.js inside of web3/hooks. Created useNetwork.js in hooks/web3. Successfully rendered the test message into the ccard.

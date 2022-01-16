@@ -1,10 +1,13 @@
 
 
-import { handlerToGetUserMetaAccnt  } from "./useAccount";
+import { handler as createAccountHook } from "./useAccount";
+import { handler as createNetworkHook } from "./useNetwork";
 
 
 export const setupHooks = (web3, provider) => {
     return {
-        usersMetaAccount: handlerToGetUserMetaAccnt(web3, provider)
+        useAccount: createAccountHook(web3, provider),
+        useNetwork: createNetworkHook(web3, provider)
+
     }
 }
