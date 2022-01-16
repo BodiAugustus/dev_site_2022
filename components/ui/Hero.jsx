@@ -68,8 +68,10 @@ const {isWeb3Loaded, isWeb3Loading, connect, } = useWeb3()
                     { isWeb3Loading ? 
                     <ButtonHero disabled={true} onClick={connect}>Loading...</ButtonHero> 
                     : isWeb3Loaded ?
-                    account ?
-                    <ButtonHero hoverable={false} className='cursor-default hover:scale-100'>Hi friend!</ButtonHero> 
+                    account.isAdmin ?
+                    <ButtonHero disabled={true} hoverable={false} className='cursor-default hover:scale-100'>Hi Bodi!</ButtonHero> :
+                    account.data ?
+                    <ButtonHero disabled={true} hoverable={false} className='cursor-default hover:scale-100'>Hi Friend!</ButtonHero> 
                     :
                     <ButtonHero onClick={connect}>Connect MetaMask</ButtonHero> 
                     :

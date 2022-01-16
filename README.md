@@ -113,3 +113,5 @@ Commits
 #56. Begin setting up the finctionality to display the active network to the CCard component. Created useNetwork.js inside of web3/hooks. Created useNetwork.js in hooks/web3. Successfully rendered the test message into the ccard.
 
 #57. Worked to display actual network to UI. Used swr inside of the useNetwork file to fetch the network id. Created a useEffect to update changes to the network in the UI. 
+
+#58. Small UI fix - during network change hexadecimal is displayed before numeric value for network id. Used partInt on the mutated value to fix. Created object of network id's with maps to string to display names instead of id's to the UI. 

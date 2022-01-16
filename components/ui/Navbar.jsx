@@ -29,7 +29,6 @@ const Navbar = () => {
     const router = useRouter()
     const {isWeb3Loaded, isLoadingWeb3, connect } = useWeb3()
     const {account} = useAccount()
-    
  
     return (
         <nav className="w-full justify-between items-center">
@@ -64,8 +63,10 @@ const Navbar = () => {
                    { isLoadingWeb3 ? 
                     <ButtonNav disabled={true} onClick={connect}>Loading...</ButtonNav> 
                    : isWeb3Loaded ?
-                   account.data ?
-                   <ButtonNav hoverable={false} className="cursor-default hover:scale-100">Hi friend!</ButtonNav> 
+                   account.isAdmin ?
+                   <ButtonNav disabled={true} className="cursor-default hover:scale-100">Hi Bodi!</ButtonNav> 
+                   : account.data ?
+                   <ButtonNav disabled={true}  className="cursor-default hover:scale-100">Hi Friend!</ButtonNav> 
                    :
                     <ButtonNav onClick={connect}>Connect MetaMask</ButtonNav> 
                    : 
