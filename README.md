@@ -123,3 +123,5 @@ Commits
 #61. Current setup leaves setupHooks function called many times. To improve removed getHooks from the _web3Api and added to the web3Api state variable to reduce function calls. 
 
 #62. Reconfigured ternary operators for the hero/nav button to use requireInstall instead of web3 to prevent unneccessary importing.
+
+#63. Created useEthPrice.js to get price of ETH for app. created fetcher function to pull api data from coingecko api using useEthPrice function. Retrieved json data. 

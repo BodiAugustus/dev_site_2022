@@ -8,6 +8,10 @@ import { ButtonHero, ButtonSend } from "@components/ui"
 import { useAccount } from '@components/hooks/web3'
 
 
+import { useEthPrice } from "@components/hooks/useEthPrice"
+
+
+
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'
 import  Modal3 from './modals/Modal3'
@@ -25,7 +29,11 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
     const {openModal, openModal2, openModal3, openModal4, openModal5,openModal6} = useContext(HeroContext) 
+ 
     const {account} = useAccount()
+    const data = useEthPrice()
+    console.log(data);
+
 
 
     
@@ -65,7 +73,7 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
                     <h1 className=' xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl  lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace sm:text-center xl:-mt-8'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
                     <h4 className='text-slate-50 mt-1 font-cinzel sm:mx-auto sm:text-2xl md:text-3xl xl:mx-0'>NextJS | Solidity</h4>
                     {/* {account} */}
-                   
+                   {/* <EthRates eth={eth.data}/> */}
                     { isLoadingWeb3 ? 
                     <ButtonHero disabled={true} onClick={connect}>Loading...</ButtonHero> 
                     :

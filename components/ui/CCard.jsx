@@ -4,6 +4,7 @@ import { useWeb3 } from "@components/providers/web3"
 
 
 import { useAccount, useNetwork } from "@components/hooks/web3"
+import { useEthPrice } from "@components/hooks/useEthPrice"
 
 
 
@@ -14,6 +15,8 @@ const CryptoCard = () => {
     const {web3, isLoading, requireInstall} = useWeb3()
     const {account} = useAccount()
     const {network} = useNetwork()
+    const data = useEthPrice()
+    console.log(data);
     
     return (
         <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-10 ">
