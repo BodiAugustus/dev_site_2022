@@ -29,7 +29,7 @@ const Navbar = () => {
     const {toggleMenu, setToggleMenu} = useContext(NavbarContext)
     const sprucey = "https://www.sprucey.dev"
     const router = useRouter()
-    const {isWeb3Loaded, isLoadingWeb3, connect } = useWeb3()
+    const { isLoadingWeb3, connect, requireInstall } = useWeb3()
     const {account} = useAccount()
  
     return (
@@ -64,15 +64,17 @@ const Navbar = () => {
                </ul>
                    { isLoadingWeb3 ? 
                     <ButtonNav disabled={true} onClick={connect}>Loading...</ButtonNav> 
-                   : isWeb3Loaded ?
+                    :
                    account.isAdmin ?
                    <ButtonNav disabled={true} className="cursor-default hover:scale-100">Hi Bodi!</ButtonNav> 
                    : account.data ?
                    <ButtonNav disabled={true}  className="cursor-default hover:scale-100">Hi Friend!</ButtonNav> 
                    :
-                    <ButtonNav onClick={connect}>Connect MetaMask</ButtonNav> 
-                   : 
+                   requireInstall ?
                    <ButtonNav onClick={() => window.open("https://metamask.io/download.html", "_blank")}>Install MetaMask</ButtonNav> 
+                   : 
+                    <ButtonNav onClick={connect}>Connect MetaMask</ButtonNav> 
+             
                    }
                    
               

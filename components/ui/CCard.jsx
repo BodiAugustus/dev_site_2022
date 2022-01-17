@@ -11,7 +11,7 @@ import { useAccount, useNetwork } from "@components/hooks/web3"
 
 const CryptoCard = () => {
 
-    const {web3, isLoading} = useWeb3()
+    const {web3, isLoading, requireInstall} = useWeb3()
     const {account} = useAccount()
     const {network} = useNetwork()
     
@@ -25,6 +25,10 @@ const CryptoCard = () => {
                         <h4 className="md:text-xl">DeFi </h4>
 
                     </div>
+                    {
+                        requireInstall &&
+                        <div className="bg-yellow-500 p-2 rounded-lg">Cannot connect to network, please install MetaMask!</div>
+                    }
 
 
                       { 

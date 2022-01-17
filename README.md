@@ -121,3 +121,5 @@ Commits
 #60. Finished setting up the UI message using the isSupported and network.target properties. Combined useAccount and useNetwork hooks into newly created index.js file. Then deleted old files. Created enhanceHook function to add the hasInititialResponse property to the swrResponse of useNetwork/useAccount.
 
 #61. Current setup leaves setupHooks function called many times. To improve removed getHooks from the _web3Api and added to the web3Api state variable to reduce function calls. 
+
+#62. Reconfigured ternary operators for the hero/nav button to use requireInstall instead of web3 to prevent unneccessary importing.

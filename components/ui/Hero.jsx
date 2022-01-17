@@ -21,7 +21,7 @@ const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center
 
 
 const Hero = () => {
-const {isWeb3Loaded, isWeb3Loading, connect, } = useWeb3()
+const {isLoadingWeb3, connect, requireInstall } = useWeb3()
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
     const {openModal, openModal2, openModal3, openModal4, openModal5,openModal6} = useContext(HeroContext) 
@@ -66,17 +66,18 @@ const {isWeb3Loaded, isWeb3Loading, connect, } = useWeb3()
                     <h4 className='text-slate-50 mt-1 font-cinzel sm:mx-auto sm:text-2xl md:text-3xl xl:mx-0'>NextJS | Solidity</h4>
                     {/* {account} */}
                    
-                    { isWeb3Loading ? 
+                    { isLoadingWeb3 ? 
                     <ButtonHero disabled={true} onClick={connect}>Loading...</ButtonHero> 
-                    : isWeb3Loaded ?
+                    :
                     account.isAdmin ?
                     <ButtonHero disabled={true} hoverable={false} className='cursor-default hover:scale-100'>Hi Bodi!</ButtonHero> :
                     account.data ?
                     <ButtonHero disabled={true} hoverable={false} className='cursor-default hover:scale-100'>Hi Friend!</ButtonHero> 
                     :
-                    <ButtonHero onClick={connect}>Connect MetaMask</ButtonHero> 
-                    :
+                    requireInstall ?
                     <ButtonHero onClick={() => window.open("https://metamask.io/download.html", "_blank")}>Install MetaMask</ButtonHero> 
+                    :
+                    <ButtonHero onClick={connect}>Connect MetaMask</ButtonHero> 
                     }
                   
 
