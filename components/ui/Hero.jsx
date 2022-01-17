@@ -14,9 +14,6 @@ import { useSPIRITPrice } from '@components/hooks/useEthPrice'
 import { useSCRTPrice } from '@components/hooks/useEthPrice'
 import { useBTCPrice } from '@components/hooks/useEthPrice'
 
-
-
-
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'
 import  Modal3 from './modals/Modal3'
@@ -24,52 +21,31 @@ import  Modal4 from './modals/Modal4'
 import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
 
-
-
 const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[2.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
+const makePayment = {
+    amount: "9000",
+    addressTo: "",
+    message: ""
+}
 
 const Hero = () => {
-const {isLoadingWeb3, connect, requireInstall } = useWeb3()
+    const {isLoadingWeb3, connect, requireInstall } = useWeb3()
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
     const {openModal, openModal2, openModal3, openModal4, openModal5,openModal6} = useContext(HeroContext) 
- 
+    
     const {account} = useAccount()
     const {eth} = useEthPrice()
-    // console.log(data);
     const {xmr} = useXmrPrice()
-    // console.log(data);
     const {ftm} = useFtmPrice()
     const {spirit} = useSPIRITPrice()
     const {scrt} = useSCRTPrice()
     const {btc} = useBTCPrice()
 
 
+    const [paymentData, setPaymentData] = useState(makePayment)
 
-    
- 
-
-
-    const [formData, setFormData] = useState({addressTo: '', amount: '', message: ''})
-  
-
-    const handleSubmit = (e) => {
-        const {addressTo, amount, message} = formData
-        e.preventDefault()
-
-        if(!addressTo || !amount || !message) return;
-
-        setFormData({addressTo: "d ", amount: ' d', message: 'd '})
-        setIsLoading(true)
-        alert('payment sent')
-
-        
-    }
-    const handleChange = (e, name) => {
-        setFormData((prevState) => ({...prevState, [name]: e.target.value}))
-    }
-    
     return (
         <div className="flex w-full justify-center items-center">
             <div className="flex  flex-col lg:flex-row items-start justify-between md:p-20 py-10 md:py-8 px-4 xl:p-16">
@@ -98,12 +74,7 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
                     :
                     <ButtonHero onClick={connect}>Connect MetaMask</ButtonHero> 
                     }
-                  
-
-                    
-                 
-                 
-
+                             
                     {!toggleMenu &&
                         <CryptoCard/>
                     }
@@ -113,12 +84,48 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
 
                         {!toggleMenu && 
                         <>
-                         <Input placeholder="Address To:" name="addressTo" type="text" handleChange={handleChange} /> 
+                         <Input 
+                            value={paymentData.addressTo}
+                            onChange={({target: {value}}) => {
+                             setPaymentData({
+                                 ...paymentData,
+                                 addressTo: value
+                             })
+                         }}
+                           placeholder="Address To:" name="addressTo" type="text" id="addressTo"
+                        
 
-                         <Input placeholder="Amount in FTM:" name="amount" type="number" handleChange={handleChange} />
+                        //   handleChange={handleChange} 
+
+                          /> 
+
+                         <Input 
+                            value={paymentData.amount}
+                            onChange={({target: {value}}) => {
+                            
+                              setPaymentData({
+                                  ...paymentData,
+                                  amount: value
+                              })
+                          }} 
+                            placeholder="Amount in FTM:" name="amount" type="number" id="amount"
+                         
+                        //   handleChange={handleChange}
+                                                                       
+                            />
 
 
-                         <Input placeholder="Enter Message:" name="message" type="text" handleChange={handleChange} /> 
+                         <Input
+                            value={paymentData.message}
+                            onChange={({target : {value}}) => {
+                              setPaymentData({
+                                  ...paymentData,
+                                  message: value
+                              })
+                          }} 
+                            placeholder="Enter Message:" name="message" type="text" id="message"
+                        //   handleChange={handleChange}
+                           /> 
 
                         </>
                         }
@@ -129,6 +136,11 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
                             <Loader/>
                          ) :
                          (<ButtonSend type="button"
+                          onClick={() => {
+                              alert(
+                                  JSON.stringify(paymentData)
+                              )
+                          }}
 
                      
                          >
@@ -205,3 +217,22 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
 }
 
 export default Hero
+
+    // const [formData, setFormData] = useState({addressTo: '', amount: '', message: ''})
+  
+
+    // const handleSubmit = (e) => {
+    //     const {addressTo, amount, message} = formData
+    //     e.preventDefault()
+
+    //     if(!addressTo || !amount || !message) return;
+
+    //     setFormData({addressTo: "d ", amount: ' d', message: 'd '})
+    //     setIsLoading(true)
+    //     alert('payment sent')
+
+        
+    // }
+    // const handleChange = (e, name) => {
+    //     setFormData((prevState) => ({...prevState, [name]: e.target.value}))
+    // }

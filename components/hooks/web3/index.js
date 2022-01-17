@@ -21,3 +21,14 @@ export const useAccount = () => {
         account: swrRes
     }
 }
+
+export const useWalletInfo = () => {
+    const { account } = useAccount()
+    const { useNetwork } = useNetwork()
+
+    return {
+        account,
+        network,
+        canPurchase: !!(account.data && network.isSupported)
+    }
+}

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
     return (
-        <div className="grid grid-cols-3 mb-7 text-white  mx-auto border-4 p-4 bg-slate-400 rounded-xl ">
+        <div className="grid grid-cols-3 mb-7 text-white  mx-auto border-4 p-4 bg-sky-600 rounded-xl ">
             <div className="text-center ">
                 <div className="p-2  drop-shadow rounded-md">
                     <div className="flex items-center">
@@ -49,7 +49,7 @@ export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
                     alt='XMR logo'
 
                      />
-                        <span className="text-2xl font-bold"> = ${spirit}</span>
+                        <span className="text-2xl font-bold"> = ${spirit?.toFixed(3)}</span>
                     </div>
                     <p className="text-xl ">Current SPIRIT Price</p>
                 </div>
