@@ -5,7 +5,8 @@ import { HeroContext } from '../providers/HeroContext'
 import { Input, Showcase, CryptoCard, Loader,  } from '..'
 import { useWeb3 } from '@components/providers/web3'
 import { ButtonHero, ButtonSend } from "@components/ui"
-import { useAccount } from '@components/hooks/web3/useAccount'
+import { useAccount } from '@components/hooks/web3'
+
 
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'

@@ -8,7 +8,9 @@ import { useRouter } from "next/router"
 import Link from "next/link"
 import { useWeb3 } from "@components/providers/web3"
 import { ButtonNav } from "@components/ui"
-import { useAccount } from "@components/hooks/web3/useAccount"
+import { useAccount } from "@components/hooks/web3"
+
+
 
 export const NavItem = ({title, classProps, url, id}) => {
     return (

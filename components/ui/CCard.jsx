@@ -1,8 +1,9 @@
 
 import { BsInfoCircle } from "react-icons/bs"
 import { useWeb3 } from "@components/providers/web3"
-import { useAccount } from "@components/hooks/web3/useAccount"
-import { useNetwork } from "@components/hooks/web3/useNetwork"
+
+
+import { useAccount, useNetwork } from "@components/hooks/web3"
 
 
 
@@ -24,6 +25,18 @@ const CryptoCard = () => {
                         <h4 className="md:text-xl">DeFi </h4>
 
                     </div>
+
+
+                      { 
+                          network.hasInitialResponse && !network.isSupported &&
+                          <div className="bg-red-400 p-2 rounded-lg text-white">
+                           <div className="">Connected to wrong network,</div>
+                           <div className="">Connect to: {` `}
+                           <strong className="text-2xl">{network.target}</strong>
+                           </div>
+                       </div>}
+
+
                     <BsInfoCircle className="xs:text-lg md:text-2xl" color="#fff"/>
                 </div>
         
@@ -34,6 +47,7 @@ const CryptoCard = () => {
                     {/* Hi {account.data} */}
                     </p>
                     <p className="text-white font-medium text-md  mt-1">Currently on <span className="md:text-xl">{network.data}</span></p>
+                   
                     
                 </div>
 

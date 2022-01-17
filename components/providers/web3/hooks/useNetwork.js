@@ -29,12 +29,12 @@ export const handler = (web3, provider) => () => {
         provider.on("chainChanged", chainId => mutate(NETWORKS[parseInt(chainId, 16)]))
     },[web3])
     return {
-        network: {
+       
             data,
             mutate,
             target: targetNetwork,
             isSupported: data === targetNetwork,
             ...rest
-        }
+        
     }
 }

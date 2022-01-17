@@ -117,3 +117,5 @@ Commits
 #58. Small UI fix - during network change hexadecimal is displayed before numeric value for network id. Used partInt on the mutated value to fix. Created object of network id's with maps to string to display names instead of id's to the UI. 
 
 #59. Set up UI message to display when user is on wrong network. Created .env dev and prod files for default chain id. Created targetNetwork variable. 
+
+#60. Finished setting up the UI message using the isSupported and network.target properties. Combined useAccount and useNetwork hooks into newly created index.js file. Then deleted old files. Created enhanceHook function to add the hasInititialResponse property to the swrResponse of useNetwork/useAccount.
