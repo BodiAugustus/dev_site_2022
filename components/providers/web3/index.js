@@ -12,7 +12,8 @@ export default function Web3Provider({children}){
         provider: null,
         web3: null,
         contract: null,
-        isLoadingWeb3: true
+        isLoadingWeb3: true,
+        hooks: setupHooks()
     })
 
     useEffect(() => {
@@ -24,7 +25,8 @@ export default function Web3Provider({children}){
                     provider,
                     web3,
                     contract: null,
-                    isLoadingWeb3: false
+                    isLoadingWeb3: false,
+                    hooks: setupHooks(web3, provider)
                 })
             }else{
                 setWeb3Api(api => ({...api, isLoadingWeb3: false}))
@@ -41,7 +43,7 @@ export default function Web3Provider({children}){
         return {
             ...web3Api,
             isWeb3Loaded: web3 != null,
-            getHooks: () => setupHooks(web3, provider),
+            // getHooks: () => setupHooks(web3, provider),
             connect: provider ? //connect helper function grabs meta
             async () => {
                 try {
@@ -69,7 +71,7 @@ export const useWeb3 = () => {
 }
 
 export function useHooks(callback){
-    const {getHooks} = useWeb3()
-    return callback(getHooks())
+    const {hooks} = useWeb3()
+    return callback(hooks)
 }
 
