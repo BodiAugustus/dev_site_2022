@@ -24,9 +24,28 @@ import  Modal6 from './modals/Modal6'
 const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[2.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
 const makePayment = {
-    amount: "9000",
+    amount: "",
     addressTo: "",
     message: ""
+}
+
+const _createFormState = (isDisabled = false, alert = "") => ({
+    isDisabled, alert
+})
+
+const createFormState = ({amount, alert, addressTo}) => {
+  
+    if(Number(amount) < 0){
+        return _createFormState(true, "Not a valid amount.")
+    } 
+    // else if(!addressTo || !amount){
+    //     return
+    // }
+    //  else if(addressTo.length === 0){
+    //     return _createFormState(true, "Not a valid address!")
+    // } 
+
+    return _createFormState()
 }
 
 const Hero = () => {
@@ -45,7 +64,8 @@ const Hero = () => {
 
 
     const [paymentData, setPaymentData] = useState(makePayment)
-
+    const formState = createFormState(paymentData)
+    
     return (
         <div className="flex w-full justify-center items-center">
             <div className="flex  flex-col lg:flex-row items-start justify-between md:p-20 py-10 md:py-8 px-4 xl:p-16">
@@ -85,13 +105,13 @@ const Hero = () => {
                         {!toggleMenu && 
                         <>
                          <Input 
-                            value={paymentData.addressTo}
                             onChange={({target: {value}}) => {
                              setPaymentData({
                                  ...paymentData,
                                  addressTo: value
                              })
                          }}
+                            value={paymentData.addressTo}
                            placeholder="Address To:" name="addressTo" type="text" id="addressTo"
                         
 
@@ -100,7 +120,6 @@ const Hero = () => {
                           /> 
 
                          <Input 
-                            value={paymentData.amount}
                             onChange={({target: {value}}) => {
                             
                               setPaymentData({
@@ -108,6 +127,7 @@ const Hero = () => {
                                   amount: value
                               })
                           }} 
+                            value={paymentData.amount}
                             placeholder="Amount in FTM:" name="amount" type="number" id="amount"
                          
                         //   handleChange={handleChange}
@@ -116,13 +136,13 @@ const Hero = () => {
 
 
                          <Input
-                            value={paymentData.message}
                             onChange={({target : {value}}) => {
                               setPaymentData({
                                   ...paymentData,
                                   message: value
                               })
                           }} 
+                            value={paymentData.message}
                             placeholder="Enter Message:" name="message" type="text" id="message"
                         //   handleChange={handleChange}
                            /> 
@@ -132,23 +152,44 @@ const Hero = () => {
 
                          <div className="h-[1px] w-full bg-gray-300 my-2"/>
 
-                         {isLoading && !toggleMenu ? (
-                            <Loader/>
-                         ) :
-                         (<ButtonSend type="button"
-                          onClick={() => {
-                              alert(
-                                  JSON.stringify(paymentData)
-                              )
-                          }}
-
+                         {formState.alert &&
+                        <div className="p-4 my-2 text-red-700 bg-red-300 rounded-lg text-sm">
+                            {formState.alert}
+                        </div>
+                        }
                      
+                         {isLoading && !toggleMenu ? (
+                            <div className="items-center"><Loader size="md"/></div>
+                         ) :
+                         (
+                             
+                          <ButtonSend
+                          
+                          disabled={formState.isDisabled}
+                          type="button"
+                          onClick={() => {
+                            
+                              alert(
+                                  `Your payment has been sent! The details are shown below:
+                                  ${JSON.stringify(paymentData)}`
+                                  
+                              )
+                            setPaymentData({
+                                amount:"",
+                                message: "",
+                                addressTo: ""
+                            })
+                    
+                              
+                          }}                    
                          >
-                            Send Now 
+                         Send Now
+                           
                          </ButtonSend>)
                          }
 
                      </div> 
+                
 
                 </div>
                  

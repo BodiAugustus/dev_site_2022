@@ -25,9 +25,7 @@ radial-gradient(at 34% 37%, hsla(96,79%,67%,1) 0, transparent 40%);
 }
 
 .spinner {
-  margin: 50px auto;
-  width: 40px;
-  height: 40px;
+  margin: 2px auto;
   position: relative;
   text-align: center;
   

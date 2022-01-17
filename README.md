@@ -131,3 +131,5 @@ Commits
 #65. Displayed SPIRIT, BTC, and SCRT prices to UI, imported logos. Did some styling.
 
 #66. Added functionality to the payment inputs. Created makePayment object and paymentData/setPaymentData useState. Successfully alerted form data on submit.
+
+#67. Set up validations for inputs using createFormState function. Added loaders to token api call values during fetches.
