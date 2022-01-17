@@ -125,3 +125,5 @@ Commits
 #62. Reconfigured ternary operators for the hero/nav button to use requireInstall instead of web3 to prevent unneccessary importing.
 
 #63. Created useEthPrice.js to get price of ETH for app. created fetcher function to pull api data from coingecko api using useEthPrice function. Retrieved json data. 
+
+#64. Displayed the ETH price to the ui in Hero. Repeated process for FTM and XMR. Set up refreshInterval to refresh values to UI every 1 minute.

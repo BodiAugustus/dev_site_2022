@@ -6,9 +6,11 @@ import { Input, Showcase, CryptoCard, Loader,  } from '..'
 import { useWeb3 } from '@components/providers/web3'
 import { ButtonHero, ButtonSend } from "@components/ui"
 import { useAccount } from '@components/hooks/web3'
-
-
+import EthRates from './web3/ethRates'
 import { useEthPrice } from "@components/hooks/useEthPrice"
+import { useXmrPrice } from "@components/hooks/useEthPrice"
+import { useFtmPrice } from '@components/hooks/useEthPrice'
+
 
 
 
@@ -31,8 +33,11 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
     const {openModal, openModal2, openModal3, openModal4, openModal5,openModal6} = useContext(HeroContext) 
  
     const {account} = useAccount()
-    const data = useEthPrice()
-    console.log(data);
+    const {eth} = useEthPrice()
+    // console.log(data);
+    const {xmr} = useXmrPrice()
+    // console.log(data);
+    const {ftm} = useFtmPrice()
 
 
 
@@ -131,6 +136,10 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
                  
                 
                 <div key='rightSideForDesktop'>
+                         <EthRates
+                            eth={eth.data}
+                            xmr={xmr.data}
+                            ftm={ftm.data}/> 
 
                         <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bebes text-white text-center underline underline-offset-8 mt-2 -mb-4 xl:-mb-4 sm:-mb-1'>At A Glance Services:</h2>
                        

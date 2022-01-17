@@ -1,27 +1,35 @@
 
 
 
-// export default function EthRates({eth}){
-//     return (
-//         <div className="grid grid-cols-4 mb-5">
-//             <div className="flex flex-1 items-stretch text-center">
-//                 <div className="p-10 border drop-shadow rounded-md">
-//                     <div className="">
-//                         <span className="text-2xl font-bold">
-//                             ETH = {eth}$
-//                         </span>
-//                     </div>
-//                     <p className="text-xl text-gray-500">Current eth PRice</p>
-//                 </div>
-//             </div>
-//             <div className="flex flex-1 items-stretch text-cente">
-//                 <div className="p-10 border drop-shadow rounded-md">
-//                     <div className="">
-//                         <span className="text-2xl font-bold">00034 = $14</span>
-//                     </div>
-//                     <p className="text-xl text-gray-500">Price per course</p>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
+export default function EthRates({eth, xmr, ftm}){
+    return (
+        <div className="grid grid-cols-3 mb-7 text-white  mx-auto ">
+            <div className="text-center ">
+                <div className="p-2  border-4 drop-shadow rounded-md">
+                    <div className="">
+                        <span className="text-2xl font-bold">
+                            ETH = ${eth}
+                        </span>
+                    </div>
+                    <p className="text-xl ">Current ETH Price</p>
+                </div>
+            </div>
+            <div className=" text-center">
+                <div className="p-2 border-4 drop-shadow rounded-md">
+                    <div className="">
+                        <span className="text-2xl font-bold">FTM = ${ftm}</span>
+                    </div>
+                    <p className="text-xl ">Current FTM Price</p>
+                </div>
+            </div>
+            <div className=" text-center">
+                <div className="p-2 border-4 drop-shadow rounded-md">
+                    <div className="">
+                        <span className="text-2xl font-bold">XMR = ${xmr}</span>
+                    </div>
+                    <p className="text-xl ">Current XMR Price</p>
+                </div>
+            </div>
+        </div>
+    )
+}
