@@ -127,3 +127,5 @@ Commits
 #63. Created useEthPrice.js to get price of ETH for app. created fetcher function to pull api data from coingecko api using useEthPrice function. Retrieved json data. 
 
 #64. Displayed the ETH price to the ui in Hero. Repeated process for FTM and XMR. Set up refreshInterval to refresh values to UI every 1 minute.
+
+#65. Displayed SPIRIT, BTC, and SCRT prices to UI, imported logos. Did some styling.

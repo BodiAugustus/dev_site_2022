@@ -10,6 +10,9 @@ import EthRates from './web3/ethRates'
 import { useEthPrice } from "@components/hooks/useEthPrice"
 import { useXmrPrice } from "@components/hooks/useEthPrice"
 import { useFtmPrice } from '@components/hooks/useEthPrice'
+import { useSPIRITPrice } from '@components/hooks/useEthPrice'
+import { useSCRTPrice } from '@components/hooks/useEthPrice'
+import { useBTCPrice } from '@components/hooks/useEthPrice'
 
 
 
@@ -38,6 +41,9 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
     const {xmr} = useXmrPrice()
     // console.log(data);
     const {ftm} = useFtmPrice()
+    const {spirit} = useSPIRITPrice()
+    const {scrt} = useSCRTPrice()
+    const {btc} = useBTCPrice()
 
 
 
@@ -139,7 +145,11 @@ const {isLoadingWeb3, connect, requireInstall } = useWeb3()
                          <EthRates
                             eth={eth.data}
                             xmr={xmr.data}
-                            ftm={ftm.data}/> 
+                            ftm={ftm.data}
+                            spirit={spirit.data}
+                            scrt={scrt.data}
+                            btc={btc.data}
+                            /> 
 
                         <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bebes text-white text-center underline underline-offset-8 mt-2 -mb-4 xl:-mb-4 sm:-mb-1'>At A Glance Services:</h2>
                        
