@@ -8,6 +8,7 @@ import  {Web3Provider}  from '@components/providers'
 
 
 
+
 function MyApp({ Component, pageProps }) {
 
   return (
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }) {
     </HeroProvider>
     </NavbarProvider>
     </Web3Provider>
+ 
   )
 
 }
