@@ -161,3 +161,5 @@ Commits
 #80. Created stopContract and resumeContract functions to shut down/restart SC after deployment if required. Created onlyWhenNotStopped modifier.
 
 #81. Created functionality to allow funds to be sent to the SC along with withdrawal ability using receive and withdrawal functions. Created emergencyWithdraw function. Created selfDestruct function to erase SC from chain.
+
+#82. Ran truffle migrate --reset. Sent test ether to contract via Meta, success - verified in Ganache. Created testing for TX before/after amount. Passed in truffle test.
