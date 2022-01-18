@@ -133,3 +133,5 @@ Commits
 #66. Added functionality to the payment inputs. Created makePayment object and paymentData/setPaymentData useState. Successfully alerted form data on submit.
 
 #67. Set up validations for inputs using createFormState function. Added loaders to token api call values during fetches.
+
+#68. ran truffle init. Prepared tuffle-config file. Created ProfilePayments.sol. Created 2_profile_migration.js. Ran truffle migrate. Added truffle-config to Ganache and verified ProfilePayments deployment. 
