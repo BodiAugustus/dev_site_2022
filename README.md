@@ -157,3 +157,5 @@ Commits
 #78. Setup testing for transferOwnership SC function. Ran truffle test, all passed.
 
 #79. Created a getGas abstraction for use with withdrawl/send payment transactions. Created getBalance and toBN functions as well.
+
+#80. Created stopContract and resumeContract functions to shut down/restart SC after deployment if required. Created onlyWhenNotStopped modifier.

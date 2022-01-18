@@ -4,6 +4,8 @@ pragma solidity ^0.8.0;
 contract ProfilePayments {
 address payable private owner;
 
+bool public isStopped = false;
+
    constructor(){
        setContractOwner(msg.sender);
    }
@@ -16,6 +18,19 @@ address payable private owner;
         revert OnlyOwner();
        }
        _;
+   }
+
+   modifier onlyWhenNotStopped {
+       require(!isStopped);
+       _;
+   }
+
+   function stopContract() external onlyOwner {
+       isStopped = true;
+   }
+
+   function resumeContract() external onlyOwner {
+       isStopped = false;
    }
 
    function transferOwnership(address newOwner) external onlyOwner {
