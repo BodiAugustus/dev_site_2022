@@ -137,3 +137,5 @@ Commits
 #68. Ran truffle init. Prepared tuffle-config file. Created ProfilePayments.sol. Created 2_profile_migration.js. Ran truffle migrate. Added truffle-config to Ganache and verified ProfilePayments deployment. 
 
 #69. Set up contract owner using setContractOwner and constructor. Made contract payable.
+
+#70. Created getContractOwner function to get contract owner. Created transferOwnership function to transfer contract ownership. Tested on Remix.

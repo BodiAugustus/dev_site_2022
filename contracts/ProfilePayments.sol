@@ -8,9 +8,17 @@ address payable private owner;
        setContractOwner(msg.sender);
    }
 
+   function transferOwnership(address newOwner) external {
+       setContractOwner(newOwner);
+   }
+
+   function getContractOwner() public view returns(address){
+   return owner;
+
+   }
+
    function setContractOwner(address newOwner) private {
-       owner = payable(newOwner);
-       owner.transfer(12);
+       owner = payable(newOwner);    
    }
    
 }
