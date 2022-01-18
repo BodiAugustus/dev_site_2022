@@ -21,10 +21,11 @@ export default function Web3Provider({children}){
             const provider = await detectEthereumProvider()
             if(provider){
                 const web3 = new Web3(provider)
+                const contract = loadContract("ProfilePayments", provider)
                 setWeb3Api({
                     provider,
                     web3,
-                    contract: null,
+                    contract,
                     isLoadingWeb3: false,
                     hooks: setupHooks(web3, provider)
                 })

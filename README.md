@@ -141,3 +141,5 @@ Commits
 #70. Created getContractOwner function to get contract owner. Created transferOwnership function to transfer contract ownership. Tested on Remix.
 
 #71. Created onlyOwner modifier to restrict function access to msg.sender whenever used. Created onlyOwner error. 
+
+#72. Ran truffle migrate --reset. Deleted build folder from improper compiler command. Fixed compiler. Ran truffle compile, now contracts in public folder. Created utils folder in root. Created loadContract.js and updated jsconfig.json for new route. Installed npm i @truffle/contract. Imported contract from truffle/contract. Created loadContract function. Added the contract into the provider. NextJS causes issues with fs package.. NextJS compiles server version instead of browser. 
