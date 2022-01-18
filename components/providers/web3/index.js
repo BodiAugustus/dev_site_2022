@@ -8,6 +8,16 @@ import { loadContract } from "@utils/loadContract"
 
 const Web3Context = createContext(null)
 
+// const createWeb3State = ({web3, provider, contract, isLoadingWeb3}) => {
+//     return {
+//         web3,
+//         provider,
+//         contract,
+//         isLoading,
+//         hooks: setupHooks({web3, provider,})
+//     }
+// }
+
 export default function Web3Provider({children}){
     const [web3Api, setWeb3Api] = useState({
         provider: null,
@@ -23,13 +33,13 @@ export default function Web3Provider({children}){
             if(provider){
                 const web3 = new Web3(provider)
                 const contract = await loadContract("ProfilePayments", web3)
-                console.log(contract);
+                // console.log(contract);
                 setWeb3Api({
                     provider,
                     web3,
                     contract,
                     isLoadingWeb3: false,
-                    hooks: setupHooks(web3, provider)
+                    hooks: setupHooks(web3, provider, contract)
                 })
             }else{
                 setWeb3Api(api => ({...api, isLoadingWeb3: false}))
