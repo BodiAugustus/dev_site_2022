@@ -20,6 +20,11 @@ export const handler = (web3, provider) => () => {
         web3 ? "web3/network" : null,
         async () => {
             const chainId = await web3.eth.getChainId()
+            // console.log(chainId);
+
+            if(!chainId){
+                throw new Error("No network found! Please check your connection and refresh the browser.")
+            }
             return NETWORKS[chainId]
         }
     )

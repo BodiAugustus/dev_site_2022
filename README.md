@@ -147,3 +147,5 @@ Commits
 #73. Instead of editing next.config or pasting minfied file directly into browser. ran npm uninstall @truffle/contract --- too large. Loaded the contract using web3 instead. Added new env variable for network id.
 
 #74. Refactored enhanceHook function. Created _isEmpty function to check for empty data being returned for either useAccount or useNetwork hooks.
+
+#75. Handled empty accounts[]0 from being returned as undefined in useAccounts.js by amending the handler function to return an error in that instance. Repeated the same process for useNetwork.js.
