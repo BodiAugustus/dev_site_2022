@@ -149,3 +149,7 @@ Commits
 #74. Refactored enhanceHook function. Created _isEmpty function to check for empty data being returned for either useAccount or useNetwork hooks.
 
 #75. Handled empty accounts[]0 from being returned as undefined in useAccounts.js by amending the handler function to return an error in that instance. Repeated the same process for useNetwork.js.
+
+#76. Refactored the useEffect in useAccounts and useNetwork to remove the account/chainChanged listeners during unmounting to avoid repetitive function calls.
+
+#77. Created ProfilePayments.test.js. Set up initial testing enviornment. Ran truffle test, no errors. Imported a catch revert file to replace try/catch blocks in testing file and serve exceptions.

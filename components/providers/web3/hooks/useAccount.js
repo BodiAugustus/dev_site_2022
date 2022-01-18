@@ -21,9 +21,16 @@ export const handler = (web3, provider) => () => {
     )
 
     useEffect(() => {
-        provider &&
-        provider.on("accountsChanged",
-         (accounts) => mutate(accounts[0] ?? null))
+        console.log("SUBSCRIBING TO EVENT")
+        
+        // provider?.on("accountsChanged",
+        //  (accounts) => mutate(accounts[0] ?? null))
+        const mutator = accounts => mutate(accounts[0] ?? null)
+        provider?.on("accountsChanged", mutator)
+
+        return () => {
+            provider?.removeListener("accountsChanged", mutator)
+        }
     },[provider])
 
     return {
