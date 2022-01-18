@@ -139,3 +139,5 @@ Commits
 #69. Set up contract owner using setContractOwner and constructor. Made contract payable.
 
 #70. Created getContractOwner function to get contract owner. Created transferOwnership function to transfer contract ownership. Tested on Remix.
+
+#71. Created onlyOwner modifier to restrict function access to msg.sender whenever used. Created onlyOwner error. 

@@ -8,7 +8,17 @@ address payable private owner;
        setContractOwner(msg.sender);
    }
 
-   function transferOwnership(address newOwner) external {
+///Only the contract owner has access.
+   error OnlyOwner();
+
+   modifier onlyOwner(){
+       if(msg.sender != getContractOwner()){
+        revert OnlyOwner();
+       }
+       _;
+   }
+
+   function transferOwnership(address newOwner) external onlyOwner {
        setContractOwner(newOwner);
    }
 
