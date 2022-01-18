@@ -84,4 +84,39 @@ contract("ProfilePayments", accounts => {
     
         })
       })
+
+      describe("Normal withdraw", () => {
+          const fundsToDeposit = "100000000000000000"
+          const overLimitFunds = "100000000000000000000000"
+
+          before(async() => {
+            await web3.eth.sendTransaction({
+                from: sender,
+                to: _contract.address,
+                value: fundsToDeposit
+              })
+          })
+
+          it("Should fail when withdrawal attempted with non-owner address", async() => {
+              const value = "10000000000000000"
+              await catchRevert(_contract.withdraw(value, {from: sender}))
+          })
+
+          it("Should fail when withdrawal is over the available balance.", async() => {
+              const currentOwner = await _contract.getContractOwner()
+              await catchRevert(_contract.withdraw(overLimitFunds, {from: currentOwner}))
+          })
+
+          it("Should have +0.1 Ether after withdrawal.", async() => {
+              const currentOwner = await _contract.getContractOwner()
+              const ownerBalance = await getBalance(currentOwner)
+              const result = await _contract.withdraw(fundsToDeposit, {from: currentOwner})
+              const newOwnerBalance = await getBalance(currentOwner)
+              const gas = await getGas(result)
+
+              assert.equal(toBN(ownerBalance).add(toBN(fundsToDeposit)).sub(toBN(gas)).toString(), newOwnerBalance, "The new owner balance is incorrect!")
+
+              await catchRevert(_contract.withdraw(overLimitFunds, {from: currentOwner}))
+          })
+      })
 })
