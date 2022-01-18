@@ -155,3 +155,5 @@ Commits
 #77. Created ProfilePayments.test.js. Set up initial testing enviornment. Ran truffle test, no errors. Imported a catch revert file to replace try/catch blocks in testing file and serve exceptions.
 
 #78. Setup testing for transferOwnership SC function. Ran truffle test, all passed.
+
+#79. Created a getGas abstraction for use with withdrawl/send payment transactions. Created getBalance and toBN functions as well.

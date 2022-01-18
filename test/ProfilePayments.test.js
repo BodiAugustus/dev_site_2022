@@ -1,8 +1,21 @@
 
 const { isTargetLikeServerless } = require("next/dist/server/config")
+const { default: Web3 } = require("web3")
 const { catchRevert } = require("./utils/exceptions")
 
 const ProfilePayments = artifacts.require("ProfilePayments")
+
+const getBalance = async address => Web3.eth.getBalance(address)
+const toBN = value => Web3.utils.toBN(value)
+
+const getGas = async (result) => {
+    const tx = await Web3.eth.getTransaction(result.tx)
+    const gasUsed = toBN(result.receipt.gasUsed)
+    const gasPrice = toBN(tx.gasPrice)
+    const gas = gasUsed.mul(gasPrice)
+    
+    return gas
+}
 
 contract("ProfilePayments", accounts => {
     let _contract = null
