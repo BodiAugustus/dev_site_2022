@@ -1,4 +1,6 @@
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 import NavbarProvider from '@components/providers/NavContext'
 import '@styles/globals.css'
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps }) {
     <Web3Provider>
     <NavbarProvider>
     <HeroProvider>
+      <ToastContainer/>
       <Component {...pageProps} />
     </HeroProvider>
     </NavbarProvider>
@@ -25,3 +28,9 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+
+
+//
+//
+// NEXT_PUBLIC_TARGET_CHAIN_ID=1337
+// NEXT_PUBLIC_NETWORK_ID=5777

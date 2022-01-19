@@ -16,19 +16,19 @@ module.exports = {
           phrase: keys.MNEMONIC
         },
         providerOrUrl: `https://ropsten.infura.io/v3/${keys.INFURA_PROJECT_ID}`,
-        addressIndex: 0
+        addressIndex: 0,
       }),
       network_id: 3,
       gas: 5500000, //Gas limit
-      gasPrice: 20000000000, //Price per unit
+      gasPrice:  120000000000, //Price per unit
       confirmations: 2, //mined blocks before deployment
       timeoutBlocks: 200, //mined blocks before deployment times out
-
+      // skipDryRun: true,
     }  
   },
   compilers: {
     solc: {
-      version: "0.8.4",    
+      version: "0.8.10",    
     }
   },
 

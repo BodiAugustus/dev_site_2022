@@ -13,6 +13,7 @@ import { useFtmPrice } from '@components/hooks/useEthPrice'
 import { useSPIRITPrice } from '@components/hooks/useEthPrice'
 import { useSCRTPrice } from '@components/hooks/useEthPrice'
 import { useBTCPrice } from '@components/hooks/useEthPrice'
+import { toast } from 'react-toastify';
 
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'
@@ -65,6 +66,35 @@ const Hero = () => {
 
     const [paymentData, setPaymentData] = useState(makePayment)
     const formState = createFormState(paymentData)
+
+    const notify = () => {
+        // const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve("Sending transaction, please hold on.."), 4000));
+        const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => reject(new Error("Something went wrong..")), 4000));
+        toast.promise(
+            resolveWithSomeData,
+            {
+              pending: {
+                render(){
+                  return "Sending transaction, please hold on.."
+                },
+                icon: false,
+              },
+              success: {
+                render({data}){
+                  return `Transaction was sent succesfully!`
+                },
+                // other options
+                icon: "🟢",
+              },
+              error: {
+                render({data}){
+                  // When the promise reject, data will contains the error
+                  return <div>{data.message ?? "Transaction has failed!"}</div>
+                }
+              }
+            }
+        )
+    }
     
     return (
         <div className="flex w-full justify-center items-center">
@@ -168,7 +198,7 @@ const Hero = () => {
                           disabled={formState.isDisabled}
                           type="button"
                           onClick={() => {
-                            
+                              notify()
                               alert(
                                   `Your payment has been sent! The details are shown below:
                                   ${JSON.stringify(paymentData)}`
