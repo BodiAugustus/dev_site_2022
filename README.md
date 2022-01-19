@@ -166,4 +166,6 @@ Commits
 
 #83. Tested withdrawl functionality with new testing. All passed.
 
-#84. Created new testing for emergencyWithdrawal function.
+#84. Created testing for emergencyWithdrawal function. All passed.
+
+#85. Created testing for the selfDestruct function. All passed.
