@@ -21,6 +21,7 @@ import  Modal3 from './modals/Modal3'
 import  Modal4 from './modals/Modal4'
 import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
+import { withToast } from '@utils/toast'
 
 const commonStyles = 'xs:min-h-[70px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[2.5px] border- text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
@@ -68,32 +69,9 @@ const Hero = () => {
     const formState = createFormState(paymentData)
 
     const notify = () => {
-        // const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve("Sending transaction, please hold on.."), 4000));
-        const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => reject(new Error("Something went wrong..")), 4000));
-        toast.promise(
-            resolveWithSomeData,
-            {
-              pending: {
-                render(){
-                  return "Sending transaction, please hold on.."
-                },
-                icon: false,
-              },
-              success: {
-                render({data}){
-                  return `Transaction was sent succesfully!`
-                },
-                // other options
-                icon: "🟢",
-              },
-              error: {
-                render({data}){
-                  // When the promise reject, data will contains the error
-                  return <div>{data.message ?? "Transaction has failed!"}</div>
-                }
-              }
-            }
-        )
+        const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve({transactionHash: "0x525c86788b4dd762aa734c2e158081cdd78e00a0462a423b5d0262613fd3cf1b"}), 4000));
+        // const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => resolve(new Error("Something went wrong..")), 4000));
+        withToast(resolveWithSomeData)
     }
     
     return (
