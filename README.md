@@ -173,3 +173,5 @@ Commits
 #86. Prepared truffle ropsten config besides mnemonic and api. Installed npm i @truffle/hdwallet-provider.
 
 #87. Created new project on infura. Added keys.json to .gitignore then created the named file. Added variables to keys.json. Imported keys to truffle-config and setup providerUrl.
+
+#88. Generated mnemonic for infura/ropsten, setup in truffle-config. Confirmed working connection between Ropsten/InfuraAPI. Confirmed deployment account using const accounts = await web3.eth.getAccounts() in the truffle console. Verified deployed account balance using await web3.eth.getBalance(accounts[]0). Successful.
