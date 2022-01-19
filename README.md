@@ -172,4 +172,4 @@ Commits
 
 #86. Prepared truffle ropsten config besides mnemonic and api. Installed npm i @truffle/hdwallet-provider.
 
-#87. Created new project on infura. Added keys.json to .gitignore then created the named file. Added variables to keys.json. Imported keys to truffle-config.
+#87. Created new project on infura. Added keys.json to .gitignore then created the named file. Added variables to keys.json. Imported keys to truffle-config and setup providerUrl.
