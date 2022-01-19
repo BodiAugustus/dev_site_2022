@@ -165,3 +165,5 @@ Commits
 #82. Ran truffle migrate --reset. Sent test ether to contract via Meta, success - verified in Ganache. Created testing for TX before/after amount. Passed in truffle test.
 
 #83. Tested withdrawl functionality with new testing. All passed.
+
+#84. Created new testing for emergencyWithdrawal function.
