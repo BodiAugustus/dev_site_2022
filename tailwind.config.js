@@ -33,3 +33,7 @@ module.exports = {
   },
   plugins: [],
 }
+
+//0xEF03bED82D15725b0FE6938BdE2f22F55F3587cE contract address
+
+//0xcc261c492cb6ebda8a345160850debd0d4685154ca2a29c4b3f5fa38db81b55f TX hash
