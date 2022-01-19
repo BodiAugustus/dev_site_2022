@@ -169,3 +169,5 @@ Commits
 #84. Created testing for emergencyWithdrawal function. All passed.
 
 #85. Created testing for the selfDestruct function. All passed.
+
+#86. Prepared truffle ropsten config besides mnemonic and api. Installed npm i @truffle/hdwallet-provider.

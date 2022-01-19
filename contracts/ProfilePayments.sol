@@ -67,5 +67,11 @@ bool public isStopped = false;
    function setContractOwner(address newOwner) private {
        owner = payable(newOwner);    
    }
+
+   function getBalance() external view returns(uint){
+       return address(this).balance;
+   }
+
+
    
 }
