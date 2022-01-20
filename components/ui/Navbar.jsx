@@ -14,14 +14,14 @@ import { useAccount } from "@components/hooks/web3"
 
 export const NavItem = ({title, classProps, url, id}) => {
     return (
-        <>
-           <Link href={url}>
-           <a key={id} className={` cursor-pointer font-marcellus sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl xl:text-3xl xl:first-letter:text-4xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4   first-letter:underline transition-all md:hover:bg-blue-600 rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
+       
+           
+           <a href={url} key={id} className={` cursor-pointer font-marcellus sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl xl:text-3xl xl:first-letter:text-4xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4   first-letter:underline transition-all md:hover:bg-blue-600 rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
          ${classProps}`} >
             {title}
         </a>
-           </Link>
-       </>
+          
+      
     )
 }
 
@@ -39,7 +39,7 @@ const Navbar = () => {
             {/* {account} */}
                <div className="ml-2 mt-2 inline-block" >
                <Image 
-                    src="/images/logo.png"
+                    src="/images/mmmm.png"
                     alt="logo"
                     height={60}
                     width={45}
@@ -48,7 +48,7 @@ const Navbar = () => {
                     onClick={() => router.push(sprucey)}
                 />
                </div>
-               <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl xl:first-letter:text-5xl
+               <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl xl:first-letter:text-5xl 
               
                 first-letter:text-stone-100 font-cinzel  xl:text-2xl ">Bodi</h1>
                 {/* {account} */}
@@ -57,11 +57,12 @@ const Navbar = () => {
 
                
                
-               <ul className="relative xs:l-10 text-white md:flex hidde ">
+               <ul className="relative xs:l-10 text-white md:flex hidden">
                    {links.map((item, index) => (
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>
+
                    { isLoadingWeb3 ? 
                     <ButtonNav disabled={true} onClick={connect}>Loading...</ButtonNav> 
                     :

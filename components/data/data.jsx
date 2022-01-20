@@ -18,41 +18,42 @@ export const links = [{
 
 export const showcase = [
     {
-    name: "Magenta Spruce",
+    name: "Portfolio Site",
     id: "1a3f",
-    image: "/images/menuPic.jpg",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut sit, corrupti perspiciatis magnam repellat voluptatem illo, suscipit quidem voluptates unde tempore, rerum temporibus. Maiores atque voluptas aspernatur nisi? Est, eveniet.",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642628272/sprucey_viebmq.png",
+    description: "Custom made artsy-type portfolio site built with React version 17. Includes email functionality and project list.",
     link: "https://www.sprucey.dev",
+    date: "2021",
+    github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
+},
+{
+name: "Hot in the Biscuit",
+id: "3a34",
+image: "/images/bonnie.jpg",
+description: "A multi-page front-end business website for a local restaraunt in Koh Samui, Thailand. Custom design built with vanilla JavaScript, HTML and CSS.",
+link: "https://www.hotinthebiscuit.com",
+date: "2021",
+github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
+},
+    {
+    name: "Nettle's Herbs",
+    id: "2a34",
+    image: "/images/nettlesLogo.png",
+    description: "I built this project as a concept using vanilla JavaScript on the client side including Stripe for payments and nodemailer for emails. Full backend was built out using NodeJS with Express and a custom API. Uses MongoDB for data storage.",
+    link: "https://nettles-herbs.herokuapp.com/home",
     date: "2021",
     github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
 },
     {
     name: "Nettle's Herbs",
     id: "2a34",
-    image: "/images/menuPic.jpg",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut sit, corrupti perspiciatis magnam repellat voluptatem illo, suscipit quidem voluptates unde tempore, rerum temporibus. Maiores atque voluptas aspernatur nisi? Est, eveniet.",
-    link: "https://www.sprucey.dev",
+    image: "/images/nettlesLogo.png",
+    description: "I built this project as a concept using vanilla JavaScript on the client side including Stripe for payments and nodemailer for emails. Full backend was built out using NodeJS with Express and a custom API. Uses MongoDB for data storage.",
+    link: "https://nettles-herbs.herokuapp.com/home",
     date: "2021",
     github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
 },
-    {
-    name: "Hot in the Biscuit",
-    id: "3a34",
-    image: "/images/menuPic.jpg",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut sit, corrupti perspiciatis magnam repellat voluptatem illo, suscipit quidem voluptates unde tempore, rerum temporibus. Maiores atque voluptas aspernatur nisi? Est, eveniet.",
-    link: "https://www.sprucey.dev",
-    date: "2021",
-    github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
-},
-    {
-    name: "Hot in the Biscuit",
-    id: "4a34",
-    image: "/images/menuPic.jpg",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut sit, corrupti perspiciatis magnam repellat voluptatem illo, suscipit quidem voluptates unde tempore, rerum temporibus. Maiores atque voluptas aspernatur nisi? Est, eveniet.",
-    link: "https://www.sprucey.dev",
-    date: "2021",
-    github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
-},
+
 
 ]
 

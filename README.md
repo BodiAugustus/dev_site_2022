@@ -181,3 +181,5 @@ Commits
 #90. Changed env file to allow ropsten to prevent UI error and make new target Ropsten. Downloaded npm i react-toastify. Set up to display toastify promise return during send payment button click.
 
 #91. Created toast.js file. Created withToast function. Rendered to UI on click.
+
+#92. Remade the home page for responsive screen sizes.

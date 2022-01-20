@@ -51,7 +51,7 @@ const Services = () => {
                 message={`Offering full-stack services with zero outsourcing, including web hosting with data storage and resource management.`}
             />
             </div>
-            <Link href="/" >
+            <Link href="/contact" >
                 <a className="text-white bg-sky-800 px-5 py-3 rounded-full mt-4 -mb-4 border-4 border-sky-400 font-marcellus hover:-translate-y-1 active:translate-y-1 text-xl transition-all lg:text-2xl">Contact me</a>
             </Link>
             </div>

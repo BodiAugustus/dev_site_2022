@@ -7,7 +7,7 @@ export const withToast = (promise) => {
           pending: {
             render(){
               return (
-                  <div className="p-6 py-2">
+                  <div className="p-6 py-2 bg-sky-400 text-white">
                     <p className="mb-2">
                         Your transaction is being processed
                     </p>
@@ -21,20 +21,20 @@ export const withToast = (promise) => {
           success: {
             render({data}){
               return (
-                  <div>
-                      <p className="font-bold">
+                  <div className="">
+                      {/* <p className="font-bold">
                       Tx: {data.transactionHash.slice(0,20)}...
 
-                      </p>
-                      <p>Transaction was successful!</p>
-                      <a rel="noreferrer" href={`https://ropsten.etherscan.io/tx/${data.transactionHash}`} target="_blank">
+                      </p> */}
+                      <p className="">Transaction was successful!</p>
+                      {/* <a rel="noreferrer" href={`https://ropsten.etherscan.io/tx/${data.transactionHash}`} target="_blank">
                           <i className="text-sky-400 underline">See transaction details</i>
-                      </a>
+                      </a> */}
                   </div>
               )
             },
             // other options
-            icon: "🟢",
+            icon: "🌞",
           },
           error: {
             render({data}){

@@ -10,7 +10,12 @@ module.exports = {
     {
         screens: {
           "xs": "359px",
-          ...defaultTheme.screens
+          'sm': '400px',
+          'ms': '539px',
+          'md': '767px',
+          'lg': '1023px',
+          'xl': '1279',
+          ...defaultTheme.screens,
         },
     extend: {
       fontFamily: {
@@ -19,9 +24,13 @@ module.exports = {
         bebes: "Bebas Neue, cursive",
         monte: "Montserrat Subrayada, sans-serif",
         marcellus : "Marcellus, serif"
-
-
       },
+      // screens: {
+      //   'sm': '400px',
+      //   'ms': '539px',
+
+
+      // }
     },
 
   },

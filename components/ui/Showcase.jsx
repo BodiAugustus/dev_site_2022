@@ -5,21 +5,20 @@ import {  useContext } from 'react'
 import { HeroContext } from '../providers/HeroContext'
 import { NavbarContext } from '../providers/NavContext'
 
+
+
 const Showcase = () => {
     const {readMore, setReadMore} = useContext(HeroContext)
     const {toggleMenu} = useContext(NavbarContext)
     return(
         <>
-
-        
-     
   {showcase.map((item) => {
     const {id, name, image, link, github, description, date} = item;
       return (
-        <div key={id} className="flex flex-col justify-center xs:w-3/4 sm:w-11/12 sm:mt-10 md:w-[92%] lg:w-[97%] xl:w-[92%] xs:mx-auto border-4 border-slate-100 rounded-md bg-slate-400 items-center xs:mb-0 sm:-mb-2 xs:mt-6">
-        <div className="items-center justify-center p-4 ">
+        <div key={id} className="flex flex-col  justify-center xs:w-[95%] sm:w-11/12 ms:w-[70%] sm:mt-10 md:w-[95%]  lg:w-[97%] xl:w-[88%] xs:mx-auto border-4 border-slate-100 rounded-md bg-slate-400 items-center xs:mb-0 sm:-mb-2 xs:mt-6 lg:-mb-6 ">
+        <div className="items-center justify-center xs:p-3 sm:p-3">
        {!toggleMenu &&
-        <div className="border-2 relative  border-sky-900 rounded-md h-60 w-60">
+        <div className="border-2 relative  border-sky-900 rounded-md xs:w-72 sm:w-80   h-60 ms:h-72 w-60 md:w-64 bg-white">
         <Image 
             src={image}
             // height={350}
@@ -32,7 +31,7 @@ const Showcase = () => {
         </div>
        }
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center ">
             <div className="flex items-center">
                 <h2 className='text-2xl md:text-2xl lg:text-xl text-sky-900 font-medium -mb-1'>{name} | {date}</h2>
             </div>
@@ -40,7 +39,7 @@ const Showcase = () => {
                 <h4>{ readMore ?
                     description :
                     `${description.substring(0, 100)}...`
-                    } <button className='px-2 my-1 py-[0.5]  text-md text-sky-900 pb-1 bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base xl:mt-3' onClick={() => setReadMore(!readMore)}>{readMore ? "Show Less" : "Show More"}</button>
+                    } <button key={id} className='px-2 my-1 py-[0.5]  text-md text-sky-900 pb-1 bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base xl:mt-3' onClick={() => setReadMore(!readMore)}>{readMore ? "Show Less" : "Show More"}</button>
                     </h4>
             </div>
             <div className="flex items-center text-white bg-sky-900 justify-between w-full p-3">
