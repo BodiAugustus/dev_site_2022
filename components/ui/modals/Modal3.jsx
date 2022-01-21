@@ -9,7 +9,7 @@ const Modal3 = () => {
         sm:h-[80%] sm:text-lg lg:-mt-40 lg:w-[70%] lg:h-[75%] xl:-mt-[14%] md:h-[50%] md:mt-0">
     
 
-            <h3 className="text-slate-700 p-6 w-full m-10 border-4 font-marcellus border-sky-900 first-letter:text-2xl indent-4 xs:text-md xl:text-3xl lg:text-2xl md:text-2xl lg:first-letter:text-5xl xl:first-letter:text-4xl sm:pt-[15%] md:pt-[10%] lg:pt-[3%] xl:pt-[8%]">I specialize in creating decentralized applications for the next generation of internet users. <h3 className="first-letter:text-2xl indent-4 mt-3 xl:first-letter:text-4xl
+            <h3 className="text-slate-700 p-6 w-full m-10 border-4 font-marcellus border-sky-900 first-letter:text-2xl indent-4 xs:text-md xl:text-3xl lg:text-2xl md:text-2xl lg:first-letter:text-5xl xl:first-letter:text-4xl sm:pt-[10%] md:pt-[10%] lg:pt-[3%] xl:pt-[8%]">I specialize in creating decentralized applications for the next generation of internet users. <h3 className="first-letter:text-2xl indent-4 mt-3 xl:first-letter:text-4xl
             lg:first-letter:text-5xl">My major focus is on connecting existing and new web applications into the world of DeFi and web3.0. to allow tokenization, voting, governance, and much more!</h3></h3>
         
             <div className="text-white  w-1/4 transition-all hover:bg-sky-700 rounded-tr-xl rounded-br-xl bg-sky-900" >
