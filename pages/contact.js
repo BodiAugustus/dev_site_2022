@@ -140,7 +140,7 @@ const Contact = () => {
         detectRetina: true,
       }}
     />
-      <main className="-mt-4 w-full p-4 h-full sm:mt-[10%] md:mt-10 lg:-mt-[7%] xl:-mt-[5%]">
+      <main className="-mt-4 w-full p-4 h-full sm:mt-[6%] md:mt-10 lg:-mt-[7%] xl:-mt-[5%]">
         <h2 className="text-center p-1 text-white text-3xl md:text-4xl xl:text-4xl w-[70%] mx-auto mb-1 mt-16 sm:mt-20">Question, idea or opportunity?</h2>
         <hr className="mb-4 mt-2 w-[50%] xl:w-[30%]  mx-auto border-2 border-[#00bfff]"/>
         <div className="w-full sm:w-[90%]  md:w-[70%] lg:w-[50%] md: mx-auto bg-[#23455b] rounded-md shadow-lg border-2 border-blue-500">

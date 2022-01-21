@@ -131,11 +131,11 @@ const createFormState = ({amount, alert, addressTo}) => {
                     :
                     requireInstall ?
                     <ButtonHero
-                    className="xs:w-[160px] sm:w-[50%] ms:w-[160px]"
+                    className="xs:w-[160px] sm:w-[41%] sm:pb-[9px] ms:w-[160px]"
                      onClick={() => window.open("https://metamask.io/download.html", "_blank")}>Install MetaMask</ButtonHero> 
                     :
                     <ButtonHero 
-                    className="xs:w-[180px] sm:w-[50%] ms:w-[180px]"
+                    className="xs:w-[180px] sm:w-[45%] ms:w-[180px]"
                     onClick={connect}>Connect MetaMask</ButtonHero> 
                     }
                    

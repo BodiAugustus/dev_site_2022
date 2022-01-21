@@ -5,7 +5,7 @@ import { HeroContext } from "../../providers/HeroContext"
 const Modal5 = () => {
     const {openModal, showModal5, closeModal5} = useContext(HeroContext)
     return (<div className={` fixed top-0 left-0 w-full h-full bg-slate-400 bg-opacity-90 -z-10  items-center transition-all ${showModal5 ? 'show-modal' : 'hide-modal'}`  }>
-        <div className="flex w-[50%]  sm:w-[90%] h-[50%] z-20 bg-stone-300 rounded-xl mx-auto translate-y-[50%]  opacity-100 xs:w-[90%] xs:h-[90%] xs:-mt-[75%] sm:-mt-[75%]
+        <div className="flex w-[50%]  sm:w-[90%] h-[50%] z-20 bg-stone-300 rounded-xl mx-auto translate-y-[50%]  opacity-100 xs:w-[90%] xs:h-[90%] xs:-mt-[75%] sm:-mt-[65%]
          sm:h-[80%] sm:text-xl lg:-mt-40 lg:w-[70%] lg:h-[75%] xl:-mt-[14%] md:h-[50%] md:mt-0 ">
     
 

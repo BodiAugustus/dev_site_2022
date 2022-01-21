@@ -42,7 +42,9 @@ module.exports = {
       cursor: ["disabled"]
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
 
 //0xEF03bED82D15725b0FE6938BdE2f22F55F3587cE contract address

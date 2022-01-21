@@ -44,7 +44,7 @@ export const ButtonHero = ({
        <button
          
          {...rest} // contains the onClick={}        
-         className={`py-2 w-[40%] sm:w-[25%] sm:mx-auto mt-6 -mb-5
+         className={`py-2 w-[40%]  sm:mx-auto mt-6 -mb-5
                      rounded-lg  outline-none cursor-pointer transition-all hover:bg-blue-600, hover:scale-110 active:scale-100 list-none  md:hidden md:invisible  font-medium tracking-wider border-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 ${className} ${variants[variant]}`} >
 
          {children}

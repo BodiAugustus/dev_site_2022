@@ -38,7 +38,7 @@ const ImgBox = () => {
             </div>
            <div className="w-[90vw] my-2 mx-auto md:w-[90%]">
            <div className="flex mx-auto  mt-2 w-[90vw]
-             xs:h-[35vh] md:w-[50vw] sm:h-[33vh] md:h-[30vh] lg:h-[62vh] xl:h-[67vh] md:mx-auto 
+             xs:h-[35vh] md:w-[50vw] sm:h-[36vh] md:h-[30vh] lg:h-[62vh] xl:h-[67vh] md:mx-auto 
             max-w-[800px] text-center relative overflow-hidden  border-4  rounded-xl border-[#00bfff] ">
                 {picturesArray.map((picture, pictureIndex) => {
                     const {id, image, title, location} = picture
