@@ -42,7 +42,7 @@ const Blog = () => {
                 </h2>
             </div>
            <div className="w-[90vw] h-[90vh]   md:h-[75vh] lg:h-[70vh] md:mx-[10%]  my-2 mx-auto">
-           <div className="my-0 mx-auto mt-2 w-[90vw] xs:h-[105vh] max-w-[850px] sm:h-[80vh] md:h-[60vh] md:w-[75vw] lg:w-[50vw] lg:h-[100vh] xl:h-[82vh] text-center relative overflow-hidden flex border-4 rounded-xl  border-[#00bfff]">
+           <div className="my-0 mx-auto mt-2 w-[90vw] xs:h-[80vh] max-w-[850px] sm:h-[80vh] md:h-[60vh] md:w-[75vw] lg:w-[50vw] lg:h-[100vh] xl:h-[82vh] text-center relative overflow-hidden flex border-4 rounded-xl  border-[#00bfff]">
                 {blogsPost.map((blog, blogIndex) => {
                     const {id, image, content, date} = blog
                     let position = 'nextSlide'
@@ -54,7 +54,7 @@ const Blog = () => {
                     }
                     return (
                     <article key={id} className={`absolute top-0 left-0 w-[100%] h-[100%] opacity-0 ${position} `}>
-                    <div className="w-[100%] xs:h-[23%] sm:h-[25%] md:h-[33.5%] lg:h-[26%] xl:h-[34%]">
+                    <div className="w-[100%] xs:h-[25%] sm:h-[25%] md:h-[33.5%] lg:h-[26%] xl:h-[34%]">
                     <Image
                     src={image}
                     width="100%"
@@ -69,7 +69,7 @@ const Blog = () => {
 
 
 
-                   <div className="flex flex-col bg-[#142f43] xs:h-[80vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[44vh] overflow-y-scroll font-marcellus md:mt-20 ">
+                   <div className="flex flex-col bg-[#142f43] xs:h-[80vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[54vh] overflow-y-scroll font-marcellus md:mt-20 ">
 
 
 
@@ -97,7 +97,7 @@ const Blog = () => {
                     <CgChevronLeftR className='hover:bg-sky-900 rounded-xl transition-all'/>
                     
                 </button>
-                <button className='absolute top-[110px] md:top-[210px] xs:left-[250px] sm:left-[298px] md:left-[500px] lg:left-[87%] xl:left-[89%] lg:top-[33%] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff]' onClick={() => {setIndex(index + 1)}}>
+                <button className='absolute top-[110px] md:top-[210px] xs:left-[80%] sm:left-[298px] md:left-[500px] lg:left-[87%] xl:left-[89%] lg:top-[33%] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff]' onClick={() => {setIndex(index + 1)}}>
                     <CgChevronRightR className='hover:bg-sky-900 rounded-xl transition-all'/>    
                 </button>
             </div>
