@@ -33,7 +33,7 @@ export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
                         width="35"
                         src="/images/ETH1.png"
                         alt='ETH logo'
-                        placeholder="blur"
+                        // placeholder="blur"
                         blurDataURL="/images/ETH1.png"
 
                         />
@@ -60,7 +60,7 @@ export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
                     width="35"
                     src="/images/FTM.png"
                     alt='FTM logo'
-                    placeholder="blur"
+                    // placeholder="blur"
                     blurDataURL="/images/FTM.png"
 
                      />
@@ -85,7 +85,7 @@ export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
                     width="35"
                     src="/images/SPIRITs.png"
                     alt='XMR logo'
-                    placeholder="blur"
+                    // placeholder="blur"
                     blurDataURL="/images/SPIRITs.png"
 
                      />
@@ -109,7 +109,7 @@ export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
                     width="35"
                     src="/images/XMR1.png"
                     alt='SPIRIT logo'
-                    placeholder="blur"
+                    // placeholder="blur"
                     blurDataURL="/images/XMR1.png"
 
                      />
@@ -136,7 +136,7 @@ export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
                     width="35"
                     src="/images/scrt1.png"
                     alt='XMR logo'
-                    placeholder="blur"
+                    // placeholder="blur"
                     blurDataURL="/images/scrt1.png"
 
                      />
@@ -161,7 +161,7 @@ export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
                     width="35"
                     src="/images/btc.png"
                     alt='SCRT logo'
-                    placeholder="blur"
+                    // placeholder="blur"
                     blurDataURL="/images/btc.png"
                      />
                     <span className="text-2xl xs:text-xl  font-bold xl:text-3xl">&nbsp; = ${btc?.toFixed(0)}</span>

@@ -36,13 +36,13 @@ const Blog = () => {
            {!toggleMenu &&
             <section>
             <div className="">
-                <h2 className='text-white text-center text-3xl mb-2 mt-8 md:text-4xl lg:text-5xl lg:mb-3'>
+                <h2 className='text-white text-center xs:text-2xl sm:text-3xl xs:-mb-1 mb-2 mt-8 md:text-4xl lg:text-5xl lg:mb-3 md:-mt-6 md:ml-[20%] lg:mt-[1.5%] xl:mt-[3%]'>
                    
                     and I really ❤ DeFi!
                 </h2>
             </div>
-           <div className="w-[90vw] h-[90vh] md:h-[75vh]  my-2 mx-auto">
-           <div className="my-0 mx-auto mt-2 w-[90vw] h-[90vh] max-w-[850px] md:h-[70vh] lg:h-[124vh] xl:h-[105vh] text-center relative overflow-hidden flex border-4 rounded-xl  border-[#00bfff]">
+           <div className="w-[90vw] h-[90vh]   md:h-[75vh] lg:h-[70vh] md:mx-[10%]  my-2 mx-auto">
+           <div className="my-0 mx-auto mt-2 w-[90vw] xs:h-[105vh] max-w-[850px] sm:h-[80vh] md:h-[60vh] md:w-[75vw] lg:w-[50vw] lg:h-[100vh] xl:h-[102vh] text-center relative overflow-hidden flex border-4 rounded-xl  border-[#00bfff]">
                 {blogsPost.map((blog, blogIndex) => {
                     const {id, image, content, date} = blog
                     let position = 'nextSlide'
@@ -54,7 +54,7 @@ const Blog = () => {
                     }
                     return (
                     <article key={id} className={`absolute top-0 left-0 w-[100%] h-[100%] opacity-0 ${position} `}>
-                    <div className="w-[100%] h-[28%] md:h-[37%] lg:h-[45%] xl:h-[41%]">
+                    <div className="w-[100%] sm:h-[25%] md:h-[33.5%] lg:h-[26%] xl:h-[33%]">
                     <Image
                     src={image}
                     width="100%"
@@ -65,9 +65,11 @@ const Blog = () => {
                     />
                     </div>
                    <div className="flex flex-col bg-[#142F43] h-full font-marcellus md:mt-20 ">
-                   <div className="flex flex-col text-center p-3 md:text-lg lg:text-base overflow-y-scroll h-[480px] md:h-[380px]">
-                        <h2 className='text-white font-marcellus text-xl md:text-2xl underline underline-offset-4 md:mb-1 xl:text-3xl lg:mt-4'>{date}</h2>
-                        <h4 className='text-white indent-8 first-letter:text-3xl px-2 font-medium overflow-y-scroll md:text-xl xl:text-2xl xl:px-4 '>
+                   <div className="flex flex-col text-center p-3 md:text-lg lg:text-base overflow-y-scroll sm:h-[540px] md:h-[380px] ">
+                        <h2 className='text-white font-marcellus text-xl md:text-2xl underline underline-offset-4 xs:mb-3 md:mb-1 lg:text-xl xl:text-3xl lg:mt-4 xl:mb-4'>{date}</h2>
+                        <h4 className='text-white indent-8 first-letter:text-3xl px-2 font-medium overflow-y-scroll
+                        xs:text-base
+                         sm:text-lg md:text-base xl:text-2xl xl:px-4 '>
                         { readMore ?
                             content :
                             `${content.substring(0, 620)}...`
@@ -81,11 +83,11 @@ const Blog = () => {
                     </article>
                     )
                 })}
-                <button className='absolute top-[120px] md:top-[280px] l-[293px] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff] ' onClick={() => {setIndex(index - 1)}}>
+                <button className='absolute  top-[120px] md:top-[280px] l-[293px] lg:top-[33%] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff] ' onClick={() => {setIndex(index - 1)}}>
                     <CgChevronLeftR className='hover:bg-sky-900 rounded-xl transition-all'/>
                     
                 </button>
-                <button className='absolute top-[120px] md:top-[280px] left-[298px] md:left-[615px] lg:left-[775px] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff]' onClick={() => {setIndex(index + 1)}}>
+                <button className='absolute top-[120px] md:top-[280px] xs:left-[250px] sm:left-[298px] md:left-[500px] lg:left-[87%] lg:top-[33%] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff]' onClick={() => {setIndex(index + 1)}}>
                     <CgChevronRightR className='hover:bg-sky-900 rounded-xl transition-all'/>    
                 </button>
             </div>

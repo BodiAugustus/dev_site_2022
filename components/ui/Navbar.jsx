@@ -15,11 +15,15 @@ import { useAccount } from "@components/hooks/web3"
 export const NavItem = ({title, classProps, url, id}) => {
     return (
        
-           
-           <a href={url} key={id} className={` cursor-pointer font-marcellus sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl xl:text-3xl xl:first-letter:text-4xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-4   first-letter:underline transition-all md:hover:bg-blue-600 rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
+           <>
+            
+
+           <a href={url}  key={id} className={` cursor-pointer font-marcellus sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl xl:text-3xl xl:first-letter:text-4xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-3   first-letter:underline transition-all md:hover:bg-blue-600 rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
          ${classProps}`} >
             {title}
         </a>
+               
+           </>
           
       
     )
@@ -37,28 +41,29 @@ const Navbar = () => {
             <div className="flex relative lg:justify-between justify-between items-center">
 
             {/* {account} */}
-               <div className="ml-2 mt-2 inline-block" >
+               <div className="ml-2 mt-2 inline-block md:pl-3 lg:ml-[4%]" >
                <Image 
                     src="/images/mmmm.png"
                     alt="logo"
                     height={60}
                     width={45}
                     layout="fixed"
-                    className="rounded-lg cursor-pointer"
+                    className="rounded-lg cursor-pointer "
                     onClick={() => router.push(sprucey)}
                 />
                </div>
-               <div className="flex gap-3 xs:text-center sm:ml-30 md:ml-0"><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl xl:first-letter:text-5xl 
+               <div className="flex gap-3 xs:text-center sm:ml-30 "><h1 className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl lg:first-letter:text-4xl 
               
                 first-letter:text-stone-100 font-cinzel  xl:text-2xl ">Bodi</h1>
                 {/* {account} */}
-               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-100 xl:first-letter:text-5xl xl:text-2xl">Augustus</h1></div>
+               <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-100 lg:first-letter:text-4xl xl:text-2xl">Augustus</h1></div>
 
 
                
                
                <ul className="relative xs:l-10 text-white md:flex hidden">
                    {links.map((item, index) => (
+                       
                        <NavItem key={item + index + 1} title={item.name} url={item.url}/>
                    ))}
                </ul>

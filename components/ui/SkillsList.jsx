@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useContext, useState} from 'react'
+import { NavbarContext } from '../providers/NavContext'
+
 import {skills} from '../data/data'
 import {FiChevronsRight} from 'react-icons/fi'
 import {GiBlacksmith, GiScrollQuill, GiSpaceShuttle} from 'react-icons/gi'
@@ -6,6 +8,7 @@ import {GiBlacksmith, GiScrollQuill, GiSpaceShuttle} from 'react-icons/gi'
 const SkillsList = () => {
 
     const [value, setValue] = useState(2)
+    const {toggleMenu} = useContext(NavbarContext)
 
     const {id, order, title, experience, stack, label} = skills[value]
 
@@ -15,7 +18,9 @@ const SkillsList = () => {
                 <h2 className='p-3 text-3xl text-sky-900 font-marcellus  underline-offset-4 underline sm:text-4xl xl:mt-4 xl:mb-6 '>Skill Sets</h2>
              
             </div>
-           <div className=" relative">
+            {!toggleMenu && 
+            <>
+            <div className=" relative">
            <div className="flex px-2 py-2 justify-center sm:justify-around text-2xl text-sky-900 sm:text-3xl lg:justify-center   -mt-4">
                 {skills.map((skill, index) => {
                     return <button key={skill.id+1} className={`m-2 mb-3 ${index === value && 'active-btn'} px-2`} onClick={() => setValue(index)}>{skill.title}</button>
@@ -51,6 +56,8 @@ const SkillsList = () => {
                 <hr className='mt-2 xl:mt-6'/>
             </div>
            </div>
+            </>
+            }
 
         </section>
     )

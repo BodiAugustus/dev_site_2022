@@ -99,11 +99,11 @@ const Hero = () => {
                     :
                     requireInstall ?
                     <ButtonHero
-                    className="xs:w-[160px] sm:w-[160px] ms:w-[160px]"
+                    className="xs:w-[160px] sm:w-[50%] ms:w-[160px]"
                      onClick={() => window.open("https://metamask.io/download.html", "_blank")}>Install MetaMask</ButtonHero> 
                     :
                     <ButtonHero 
-                    className="xs:w-[180px] sm:w-[180px] ms:w-[180px]"
+                    className="xs:w-[180px] sm:w-[50%] ms:w-[180px]"
                     onClick={connect}>Connect MetaMask</ButtonHero> 
                     }
                              
@@ -208,6 +208,8 @@ const Hero = () => {
                 
                 <div key='rightSideForDesktop'>
                 <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl  lg:-mt-2 xl:mt-0 font-bebes text-white text-center underline underline-offset-8 mt-2  xl:-mb-4 md:mb-4 xs:mb-4 md:mt-6'>Quick Scan:</h2>
+                         {!toggleMenu && 
+                         
                          <EthRates
                             eth={eth.data}
                             xmr={xmr.data}
@@ -216,6 +218,7 @@ const Hero = () => {
                             scrt={scrt.data}
                             btc={btc.data}
                             /> 
+                         }
 
                         <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bebes text-white text-center underline underline-offset-8 mt-2 md:mt-12 lg:mt-8 -mb-4 xl:-mb-4'>At A Glance Services:</h2>
                        

@@ -15,8 +15,8 @@ module.exports = {
         mnemonic: {
           phrase: keys.MNEMONIC
         },
-        providerOrUrl: `https://ropsten.infura.io/v3/${keys.INFURA_PROJECT_ID}`,
-        addressIndex: 0,
+        providerOrUrl: `https://ropsten.infura.io/v3/${keys.ALCHEMY_PROJECT_ID}`,
+
       }),
       network_id: 3,
       gas: 5500000, //Gas limit
@@ -33,3 +33,4 @@ module.exports = {
   },
 
 };
+//https://eth-ropsten.alchemyapi.io/v2/vn6GVBdUaQvEdf9MJhv76WG-Cet_h1BB

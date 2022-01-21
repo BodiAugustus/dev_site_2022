@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import {FiGithub} from 'react-icons/fi'
 import {showcase} from '../data/data'
-import {  useContext } from 'react'
+import {  useContext, useState } from 'react'
 import { HeroContext } from '../providers/HeroContext'
 import { NavbarContext } from '../providers/NavContext'
+
+
 
 
 
@@ -15,7 +17,7 @@ const Showcase = () => {
   {showcase.map((item) => {
     const {id, name, image, link, github, description, date} = item;
       return (
-        <div key={id} className="flex flex-col  justify-center xs:w-[95%] sm:w-11/12 ms:w-[70%] sm:mt-10 md:w-[95%]  lg:w-[97%] xl:w-[88%] xs:mx-auto border-4 border-slate-100 rounded-md bg-slate-400 items-center xs:mb-0 sm:-mb-2 xs:mt-6 lg:-mb-6 ">
+        <div key={id} className="flex flex-col  justify-center xs:w-[95%] sm:w-[11/12] ms:w-[70%] sm:mt-10 md:w-[95%]  lg:w-[97%] xl:w-[88%] xs:mx-auto border-4 border-slate-100 rounded-md bg-slate-400 items-center xs:mb-0 sm:-mb-2 xs:mt-6 lg:-mb-6 ">
         <div className="items-center justify-center xs:p-3 sm:p-3">
        {!toggleMenu &&
         <div className="border-2 relative  border-sky-900 rounded-md xs:w-72 sm:w-80   h-60 ms:h-72 w-60 md:w-64 bg-white">
@@ -46,7 +48,10 @@ const Showcase = () => {
             <a href={github}>
                 <FiGithub  className='ml-2 transition-all hover:scale-110 active:scale-100 text-xl md:text-2xl lg:text-xl'/>
             </a>
-                <a className='mx-auto transition-all hover:scale-110  active:scale-100 md:text-xl lg:text-lg' href={link}>
+                <a className='mx-auto transition-all hover:scale-110  active:scale-100 md:text-xl lg:text-lg'
+                 onClick={() => window.open(link)}
+                //   href={link}
+                  >
                 <h4 >See For Yourself! &#8594;</h4>
                 </a>
             </div>

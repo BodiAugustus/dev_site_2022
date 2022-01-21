@@ -21,7 +21,7 @@ export const showcase = [
     name: "Portfolio Site",
     id: "1a3f",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642628272/sprucey_viebmq.png",
-    description: "Custom made artsy-type portfolio site built with React version 17. Includes email functionality and project list.",
+    description: "Custom made artsy-type portfolio site built with React version 17. Includes email functionality, project list, and animated sidebar.",
     link: "https://www.sprucey.dev",
     date: "2021",
     github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
@@ -46,7 +46,7 @@ github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
 },
     {
     name: "Nettle's Herbs",
-    id: "2a34",
+    id: "2a35",
     image: "/images/nettlesLogo.png",
     description: "I built this project as a concept using vanilla JavaScript on the client side including Stripe for payments and nodemailer for emails. Full backend was built out using NodeJS with Express and a custom API. Uses MongoDB for data storage.",
     link: "https://nettles-herbs.herokuapp.com/home",

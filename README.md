@@ -183,3 +183,7 @@ Commits
 #91. Created toast.js file. Created withToast function. Rendered to UI on click.
 
 #92. Remade the home page for responsive screen sizes.
+
+#93. Fixed sidebar to hide elements that were showing up through the home page.
+
+#94. Styled About and contact pages to make responsive. Besides some refactors and a few edits I know about (button clicker), this project is done.

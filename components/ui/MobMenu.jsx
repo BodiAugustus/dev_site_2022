@@ -23,7 +23,7 @@ const MobMenu = () => {
         {toggleMenu && 
         
       <div>
-        <ul className="fixed top-0 -right-0 p-3 w-[100vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start rounded-md" >
+        <ul className="fixed top-0 -right-0 p-3 w-[100vw] h-[100vh] overscroll-none shadow-2xl md:hidden list-none flex flex-col justify-start rounded-md" >
       
         {/* <Sparkles
       color=""

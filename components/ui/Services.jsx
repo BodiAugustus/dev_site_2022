@@ -3,6 +3,9 @@ import {GiBeachBag} from 'react-icons/gi'
 import {FiCheckCircle} from 'react-icons/fi'
 import {GrStatusGood} from 'react-icons/gr'
 import {FaMonero, FaEthereum} from 'react-icons/fa'
+import { useContext} from 'react'
+import { NavbarContext } from '../providers/NavContext'
+
 
 import Link from 'next/link'
 
@@ -19,6 +22,7 @@ const ServiceCard = ({color, title, icon, message}) => (
 )
 
 const Services = () => {
+    const {toggleMenu} = useContext(NavbarContext)
     return (
         <div className="flex flex-col w-full md:flex-row justify-center items-center bg-gradient-to-tr from-slate-200 to-stone-400
         -mt-10">
@@ -32,6 +36,8 @@ const Services = () => {
    
 
             <div className="flex-1 flex flex-col justify-start items-center">
+            {!toggleMenu && 
+            <>
             <ServiceCard 
                 color='bg-[#22577E]'
                 title="Superb Quality Products"
@@ -50,6 +56,8 @@ const Services = () => {
                 icon={<GiBeachBag  className="text-white text-xl lg:text-2xl mx-auto my-[10px] lg:my-[11.5px] "/>}
                 message={`Offering full-stack services with zero outsourcing, including web hosting with data storage and resource management.`}
             />
+            </>
+            }
             </div>
             <Link href="/contact" >
                 <a className="text-white bg-sky-800 px-5 py-3 rounded-full mt-4 -mb-4 border-4 border-sky-400 font-marcellus hover:-translate-y-1 active:translate-y-1 text-xl transition-all lg:text-2xl">Contact me</a>

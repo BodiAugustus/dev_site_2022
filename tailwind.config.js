@@ -10,11 +10,11 @@ module.exports = {
     {
         screens: {
           "xs": "359px",
-          'sm': '400px',
-          'ms': '539px',
-          'md': '767px',
-          'lg': '1023px',
-          'xl': '1279',
+          // 'sm': '400px',
+          // 'ms': '539px',
+          // 'md': '767px',
+          // 'lg': '1023px',
+          // 'xl': '1279px',
           ...defaultTheme.screens,
         },
     extend: {
@@ -25,12 +25,14 @@ module.exports = {
         monte: "Montserrat Subrayada, sans-serif",
         marcellus : "Marcellus, serif"
       },
-      // screens: {
-      //   'sm': '400px',
-      //   'ms': '539px',
+      screens: {
+        'sm': '400px',
+        // 'ms': '539px',
+        // 'mx': '767px',
+  
 
 
-      // }
+      }
     },
 
   },

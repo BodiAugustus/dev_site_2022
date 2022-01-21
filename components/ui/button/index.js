@@ -18,7 +18,7 @@ const ButtonNav = ({
         <button
           
           {...rest} // contains the onClick={}
-          className={`disabled:opacity-70 disabled:cursor-not-allowed py-2 px-4 rounded-lg outline-none cursor-pointer transition-all hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 xs:invisible xs:hidden md:inline-block md:visible md:text-xl font-medium border-[3px] disabled:hover:scale-100 ${className} ${variants[variant]}`} >
+          className={`disabled:opacity-70 disabled:cursor-not-allowed py-2 px-4 rounded-lg outline-none cursor-pointer transition-all hover:scale-110 active:scale-100 list-none relative lg:left-12 xl:left-14 xs:invisible xs:hidden md:inline-block md:visible md:text-xl font-medium border-[3px] disabled:hover:scale-100 md:px-2 ${className} ${variants[variant]}`} >
 
           {children}
 
