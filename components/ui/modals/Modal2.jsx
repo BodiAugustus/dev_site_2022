@@ -9,7 +9,7 @@ const Modal2 = () => {
         sm:h-[80%] sm:text-lg lg:-mt-40 lg:w-[70%] lg:h-[75%] xl:-mt-[14%] md:h-[50%] md:mt-0">
     
 
-            <h3 className="text-slate-700 p-6 w-full m-10 border-4 font-marcellus border-sky-900 first-letter:text-2xl indent-4 xs:text-md xl:text-3xl lg:text-2xl md:text-2xl lg:first-letter:text-5xl xl:first-letter:text-4xl sm:pt-[15%] md:pt-[8%] lg:pt-[3%] xl:pt-[8%]">I connect apps to the decentralized web directly through the browser by way of the web3js library and ethers package.
+            <h3 className="text-slate-700 p-6 w-full m-10 border-4 font-marcellus border-sky-900 first-letter:text-2xl indent-4 xs:text-md xl:text-3xl lg:text-2xl md:text-2xl lg:first-letter:text-5xl xl:first-letter:text-4xl sm:pt-[10%] md:pt-[8%] lg:pt-[3%] xl:pt-[8%]">I connect apps to the decentralized web directly through the browser by way of the web3js library and ethers package.
             <h3 className="first-letter:text-2xl indent-4 mt-2 xl:first-letter:text-4xl
             lg:first-letter:text-5xl xl:mt-4 ">My service gets you set up from A to Z with full details and regular updates so that you can worry about what&apos;s important to you and let me worry about the rest.</h3>
             </h3>
