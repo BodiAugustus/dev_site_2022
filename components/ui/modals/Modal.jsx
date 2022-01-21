@@ -11,7 +11,7 @@ const Modal = () => {
          lg:-mt-40 lg:w-[70%] lg:h-[75%] xl:-mt-[14%]  md:h-[50%] md:mt-0">
     
 
-            <h3 className="text-slate-700 p-6 sm:px-4 w-full m-10 border-4 font-marcellus border-sky-900 first-letter:text-2xl indent-4 xs:text-md xl:text-3xl lg:text-2xl md:text-2xl lg:first-letter:text-5xl xl:first-letter:text-4xl sm:pt-[20%] md:pt-[15%] lg:pt-[7%] xl:pt-[10%]">I&apos;m an experienced blockchain developer with a deep understanding of Ethereum and Fantom&apos;s respective chains. <br/><br/>
+            <h3 className="text-slate-700 p-6 sm:px-4 w-full m-10 border-4 font-marcellus border-sky-900 first-letter:text-2xl indent-4 xs:text-md xl:text-3xl lg:text-2xl md:text-2xl lg:first-letter:text-5xl xl:first-letter:text-4xl sm:pt-[20%] md:pt-[15%] lg:pt-[7%] xl:pt-[8%]">I&apos;m an experienced blockchain developer with a deep understanding of Ethereum and Fantom&apos;s respective chains. <br/><br/>
             <h3 className="first-letter:text-2xl -mt-2 xl:first-letter:text-4xl
             lg:first-letter:text-5xl">I currently build exclusively to Fantom blockchain but am branching into the Secret Network as well.</h3></h3>
         

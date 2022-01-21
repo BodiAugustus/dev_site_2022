@@ -42,7 +42,7 @@ const Blog = () => {
                 </h2>
             </div>
            <div className="w-[90vw] h-[90vh]   md:h-[75vh] lg:h-[70vh] md:mx-[10%]  my-2 mx-auto">
-           <div className="my-0 mx-auto mt-2 w-[90vw] xs:h-[80vh] max-w-[850px] sm:h-[80vh] md:h-[60vh] md:w-[75vw] lg:w-[50vw] lg:h-[100vh] xl:h-[82vh] text-center relative overflow-hidden flex border-4 rounded-xl  border-[#00bfff]">
+           <div className="my-0 mx-auto mt-2 w-[90vw] xs:h-[80vh] max-w-[850px] sm:h-[80vh] md:h-[60vh] md:w-[75vw] lg:w-[50vw] lg:h-[100vh] xl:h-[88vh] text-center relative overflow-hidden flex border-4 rounded-xl  border-[#00bfff]">
                 {blogsPost.map((blog, blogIndex) => {
                     const {id, image, content, date} = blog
                     let position = 'nextSlide'
@@ -69,7 +69,7 @@ const Blog = () => {
 
 
 
-                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[60vh] overflow-y-scroll font-marcellus md:mt-20 ">
+                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[54vh] overflow-y-scroll font-marcellus md:mt-20 ">
 
 
 
