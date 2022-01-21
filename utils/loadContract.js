@@ -12,7 +12,7 @@ export const loadContract = async (name, web3) => {
         contract = new web3.eth.Contract(Artifact.abi, 
             Artifact.networks[NETWORK_ID].address
             )
-            debugger
+            // debugger
     
     } catch (error) {
         console.error(`Contract ${name} cannot be loaded! 😢`);

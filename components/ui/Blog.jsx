@@ -69,7 +69,7 @@ const Blog = () => {
 
 
 
-                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[46vh] overflow-y-scroll font-marcellus md:mt-20 ">
+                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[45vh]  font-marcellus md:mt-20 ">
 
 
 
@@ -97,7 +97,7 @@ const Blog = () => {
                     <CgChevronLeftR className='hover:bg-sky-900 rounded-xl transition-all'/>
                     
                 </button>
-                <button className='absolute top-[110px] md:top-[210px] xs:left-[80%] sm:left-[298px] md:left-[500px] lg:left-[87%] xl:left-[89%] lg:top-[33%] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff]' onClick={() => {setIndex(index + 1)}}>
+                <button className='absolute top-[110px] md:top-[210px] xs:left-[80%] sm:left-[298px] md:left-[500px] lg:left-[87%] xl:left-[89.5%] lg:top-[33%] translate-x-[10%] my-0 mx-1 w-[2.95rem] h-[1.25rem] grid items-center text-5xl cursor-pointer transition-all  text-[#00bfff]' onClick={() => {setIndex(index + 1)}}>
                     <CgChevronRightR className='hover:bg-sky-900 rounded-xl transition-all'/>    
                 </button>
             </div>
