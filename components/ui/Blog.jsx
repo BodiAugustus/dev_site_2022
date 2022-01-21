@@ -75,7 +75,7 @@ const Blog = () => {
 
 
 
-                   <div className="flex flex-col text-center p-3 md:text-lg lg:text-base overflow-y-scroll sm:h-[100vh] md:h-[380px] ">
+                   <div className="flex flex-col text-center p-3 md:text-lg lg:text-base  sm:h-[100vh] md:h-[380px] ">
                         <h2 className='text-white font-marcellus text-xl md:text-2xl underline underline-offset-4 xs:mb-3 md:mb-1 lg:text-xl xl:text-3xl lg:mt-4 xl:mb-4'>{date}</h2>
                         <h4 className='text-white indent-8 first-letter:text-3xl px-2 font-medium overflow-y-scroll
                         xs:text-base
@@ -84,7 +84,7 @@ const Blog = () => {
                             content :
                             `${content.substring(0, 620)}...`
                             }
-                             <button className='px-2 my-2 mx-2   text-md text-sky-900 pb-[2px] bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base  xl:mt-3 mb-4' onClick={() => setReadMore1(!readMore1)}>{readMore1 ? "Show Less" : "Show More"}
+                             <button className='px-2 my-2 mx-2   text-md text-sky-900 pb-[2px] bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base  xl:mt-2 mb-4' onClick={() => setReadMore1(!readMore1)}>{readMore1 ? "Show Less" : "Show More"}
                              </button>
                         </h4>
                     </div>

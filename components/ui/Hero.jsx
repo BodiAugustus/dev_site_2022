@@ -13,7 +13,6 @@ import { useFtmPrice } from '@components/hooks/useEthPrice'
 import { useSPIRITPrice } from '@components/hooks/useEthPrice'
 import { useSCRTPrice } from '@components/hooks/useEthPrice'
 import { useBTCPrice } from '@components/hooks/useEthPrice'
-import { toast } from 'react-toastify';
 
 import  Modal  from './modals/Modal'
 import  Modal2 from './modals/Modal2'
@@ -22,7 +21,7 @@ import  Modal4 from './modals/Modal4'
 import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
 import { withToast } from '@utils/toast'
-import { loadContract } from '@utils/loadContract'
+
 
 const commonStyles = 'xs:min-h-[90px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[3px] border-sky-400 text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
@@ -102,7 +101,7 @@ const createFormState = ({amount, alert, addressTo}) => {
             if(!addressTo || !amount ) return 
           
 
-            sendTransaction(contract)
+            sendTransaction()
         }
     
     return (
