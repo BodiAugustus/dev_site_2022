@@ -54,7 +54,7 @@ const Blog = () => {
                     }
                     return (
                     <article key={id} className={`absolute top-0 left-0 w-[100%] h-[100%] opacity-0 ${position} `}>
-                    <div className="w-[100%] xs:h-[30%] sm:h-[25%] md:h-[33.5%] lg:h-[26%] xl:h-[34%]">
+                    <div className="w-[100%] xs:h-[27%] sm:h-[25%] md:h-[33.5%] lg:h-[26%] xl:h-[34%]">
                     <Image
                     src={image}
                     width="100%"
