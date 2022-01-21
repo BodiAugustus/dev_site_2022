@@ -23,7 +23,7 @@ const CryptoCard = () => {
         <div className="p-3 justify-end items-start flex-col rounded-xl h-40 xs:w-80 sm:h-48 sm:w-[90%] ms:w-[75%] md:h-60 md:w-2/3 lg:w-full lg:h-44 xl:h-56  my-5 lg:my-4 bg-slate-400 eth-card white-glassmorphism">
             <div className="flex justify-between flex-col w-full h-full">
                 <div className="flex justify-between items-start">
-                    <div className="w-12 h-12 md:w-16 md:h-16 lg:w-16 lg: lg:h-14 rounded-full border-2 border-white flex justify-center items-center text-white tracking-wide">
+                    <div className="w-12 h-12 md:w-16 md:h-16 lg:w-14 lg: lg:h-14 rounded-full border-2 border-white flex justify-center items-center text-white tracking-wide">
                         
                         <h4 className="md:text-xl">DeFi </h4>
 

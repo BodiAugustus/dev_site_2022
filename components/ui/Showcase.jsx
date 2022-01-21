@@ -38,10 +38,12 @@ const Showcase = () => {
                 <h2 className='text-2xl md:text-2xl lg:text-xl text-sky-900 font-medium -mb-1'>{name} | {date}</h2>
             </div>
             <div className="flex text-center p-3 md:text-lg lg:text-base">
-                <h4>{ readMore ?
+                <h4 className='' >{ readMore[id] ?
                     description :
                     `${description.substring(0, 100)}...`
-                    } <button key={id} className='px-2 my-1 py-[0.5]  text-md text-sky-900 pb-1 bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base xl:mt-3' onClick={() => setReadMore(!readMore)}>{readMore ? "Show Less" : "Show More"}</button>
+                    } <button
+                     key={id}
+                     className='px-2 my-1 py-[0.5]  text-md  text-sky-900 pb-1 bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base xl:mt-3  ' onClick={() => setReadMore(id)}>{readMore[id] ? "Show Less" : "Show More"}</button>
                     </h4>
             </div>
             <div className="flex items-center text-white bg-sky-900 justify-between w-full p-3">
@@ -54,6 +56,7 @@ const Showcase = () => {
                   >
                 <h4 >See For Yourself! &#8594;</h4>
                 </a>
+               
             </div>
         </div>
     </div>

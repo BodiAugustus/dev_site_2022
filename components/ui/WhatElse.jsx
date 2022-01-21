@@ -7,7 +7,7 @@ const WhatElse = () => {
     return(
         <>
   
-        <h2 className="text-center mt-8 text-3xl md:text-4xl lg:text-5xl text-white font md:mb-2 md:-mt-[12vh] lg:mt-[20%] xl:mt-[20%] xs:mt-[33%] sm:-mt-[15%] xl:mb-2">What else?</h2>
+        <h2 className="text-center mt-8 text-3xl md:text-4xl lg:text-5xl text-white font md:mb-2 md:-mt-[12vh] lg:mt-[20%] xl:mt-[13%] xs:mt-[33%] sm:-mt-[15%] xl:mb-2">What else?</h2>
         <div className="flex flex-col  w-[90%] md:w-[75%] xl:w-[65%] border-4 mx-auto mt-1 rounded-xl border-[#00bfff] p-3 ">
 
             <ul className="px-1 text-white font-medium text-lg leading-6 md:text-xl lg:text-2xl xl:text-3xl">

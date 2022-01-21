@@ -26,6 +26,12 @@ export default function Web3Provider({children}){
         isLoadingWeb3: true,
         hooks: setupHooks()
     })
+    const [formData1, setFormData1] = useState({addressTo: '22', amount: '33', message: 'hey'})
+
+    const handleChange1 = (e, name) => {
+        setFormData1((prevState) => ({...prevState,
+             [name]:e.target.value}))
+    }
 
     useEffect(() => {
         const loadProvider = async () => {
@@ -53,8 +59,10 @@ export default function Web3Provider({children}){
     const _web3Api = useMemo(() => {
         const { web3, provider, isLoading} = web3Api
 
+
         return {
             ...web3Api,
+            ...formData1,
             // isWeb3Loaded: web3 != null,
             requireInstall: !isLoading && !web3,//tells us if we need to install meta
             // getHooks: () => setupHooks(web3, provider),

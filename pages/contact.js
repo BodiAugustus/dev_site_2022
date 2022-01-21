@@ -140,16 +140,17 @@ const Contact = () => {
         detectRetina: true,
       }}
     />
-      <main className="-mt-4 w-full p-4 h-full md:mt-10 lg:-mt-[10%] xl:-mt-16">
+      <main className="-mt-4 w-full p-4 h-full sm:mt-[10%] md:mt-10 lg:-mt-[7%] xl:-mt-[0%]">
         <h2 className="text-center p-1 text-white text-3xl md:text-4xl xl:text-4xl w-[70%] mx-auto mb-1 mt-16 sm:mt-20">Question, idea or opportunity?</h2>
         <hr className="mb-4 mt-2 w-[50%] xl:w-[30%]  mx-auto border-2 border-[#00bfff]"/>
-        <div className="w-full xs:h-[72vh] sm:h-[60vh] lg:h-[80vh] xl:h-[80vh] md:w-[70%] md: mx-auto bg-[#23455b] rounded-md shadow-lg border-2 border-blue-500">
-          <h2 className="text-center p-1 text-white text-2xl md:text-3xl xl:text-3xl xl:mt-3">Let&apos;s talk about it.</h2>
+        <div className="w-full sm:w-[90%]  md:w-[70%] lg:w-[50%] md: mx-auto bg-[#23455b] rounded-md shadow-lg border-2 border-blue-500">
+          <h2 className="text-center p-4 text-white text-2xl md:text-3xl xl:text-3xl xl:mt-3">Let&apos;s talk about it.</h2>
 
           <form
             autoComplete="off"
-            className="capitalize px-1"
+            className="capitalize px-1 "
             onSubmit={sendEmail}
+            
           >
             <label className="pr-1 text-blue-300 text-xl md:text-2xl lg:text-xl xl:text-2xl md:ml-2">Your Name:</label>
             <input className="p-2 w-[95%] text-left mb-2 text-sky-900 border-2 ml-2  border-blue-300 rounded-lg text-xl md:text-2xl lg:text-xl xl:text-xl" type="text" name="name" />
@@ -162,8 +163,8 @@ const Contact = () => {
             />
             <br />
             <label className="text-blue-300 text-xl md:text-2xl md:ml-2 xl:text-2xl lg:text-xl">Your message:</label>
-            <textarea className="bg-blue-400 lg:text-xl xl:text-xl text-sky-900 w-[93.5%]  flex indent-2 rounded-md mb-1 mt-1 border-2 border-b-4  mx-3 text-xl md:text-2xl" name="message" rows="6" />
-            <input className="px-1 py-1 mt-2 mr-2 tracking-wide text-white font-bold border-2 float-right border-sky-400 cursor-pointer transition-all rounded-xl hover:bg-sky-500 w-[20%] md:text-xl xl:text-xl xl:pb-[6px] sm:mt-[7%] md:w-[15%] md:absolute left-[65%] md:bottom-[25%] bottom-[138px]  lg:w-[200px] lg:bottom-[7.5%] lg:left-[420px] xl:left-[899px] xl:bottom-[6.5%] xl:w-[10%]"type="submit" value="Send" />
+            <textarea className="bg-blue-400 lg:text-xl xl:text-xl text-sky-900 w-[93.5%]  flex indent-2 rounded-md mb-[18%] mt-1 border-2 border-b-4  mx-3 text-xl md:text-2xl" name="message" rows="4" />
+            <input className="px-1 py-1 mt-2 mr-2 tracking-wide text-white font-bold border-2 float-right border-sky-400 cursor-pointer transition-all rounded-xl hover:bg-sky-500 w-[20%] md:text-xl xl:text-xl xl:pb-[6px] xs:-mt-[14%] md:-mt-[13.5%] md:mr-[5%] md:w-[15%]   lg:w-[18%] lg:pb-[1.5%]  xl:w-[14%] "type="submit" value="Send" />
           </form>
         </div>
       </main>

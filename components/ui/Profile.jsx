@@ -11,7 +11,7 @@ const Profile = () => {
                 <div className="flex flex-col w-full  lg:w-[75%] lg:mx-auto p-4 h-full lg:h-[80%] md:mt-6 lg:mt-0 md:col-span-[30vw]">
                
                 <h1 className="text-white mx-auto text-5xl lg:text-6xl font-marcellus  rounded-full mt-0 mb-1 lg:mt-[18%] xl:mt-[10%]">Hi,</h1>
-                 <div className=" w-full h-full md:h-[68%] lg:h-[85%] relative  border-4 border-[#00bfff] rounded-full">
+                 <div className=" w-full h-full md:h-[65%] lg:h-[85%] relative  border-4 border-[#00bfff] rounded-full">
                      <Image
                      src={'/images/Bodi.jpg'}
                      alt='Pic of Bodi'

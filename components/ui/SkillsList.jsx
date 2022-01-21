@@ -7,7 +7,7 @@ import {GiBlacksmith, GiScrollQuill, GiSpaceShuttle} from 'react-icons/gi'
 
 const SkillsList = () => {
 
-    const [value, setValue] = useState(2)
+    const [value, setValue] = useState(0)
     const {toggleMenu} = useContext(NavbarContext)
 
     const {id, order, title, experience, stack, label} = skills[value]

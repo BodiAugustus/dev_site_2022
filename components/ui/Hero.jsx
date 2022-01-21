@@ -22,6 +22,7 @@ import  Modal4 from './modals/Modal4'
 import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
 import { withToast } from '@utils/toast'
+import { loadContract } from '@utils/loadContract'
 
 const commonStyles = 'xs:min-h-[90px] px-2 xs:min-w-[120px]  flex justify-center items-center border-[3px] border-sky-400 text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide sm:text-lg md:text-xl '
 
@@ -34,6 +35,8 @@ const makePayment = {
 const _createFormState = (isDisabled = false, alert = "") => ({
     isDisabled, alert
 })
+
+
 
 const createFormState = ({amount, alert, addressTo}) => {
   
@@ -50,12 +53,15 @@ const createFormState = ({amount, alert, addressTo}) => {
     return _createFormState()
 }
 
-const Hero = () => {
-    const {isLoadingWeb3, connect, requireInstall } = useWeb3()
+
+    const Hero = () => {
+    const [formData1, setFormData1] = useState({addressTo: '22', amount: '33', message: 'hey'})
+    const {isLoadingWeb3, connect, requireInstall, contract } = useWeb3()
+
     const {toggleMenu} = useContext(NavbarContext)
     const [isLoading, setIsLoading] = useState(false)
     const {openModal, openModal2, openModal3, openModal4, openModal5,openModal6} = useContext(HeroContext) 
-    
+
     const {account} = useAccount()
     const {eth} = useEthPrice()
     const {xmr} = useXmrPrice()
@@ -73,6 +79,31 @@ const Hero = () => {
         // const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => resolve(new Error("Something went wrong..")), 4000));
         withToast(resolveWithSomeData)
     }
+
+    const sendTransaction = async () => {
+        try {
+            // if(!web3) return alert("You must have MetaMask installed to send payments.")
+            const { addressTo, amount, message} = formData1
+            
+        } catch (error) {
+            console.error("Transaction failed!");
+        }
+        
+    }
+
+    const handleChange1 = (e, name) => {
+        setFormData1((prevState) => ({...prevState,
+            [name]:e.target.value}))
+        }
+
+        const handleSubmit = (e) => {
+            const { addressTo, amount, message} = formData1
+            e.preventDefault()
+            if(!addressTo || !amount ) return 
+          
+
+            sendTransaction(contract)
+        }
     
     return (
         <div className="flex w-full justify-center items-center">
@@ -89,7 +120,9 @@ const Hero = () => {
                     <h4 className='text-slate-50 mt-1 font-cinzel sm:mx-auto sm:text-2xl md:text-3xl xl:mx-0'>NextJS | Solidity</h4>
                     {/* {account} */}
                    {/* <EthRates eth={eth.data}/> */}
+                
                     { isLoadingWeb3 ? 
+                    
                     <ButtonHero disabled={true} onClick={connect}>Loading...</ButtonHero> 
                     :
                     account.isAdmin ?
@@ -106,6 +139,7 @@ const Hero = () => {
                     className="xs:w-[180px] sm:w-[50%] ms:w-[180px]"
                     onClick={connect}>Connect MetaMask</ButtonHero> 
                     }
+                   
                              
                     {!toggleMenu &&
                         <CryptoCard/>
@@ -116,7 +150,8 @@ const Hero = () => {
 
                         {!toggleMenu && 
                         <>
-                         <Input 
+                         <Input  
+                            handleChange={handleChange1}
                             onChange={({target: {value}}) => {
                              setPaymentData({
                                  ...paymentData,
@@ -131,7 +166,8 @@ const Hero = () => {
 
                           /> 
 
-                         <Input 
+                         <Input  
+                            handleChange={handleChange1}
                             onChange={({target: {value}}) => {
                             
                               setPaymentData({
@@ -147,7 +183,8 @@ const Hero = () => {
                             />
 
 
-                         <Input
+                         <Input 
+                            handleChange={handleChange1}
                             onChange={({target : {value}}) => {
                               setPaymentData({
                                   ...paymentData,
@@ -179,21 +216,26 @@ const Hero = () => {
                           
                           disabled={formState.isDisabled}
                           type="button"
-                          onClick={() => {
-                              notify()
-                              alert(
-                                  `Your payment has been sent! The details are shown below:
-                                  ${JSON.stringify(paymentData)}`
+                          onClick={handleSubmit
+                              
+                        //       (e) => {
+                        //       notify()
+                        //       handleSubmit()
+                        //       alert(
+                        //           `Your payment has been sent! The details are shown below:
+                        //           ${JSON.stringify(paymentData)}`
                                   
-                              )
-                            setPaymentData({
-                                amount:"",
-                                message: "",
-                                addressTo: ""
-                            })
+                        //       )
+                        //     setPaymentData({
+                        //         amount:"",
+                        //         message: "",
+                        //         addressTo: ""
+                        //     })
                     
                               
-                          }}                    
+                        //   }
+                          
+                          }                    
                          >
                          Send Now
                            
@@ -224,7 +266,7 @@ const Hero = () => {
                        
 
                      <div className="grid sm:grid-cols-2 grid-cols-2 w-full sm:w-[90%] ms:w-[80%] sm:mx-auto ms:mx-auto xl:w-[90%] xl:h-[40vh] md:w-[90%] xl:mx-auto mt-8 cursor-pointer">
-                         <div onClick={openModal} className={`rounded-tl-2xl ${commonStyles}`}>Ethereum | Fantom  </div>
+                         <div onClick={openModal} className={`rounded-tl-2xl ${commonStyles}`}>Fantom  </div>
                          <Modal  className='text-white'
                          />
                          <div className={`${commonStyles} rounded-tr-2xl`} onClick={openModal2}>Web3.0</div>
