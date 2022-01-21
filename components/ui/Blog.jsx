@@ -54,7 +54,7 @@ const Blog = () => {
                     }
                     return (
                     <article key={id} className={`absolute top-0 left-0 w-[100%] h-[100%] opacity-0 ${position} `}>
-                    <div className="w-[100%] xs:h-[27%] sm:h-[25%] md:h-[33.5%] lg:h-[26%] xl:h-[34%]">
+                    <div className="w-[100%] xs:h-[27%] sm:h-[25%] md:h-[33.5%] lg:h-[26%] xl:h-[38%]">
                     <Image
                     src={image}
                     width="100%"
@@ -69,7 +69,7 @@ const Blog = () => {
 
 
 
-                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[54vh] overflow-y-scroll font-marcellus md:mt-20 ">
+                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[47vh] overflow-y-scroll font-marcellus md:mt-20 ">
 
 
 

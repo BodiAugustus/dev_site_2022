@@ -9,7 +9,7 @@ const Modal5 = () => {
          sm:h-[80%] sm:text-xl lg:-mt-40 lg:w-[70%] lg:h-[75%] xl:-mt-[14%] md:h-[50%] md:mt-0 ">
     
 
-            <h3 className="text-slate-700 p-6 w-full m-10 border-4 font-marcellus border-sky-900 first-letter:text-2xl indent-4 xs:text-md xl:text-3xl lg:text-2xl md:text-2xl lg:first-letter:text-5xl xl:first-letter:text-4xl sm:pt-[15%] md:pt-[10%] lg:pt-[5%] xl:pt-[8%]">Active in crypto since Spring of 2017 I have tremendous experience in using and investing in BTC and ETH, both in the real world and online. 
+            <h3 className="text-slate-700 p-6 w-full m-10 border-4 font-marcellus border-sky-900 first-letter:text-2xl indent-4 xs:text-md xl:text-3xl lg:text-2xl md:text-2xl lg:first-letter:text-5xl xl:first-letter:text-4xl sm:pt-[15%] md:pt-[10%] lg:pt-[5%] xl:pt-[7%]">Active in crypto since Spring of 2017 I have tremendous experience in using and investing in BTC and ETH, both in the real world and online. 
             <h3 className="first-letter:text-2xl mt-3 xl:first-letter:text-4xl
             lg:first-letter:text-5xl ">Since 2020 I have also been actively involved in DeFi projects and currently also offer advising and investment services for private clients.</h3></h3>
         

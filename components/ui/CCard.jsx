@@ -37,7 +37,7 @@ const CryptoCard = () => {
 
                       { 
                           network.hasInitialResponse && !network.isSupported &&
-                          <div className="bg-red-400 px-2 w-[80%] sm:w-[70%] mx-2 rounded-lg text-white md:text-xl lg:w-[100%] lg:text-base lg:mb-2 xl:text-xl">
+                          <div className="bg-red-400 px-2 w-[80%] sm:w-[70%] mx-2 rounded-lg text-white md:text-xl lg:w-[80%] lg:text-base lg:mb-2 xl:text-xl">
                            <div className="">Wrong network,</div>
                            <div className="">Connect to: {` `}
                            <strong className="">{network.target}</strong>
