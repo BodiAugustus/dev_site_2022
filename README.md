@@ -187,3 +187,5 @@ Commits
 #93. Fixed sidebar to hide elements that were showing up through the home page.
 
 #94. Styled About and contact pages to make responsive. Besides some refactors and a few edits I know about (button clicker), this project is done.
+
+#95. Ran npm run build. Build completed. Uploaded to Vercel.
