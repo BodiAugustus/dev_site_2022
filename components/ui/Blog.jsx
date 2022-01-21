@@ -69,7 +69,7 @@ const Blog = () => {
 
 
 
-                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[47vh] overflow-y-scroll font-marcellus md:mt-20 ">
+                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[46vh] overflow-y-scroll font-marcellus md:mt-20 ">
 
 
 
