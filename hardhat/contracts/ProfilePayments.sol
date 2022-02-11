@@ -2,9 +2,24 @@
 pragma solidity ^0.8.0;
 
 contract ProfilePayments {
-address payable private owner;
+    address payable private owner;
 
-bool public isStopped = false;
+    bool public isStopped = false;
+
+    uint transactionCount;
+
+    event Transfer(address from, address receiver, uint amount, string message, uint timestamp);
+
+    struct TransferStruct {
+        address sender;
+        address receiver;
+        uint amount;
+        string message;
+        uint timestamp;
+        
+    }
+
+    TransferStruct[] transactions;
 
    constructor(){
        setContractOwner(msg.sender);
@@ -42,6 +57,22 @@ bool public isStopped = false;
    function emergencyWithdraw() external onlyOwner onlyWhenStopped {
      (bool success, )  = owner.call{value: address(this).balance}("");
      require(success, "Transfer failed!");
+   }
+
+   function addToBlockchain(address payable receiver, uint amount, string memory message) public {
+       transactionCount += 1;
+       transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp));
+       emit Transfer(msg.sender, receiver, amount, message, block.timestamp);
+   }
+
+   function getAllTransactions() public view returns (TransferStruct[] memory) {
+       return transactions;
+
+   }
+
+   function getTransactionCount() public view returns(uint) {
+       return transactionCount;
+
    }
 
    function selfDestruct() external onlyWhenStopped onlyOwner {

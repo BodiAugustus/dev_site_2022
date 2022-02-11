@@ -11,16 +11,19 @@ import  {Web3Provider}  from '@components/providers'
 
 
 
+
 function MyApp({ Component, pageProps }) {
 
   return (
     <Web3Provider>
+
     <NavbarProvider>
     <HeroProvider>
       <ToastContainer/>
       <Component {...pageProps} />
     </HeroProvider>
     </NavbarProvider>
+
     </Web3Provider>
  
   )

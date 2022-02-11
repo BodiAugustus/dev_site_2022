@@ -1,6 +1,6 @@
 
 
-import abi from './Payments.json'
+import abi from './Transactions.json'
 
 export const contractABI = abi.abi
-export const contractAddress = '0x6743064c1ebf12583973ca037176f25d92292e0f'
+export const contractAddress = '0x9A9eBC4D7e0B80cFe2793AaD4fD41eC98CceE376'

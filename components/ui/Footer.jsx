@@ -15,7 +15,9 @@ const Footer = () => {
         <Link href="/" className="transition-all">
           <a className="neontext neonP font-cinzel text-4xl sm:text-4xl md:text-7xl lg:text-8xl cursor-default
           xs:mt-20
-          lg:mt-4 lg:pb-10">Bodi Agustus</a>
+          lg:mt-4 lg:pb-10
+          2xl:pb-14
+          ">Bodi Agustus</a>
         </Link>
         <div className=" w-full text-center translate-y-5 md:translate-y-16 lg:translate-y-2  ">
         {

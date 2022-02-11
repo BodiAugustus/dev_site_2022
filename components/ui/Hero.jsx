@@ -1,5 +1,5 @@
 
-import { useContext, useState} from 'react'
+import React, { useContext, useState} from 'react'
 import { NavbarContext } from '../providers/NavContext'
 import { HeroContext } from '../providers/HeroContext'
 import { Input, Showcase, CryptoCard, Loader,  } from '..'
@@ -21,6 +21,7 @@ import  Modal4 from './modals/Modal4'
 import  Modal5 from './modals/Modal5'
 import  Modal6 from './modals/Modal6'
 import { withToast } from '@utils/toast'
+
 
 
 const commonStyles = 'px-2 flex justify-center items-center border-[3px] border-sky-400 text-white bg-sky-600 hover:bg-sky-700 hover:transition-all tracking-wide xs:min-h-[90px] xs:min-w-[120px] sm:text-lg md:text-xl lg:text-base'
@@ -81,7 +82,7 @@ const createFormState = ({amount, alert, addressTo}) => {
 
     const sendTransaction = async () => {
         try {
-            // if(!web3) return alert("You must have MetaMask installed to send payments.")
+            if(!web3) return alert("You must have MetaMask installed to send payments.")
             const { addressTo, amount, message} = formData1
             
         } catch (error) {
@@ -103,7 +104,8 @@ const createFormState = ({amount, alert, addressTo}) => {
 
             sendTransaction()
         }
-    
+     
+
     return (
         <div className="flex w-full justify-center items-center 
         xl:h-[145vh]
@@ -247,7 +249,8 @@ const createFormState = ({amount, alert, addressTo}) => {
                         
                         disabled={formState.isDisabled}
                         type="button"
-                        onClick={handleSubmit
+                       
+                        
                             
                         //       (e) => {
                         //       notify()
@@ -266,7 +269,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                             
                         //   }
                         
-                        }                    
+                                          
                         >
                         Send Now
                         
