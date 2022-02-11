@@ -126,14 +126,15 @@ const createFormState = ({amount, alert, addressTo}) => {
                     
                     <h1 className='bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace 
                     xxs:text-5xl 
-                    sm:text-6xl sm:text-center sm:-mt-6 
+                    xs:text-center
+                    sm:text-6xl  sm:-mt-6 
                     md:text-7xl md:-mt-0 
                     lg:text-6xl 
                     xl:text-7xl xl:-mt-8
                     2xl:mt-10'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
                     <h4 className='text-slate-50 mt-1 font-cinzel 
                     xxs:text-2xl 
-                    sm:mx-auto 
+                    xs:mx-auto 
                     md:text-3xl 
                     xl:mx-auto'>NextJS | Solidity</h4>
                     {/* {account} */}
