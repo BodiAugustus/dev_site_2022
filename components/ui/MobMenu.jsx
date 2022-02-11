@@ -79,7 +79,7 @@ const MobMenu = () => {
     <div className="flex justify-around
     xxs:mt-28 xxs:mb-20
     xs:mb-4
-    sm:mt-32 sm:mb-20     ">
+    sm:mt-32 sm:mb-10     ">
         <a href="https://github.com/BodiAugustus" target="_blank" rel="noreferrer" className="z-50 cursor-pointer">
         <BsGithub fontSize={40} className="bg-transparent text-gray-200 hover:transition-all hover:text-slate-300 hover:scale-105 active:scale-100 cursor-pointer  "/>
         </a>

@@ -4,8 +4,8 @@ const ProjectCard = () => {
     return(
         <div className=" bg-gradient-to-b from-sky-800 to-stone-300 
         xxs:h-[275vh]
-        xs:h-[280vh]
-        sm:h-[290vh]
+        xs:h-[285vh]
+        sm:h-[280vh]
         md:h-[117vh]
         lg:h-[110vh]
         xl:h-[100vh]
