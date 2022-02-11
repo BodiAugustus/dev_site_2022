@@ -75,7 +75,8 @@ export const ButtonSend = ({
         sm:w-[40%] sm:px-3 sm:pb-[9px]
         md:w-[35%] md:pb-[11px] md:text-2xl md:py-2 md:mt-8 
         lg:w-[40%] lg:pb-3"
-        xl:w-[40%]" ${className}`}>
+        xl:w-[40%]
+        2xl:w-[50%]" ${className}`}>
 
         {children}
 

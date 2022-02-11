@@ -25,7 +25,7 @@ export default function EthRates({eth, xmr, ftm, spirit, scrt, btc}){
         md:h-[40vh] md:w-[100%] 
         lg:h-[55vh] lg:p-1 lg:w-[105%] lg:mb-0
         xl:h-[65vh] xl:mr-[100%]
-        2xl:h-[45vh] 2xl:mr-0
+        2xl:h-[45vh] 2xl:mr-12
         ">
             <div className="text-center">
                 <div className="p-2 drop-shadow rounded-md">

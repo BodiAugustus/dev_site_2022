@@ -107,11 +107,13 @@ const createFormState = ({amount, alert, addressTo}) => {
     return (
         <div className="flex w-full justify-center items-center 
         xl:h-[145vh]
+        2xl:h-[135vh]
         ">
             <div className="flex flex-col items-start justify-between py-10 px-4 
             md:p-20 md:py-8
             lg:flex-row 
-            xl:pt-0 xl:p-0 2xl:w-[95%] 2xl:py-0">
+            xl:pt-0 xl:p-0 
+            2xl:w-[95%] 2xl:py-0 2xl:-mt-14">
                 {/* <Image
                     src="/images/test.png"
                     layout="fill"
@@ -288,7 +290,8 @@ const createFormState = ({amount, alert, addressTo}) => {
                     sm:text-3xl 
                     md:text-4xl md:mt-6
                     lg:text-3xl lg:mt-16 
-                    xl:mt-0'>Quick Scan:</h2>
+                    xl:mt-0
+                    2xl:-mt-14'>Quick Scan:</h2>
                         {!toggleMenu && 
                         
                         <EthRates
