@@ -54,7 +54,12 @@ const Blog = () => {
                     }
                     return (
                     <article key={id} className={`absolute top-0 left-0 w-[100%] h-[100%] opacity-0 ${position} `}>
-                    <div className="w-[100%] xs:h-[27%] sm:h-[28%] md:h-[33.5%] lg:h-[26%] xl:h-[38%]">
+                    <div className="w-[100%] 
+                    xs:h-[27%] 
+                    sm:h-[28%] 
+                    md:h-[33.5%] 
+                    lg:h-[26%] 
+                    xl:h-[38%]">
                     <Image
                     src={image}
                     width="100%"
@@ -69,14 +74,28 @@ const Blog = () => {
 
 
 
-                   <div className="flex flex-col bg-[#142f43] xs:h-[58vh] sm:h-[60vh] md:h-[33vh] lg:h-[60vh] xl:h-[46vh] overflow-y-scroll scrollbar-track-sky-400 font-marcellus md:mt-20 ">
+                   <div className="flex flex-col bg-[#142f43] overflow-y-scroll scrollbar-track-sky-400 font-marcellus md:mt-20 
+                   xs:h-[58vh] 
+                   sm:h-[60vh] 
+                   md:h-[33vh] 
+                   lg:h-[60vh] 
+                   xl:h-[46vh] ">
 
 
 
 
 
-                   <div className="flex flex-col text-center p-3 md:text-lg lg:text-base  sm:h-[100vh] md:h-[380px] ">
-                        <h2 className='text-white font-marcellus text-xl md:text-2xl underline underline-offset-4 xs:mb-3 md:mb-1 lg:text-xl xl:text-3xl lg:mt-4 xl:mb-4'>{date}</h2>
+                   <div className="flex flex-col text-center p-3  
+                   sm:h-[100vh] 
+                   md:h-[380px] md:text-lg 
+                   lg:text-base 
+                   ">
+                        <h2 className='text-white font-marcellus text-xl md:text-2xl underline underline-offset-4 
+                        xs:mb-3 
+                        md:mb-1 
+                        lg:text-xl lg:mt-4 
+                        xl:text-3xl xl:mb-4 
+                        2xl:mt-12'>{date}</h2>
                         <h4 className='text-white indent-8 first-letter:text-3xl px-2 font-medium overflow-y-scroll scrollbar-track-sky-400
                         xs:text-base
                          sm:text-lg md:text-base xl:text-2xl xl:px-4 '>
