@@ -276,7 +276,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                 className='items-center
                 md:grid md:grid-cols-2 md:-mt-10
                 lg:grid-cols-6
-                2xl:w-[100%]
+                2xl:w-[50%]
                 
                 
                 '
