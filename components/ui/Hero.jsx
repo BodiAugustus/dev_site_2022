@@ -107,7 +107,7 @@ const createFormState = ({amount, alert, addressTo}) => {
     return (
         <div className="flex w-full justify-center items-center 
         xl:h-[145vh]
-        2xl:h-[135vh]
+        2xl:h-[125vh]
         ">
             <div className="flex flex-col items-start justify-between py-10 px-4 
             md:p-20 md:py-8
@@ -291,7 +291,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                     md:text-4xl md:mt-6
                     lg:text-3xl lg:mt-16 
                     xl:mt-0
-                    2xl:-mt-14'>Quick Scan:</h2>
+                    2xl:-mt-4'>Quick Scan:</h2>
                         {!toggleMenu && 
                         
                         <EthRates
