@@ -190,4 +190,4 @@ Commits
 
 #95. Ran npm run build. Build completed. Uploaded to Vercel.
 
-#96. Removed the cards from the hero component and made projectCard.js. Put cards there then xhanged the layout of the two top sections of the hero using the new setup.
+#96. Removed the cards from the hero component and made projectCard.js. Put cards there then xhanged the layout of the two top sections of the hero using the new setup..
