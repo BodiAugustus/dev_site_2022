@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Navbar, Hero, Showcase, Skills, Services, Footer } from '../components'
+import { Navbar, Hero, Showcase, Skills, Services, Footer, ProjectCard } from '../components'
 
 
 
@@ -23,7 +23,7 @@ export default function Home() {
         <Navbar/>
         <Hero/>
       </div>
-
+      <ProjectCard/>
       <Skills/>
       <Services/>
       <Footer/>

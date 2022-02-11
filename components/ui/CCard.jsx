@@ -19,19 +19,31 @@ const CryptoCard = () => {
     // console.log(data);
     
     return (
-        <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-8 ">
-        <div className="p-3 justify-end items-start flex-col rounded-xl h-40 xs:w-80 sm:h-48 sm:w-[90%] ms:w-[75%] md:h-60 md:w-2/3 lg:w-full lg:h-44 xl:h-56  my-5 lg:my-4 bg-slate-400 eth-card white-glassmorphism">
+        <div className="flex flex-col flex-1 items-center justify-start w-full mt-8
+        md:mt-0 
+        ">
+        <div className="p-3 justify-end items-start flex-col rounded-xl h-40 my-5 bg-slate-400 eth-card white-glassmorphism
+        xs:w-80 
+        sm:h-48 sm:w-[90%] 
+        md:h-60 md:w-2/3 
+        lg:w-[80%] lg:h-44 lg:my-4
+        xl:h-56">
             <div className="flex justify-between flex-col w-full h-full">
                 <div className="flex justify-between items-start">
-                    <div className="w-12 h-12 md:w-16 md:h-16 lg:w-14 lg: lg:h-14 rounded-full border-2 border-white flex justify-center items-center text-white tracking-wide">
+                    <div className="w-12 h-12 rounded-full border-2 border-white flex justify-center items-center text-white tracking-wide
+                    md:w-16 md:h-16 
+                    lg:w-14 lg:h-14 ">
                         
                         <h4 className="md:text-xl">DeFi </h4>
 
                     </div>
                     {
                         requireInstall &&
-                        <div className="bg-yellow-400 p-2 rounded-lg w-[60%] text-blue-900 font-semibold md:text-xl lg:text-base xl:text-xl
-                     text-center">Cannot connect to network!</div>
+                        <div className="bg-yellow-400 p-2 rounded-lg w-[60%] text-blue-900 font-semibold text-center
+                        md:text-xl 
+                        lg:text-base 
+                        xl:text-xl
+                    ">Cannot connect to network!</div>
                     }
 
 

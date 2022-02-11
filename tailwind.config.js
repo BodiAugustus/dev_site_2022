@@ -6,10 +6,10 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: 
-    {
+  theme: {
         screens: {
-          "xs": "359px",
+          "xxs": "359px",
+          'xs': '374px',
           // 'sm': '400px',
           // 'ms': '539px',
           // 'md': '767px',

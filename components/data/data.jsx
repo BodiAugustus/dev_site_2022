@@ -17,6 +17,15 @@ export const links = [{
 ]
 
 export const showcase = [
+  {
+    name: "Ashley Capital",
+    id: "2a35",
+    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1644527942/android-chrome-512x512_fkase6.png",
+    description: "This is a real world dAPP servicing subscriptions to customers using the blockchain. It was built using NextJS with Tailwinds and Truffle Suites with Solidity. It is fully functional and runs on the Fantom Mainnet.",
+    link: "https://www.ashleydefi.com",
+    date: "2022",
+    github: "https://github.com/BodiAugustus/ashley_defi"
+},
     {
     name: "Portfolio Site",
     id: "1a3f",
@@ -30,7 +39,7 @@ export const showcase = [
 name: "Hot in the Biscuit",
 id: "3a34",
 image: "/images/bonnie.jpg",
-description: "A multi-page front-end business website for a local restaraunt in Koh Samui, Thailand. Custom design built with vanilla JavaScript, HTML and CSS.",
+description: "A multi-page front-end business website for a local restaraunt in Koh Samui, Thailand that I used to own before COVID restrictions closed the island to outside tourist. Custom design built with vanilla JavaScript, HTML and CSS.",
 link: "https://www.hotinthebiscuit.com",
 date: "2021",
 github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
@@ -39,20 +48,12 @@ github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
     name: "Nettle's Herbs",
     id: "2a34",
     image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642896075/original_logo_njhuz4.png",
-    description: "I built this project as a concept using vanilla JavaScript on the client side including Stripe for payments and nodemailer for emails. Full backend was built out using NodeJS with Express and a custom API. Uses MongoDB for data storage.",
+    description: "I built this project as a concept using vanilla JavaScript on the client side including Stripe for payments and nodemailer for emails. Full backend was built out using NodeJS with Express and a custom API. Uses MongoDB for data storage and manipulation.",
     link: "https://nettles-herbs.herokuapp.com/home",
     date: "2021",
     github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
 },
-    {
-    name: "Nettle's Herbs",
-    id: "2a35",
-    image: "https://res.cloudinary.com/bodi-web3/image/upload/v1642896075/original_logo_njhuz4.png",
-    description: "I built this project as a concept using vanilla JavaScript on the client side including Stripe for payments and nodemailer for emails. Full backend was built out using NodeJS with Express and a custom API. Uses MongoDB for data storage.",
-    link: "https://nettles-herbs.herokuapp.com/home",
-    date: "2021",
-    github: "https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx"
-},
+
 
 
 ]

@@ -17,10 +17,20 @@ const Showcase = () => {
   {showcase.map((item) => {
     const {id, name, image, link, github, description, date} = item;
       return (
-        <div key={id} className="flex flex-col  justify-center xs:w-[95%] sm:w-[11/12] ms:w-[70%] sm:mt-10 md:w-[95%]  lg:w-[97%] xl:w-[88%] xs:mx-auto border-4 border-slate-100 rounded-md bg-slate-400 items-center xs:mb-0 sm:-mb-2 xs:mt-6 lg:-mb-6 ">
+        <div key={id} className="flex flex-col justify-center border-4 border-indigo-300 rounded-md bg-slate-400 items-center mt-6 mx-auto
+        xxs:w-[90vw] 
+        sm:w-[85vw]
+        md:w-[45vw]
+        lg:w-[22vw]
+        ">
         <div className="items-center justify-center xs:p-3 sm:p-3">
        {!toggleMenu &&
-        <div className="border-2 relative  border-sky-900 rounded-md xs:w-72 sm:w-80   h-60 ms:h-72 w-60 md:w-64 bg-white">
+        <div className="border-2 relative  border-sky-900 rounded-md bg-white h-60  mt-3
+        xxs:w-72 
+        sm:w-80   
+        md:w-64
+        lg:w-48 lg:mt-1 
+        xl:w-64 xl:-mt-1">
         <Image 
             src={image}
             // height={350}
@@ -40,7 +50,7 @@ const Showcase = () => {
             <div className="flex text-center p-3 md:text-lg lg:text-base">
                 <h4 className='' >{ readMore[id] ?
                     description :
-                    `${description.substring(0, 100)}...`
+                    `${description.substring(0, 130)}...`
                     } <button
                      key={id}
                      className='px-2 my-1 py-[0.5]  text-md  text-sky-900 pb-1 bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base xl:mt-3  ' onClick={() => setReadMore(id)}>{readMore[id] ? "Show Less" : "Show More"}</button>

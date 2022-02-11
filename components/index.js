@@ -16,5 +16,6 @@ export {default as Modal} from './ui/modals/Modal'
 export {default as Profile} from './ui/Profile'
 export {default as Blog} from './ui/Blog'
 export {default as WhatElse} from './ui/WhatElse'
+export {default as ProjectCard} from './ui/projectCard'
 
 
