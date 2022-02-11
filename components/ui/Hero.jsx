@@ -106,7 +106,8 @@ const createFormState = ({amount, alert, addressTo}) => {
     
     return (
         <div className="flex w-full justify-center items-center">
-            <div className="flex flex-col items-start justify-between py-10 px-4 md:p-20 md:py-8
+            <div className="flex flex-col items-start justify-between py-10 px-4 
+            md:p-20 md:py-8
             lg:flex-row 
             xl:p-16">
                 {/* <Image
@@ -129,7 +130,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                     xxs:text-2xl 
                     sm:mx-auto 
                     md:text-3xl 
-                    xl:mx-0'>NextJS | Solidity</h4>
+                    xl:mx-auto'>NextJS | Solidity</h4>
                     {/* {account} */}
                    {/* <EthRates eth={eth.data}/> */}
                 

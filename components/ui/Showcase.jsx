@@ -30,7 +30,9 @@ const Showcase = () => {
         sm:w-80   
         md:w-64
         lg:w-48 lg:mt-1 
-        xl:w-64 xl:-mt-1">
+        xl:w-64 xl:-mt-1
+        2xl:w-80
+        ">
         <Image 
             src={image}
             // height={350}

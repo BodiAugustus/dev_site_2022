@@ -9,6 +9,7 @@ const ProjectCard = () => {
         md:h-[117vh]
         lg:h-[110vh]
         xl:h-[100vh]
+        2xl:h-[85vh]
         ">
         <h1 className='text-white text-center -mb-2 font-bebes underline underline-offset-8 text-2xl 
         xs:pt-8
