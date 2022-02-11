@@ -27,7 +27,7 @@ const CryptoCard = () => {
         sm:h-48 sm:w-[90%] 
         md:h-60 md:w-2/3 
         lg:w-[80%] lg:h-44 lg:my-4
-        xl:h-56">
+        xl:h-56 xl:w-[55%]">
             <div className="flex justify-between flex-col w-full h-full">
                 <div className="flex justify-between items-start">
                     <div className="w-12 h-12 rounded-full border-2 border-white flex justify-center items-center text-white tracking-wide
