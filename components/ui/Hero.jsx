@@ -129,7 +129,8 @@ const createFormState = ({amount, alert, addressTo}) => {
                     sm:text-6xl sm:text-center sm:-mt-6 
                     md:text-7xl md:-mt-0 
                     lg:text-6xl 
-                    xl:text-7xl xl:-mt-8'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
+                    xl:text-7xl xl:-mt-8
+                    2xl:mt-10'>Full Stack <br/> <span className='font-fatFace'>Web3</span> Developer</h1>
                     <h4 className='text-slate-50 mt-1 font-cinzel 
                     xxs:text-2xl 
                     sm:mx-auto 
@@ -169,7 +170,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                     sm:w-[80%] sm:mx-auto
                     md:w-[80%] 
                     lg:w-[100%]
-                    2xl:w-[50%]"> 
+                    2xl:w-[60%]"> 
 
                         <h4 className="text-white 
                         sm:text-center 
