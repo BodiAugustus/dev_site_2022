@@ -111,7 +111,7 @@ const createFormState = ({amount, alert, addressTo}) => {
             <div className="flex flex-col items-start justify-between py-10 px-4 
             md:p-20 md:py-8
             lg:flex-row 
-            xl:pt-16 xl:p-0 xl:w-[95%]">
+            xl:pt-16 xl:p-0 2xl:w-[95%]">
                 {/* <Image
                     src="/images/test.png"
                     layout="fill"
@@ -167,7 +167,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                     sm:w-[80%] sm:mx-auto
                     md:w-[80%] 
                     lg:w-[100%]
-                    xl:w-[60%]"> 
+                    2xl:w-[60%]"> 
 
                         <h4 className="text-white 
                         sm:text-center 
