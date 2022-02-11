@@ -18,7 +18,12 @@ export const NavItem = ({title, classProps, url, id}) => {
            <>
             
 
-           <a href={url}  key={id} className={` cursor-pointer font-marcellus sm:container xs:first-letter:text-5xl tracking-wider lg:text-2xl lg:first-letter:text-2xl xl:text-3xl xl:first-letter:text-4xl lg:first-letter:no-underline lg:tracking-wide md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-3   first-letter:underline transition-all md:hover:bg-blue-600 rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200 lg:relative lg:left-10
+           <a href={url}  key={id} className={` cursor-pointer font-marcellus tracking-wider first-letter:underline transition-all  rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2 first-letter:decoration-sky-200
+           xxs:first-letter:text-5xl 
+           sm:container sm:first-letter:text-6xl sm:mt-12 sm:text-xl
+           md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-3  md:hover:bg-blue-600 
+           lg:text-2xl lg:first-letter:text-2xl lg:first-letter:no-underline lg:tracking-wide lg:relative lg:left-10 
+           xl:text-3xl xl:first-letter:text-4xl   
          ${classProps}`} >
             {title}
         </a>

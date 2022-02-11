@@ -63,10 +63,10 @@ const MobMenu = () => {
             const {id, name, url} = item
         return (
 
-             <NavItem key={id} title={name} url={url} classProps="my-0 text-lg text-white text-3xl text-center mt-8
-             hover:transition-all hover:duration-700
-              hover:bg-slate-300  hover:underline-offset-4 hover:decoration-2 z-50 hover:bg-opacity-20" 
-              onClick={!toggleMenu} />
+            <NavItem key={id} title={name} url={url} classProps="my-0 text-lg text-white     text-3xl text-center mt-8
+            hover:transition-all hover:duration-700
+            hover:bg-slate-300  hover:underline-offset-4 hover:decoration-2 z-50 hover:bg-opacity-20" 
+            onClick={!toggleMenu} />
         )
 
         
@@ -76,7 +76,10 @@ const MobMenu = () => {
    
         )}
 
-    <div className="flex xs:mt-24 sm:mt-20  justify-around  ">
+    <div className="flex justify-around
+    xxs:mt-28 xxs:mb-20
+    xs:mb-4
+    sm:mt-32 sm:mb-44     ">
         <a href="https://github.com/BodiAugustus" target="_blank" rel="noreferrer" className="z-50 cursor-pointer">
         <BsGithub fontSize={40} className="bg-transparent text-gray-200 hover:transition-all hover:text-slate-300 hover:scale-105 active:scale-100 cursor-pointer  "/>
         </a>
@@ -86,7 +89,7 @@ const MobMenu = () => {
         <BsTwitter fontSize={40} className="bg-transparent text-slate-200 z-50 cursor-pointer hover:transition-all hover:text-slate-300 hover:scale-105 active:scale-100" />
         </a>
     </div>
-    <div className="text-center xs:mt-20 sm:mt-16">
+    <div className="text-center xxs:mt-20 sm:mt-16">
     <Link href="/">
         <a  className="text-white cursor-pointer tracking-wider font-cinzel text-4xl underline underline-offset-4 decoration-sky-300 decoration-2 z-50 hover:transition-all hover:scale-105 active:scale-100">Bodi Augstus</a>
     </Link>

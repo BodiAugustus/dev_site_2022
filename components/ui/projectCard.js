@@ -3,7 +3,7 @@ import Showcase from "./Showcase"
 const ProjectCard = () => {
     return(
         <div className=" bg-gradient-to-b from-sky-800 to-stone-300 
-        xxs:h-[265vh]
+        xxs:h-[275vh]
         xs:h-[307vh]
         sm:h-[230vh]
         md:h-[117vh]
