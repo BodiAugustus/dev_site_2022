@@ -8,7 +8,7 @@ const Footer = () => {
     let time = new Date
    
     return (
-        <footer className="min-h-[25vh] flex flex-col justify-center items-center text-2xl text-white bg-sky-900 pt-6 pb-2">
+        <footer className="h-[38vh] flex flex-col justify-center items-center text-2xl text-white bg-sky-900 pt-6 pb-2">
         <Link href="/" className="transition-all">
           <a className="neontext neonP font-cinzel text-4xl sm:text-4xl md:text-7xl lg:text-8xl cursor-default lg:mt-4">Bodi Agustus</a>
         </Link>
