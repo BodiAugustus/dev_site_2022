@@ -113,7 +113,7 @@ const createFormState = ({amount, alert, addressTo}) => {
             md:p-20 md:py-8
             lg:flex-row 
             xl:pt-0 xl:p-0 
-            2xl:w-[95%] 2xl:py-0 2xl:-mt-14">
+            2xl:w-[90%] 2xl:py-0 2xl:-mt-14">
                 {/* <Image
                     src="/images/test.png"
                     layout="fill"
@@ -291,7 +291,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                     md:text-4xl md:mt-6
                     lg:text-3xl lg:mt-16 
                     xl:mt-0
-                    2xl:-mt-4'>Quick Scan:</h2>
+                    2xl:mt-10'>Quick Scan:</h2>
                         {!toggleMenu && 
                         
                         <EthRates
