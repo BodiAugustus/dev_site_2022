@@ -39,7 +39,7 @@ const CryptoCard = () => {
                     </div>
                     {
                         requireInstall &&
-                        <div className="bg-yellow-400 p-2 rounded-lg w-[60%] text-blue-900 font-semibold text-center
+                        <div className="bg-yellow-400 p-2 rounded-lg w-[60%] text-white font-semibold text-center
                         md:text-xl 
                         lg:text-base 
                         xl:text-xl
