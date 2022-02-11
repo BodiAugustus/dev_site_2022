@@ -170,7 +170,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                     sm:w-[80%] sm:mx-auto
                     md:w-[80%] 
                     lg:w-[100%]
-                    2xl:w-[60%]"> 
+                    2xl:w-[70%]"> 
 
                         <h4 className="text-white 
                         sm:text-center 
@@ -292,7 +292,7 @@ const createFormState = ({amount, alert, addressTo}) => {
                     md:text-4xl md:mt-6
                     lg:text-3xl lg:mt-16 
                     xl:mt-0
-                    2xl:mt-10'>Quick Scan:</h2>
+                    2xl:mt-20'>Quick Scan:</h2>
                         {!toggleMenu && 
                         
                         <EthRates
