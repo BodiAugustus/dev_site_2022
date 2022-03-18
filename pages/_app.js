@@ -16,14 +16,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Web3Provider>
-
     <NavbarProvider>
     <HeroProvider>
       <ToastContainer/>
       <Component {...pageProps} />
     </HeroProvider>
     </NavbarProvider>
-
     </Web3Provider>
  
   )

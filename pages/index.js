@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+
 import { Navbar, Hero, Showcase, Skills, Services, Footer, ProjectCard } from '../components'
 
 
@@ -18,8 +19,7 @@ export default function Home() {
     </Head>
     
     <div className="min-h-screen">
-      <div className="bg-[url('https://res.cloudinary.com/bodi-web3/image/upload/v1642024685/test_jdkem4.png')]
-      ">
+      <div className="image-bg">
         <Navbar/>
         <Hero/>
       </div>

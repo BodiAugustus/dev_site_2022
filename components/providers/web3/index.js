@@ -40,6 +40,7 @@ export default function Web3Provider({children}){
                 const web3 = new Web3(provider)
                 const contract = await loadContract("ProfilePayments", web3)
                 // debugger
+                console.log(provider);
                 console.log(contract);
                 setWeb3Api({
                     provider,
