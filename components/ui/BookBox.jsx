@@ -9,7 +9,7 @@ export default function BookBox() {
         WebViewer(
           {
             path: '/lib',
-            initialDoc: 'https://res.cloudinary.com/bodi-web3/image/upload/v1642785677/Teaser_qhp5lm.pdf',
+            initialDoc: 'https://res.cloudinary.com/bodi-augustus/image/upload/v1647636243/Teaser_owmkne.pdf',
           },
           viewer.current,
         ).then((instance) => {
