@@ -18,6 +18,16 @@ export const links = [
 
 export const showcase = [
   {
+    name: 'The Shepherd',
+    id: '2a39',
+    image: '/images/ShepherdHeroAlt.jpg',
+    description:
+      'SPA built using latest version of React with Tailwind CSS for my first published novel. Includes both email and form functionality.',
+    link: 'https://www.theshepherdnovel.com',
+    date: '2022',
+    github: 'https://github.com/MagentaSpruce/shepherd',
+  },
+  {
     name: 'Ashley Capital',
     id: '2a35',
     image: '/images/Ashley-capital-logo.png',
@@ -47,16 +57,16 @@ export const showcase = [
     date: '2021',
     github: 'https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx',
   },
-  {
-    name: "Nettle's Herbs",
-    id: '2a34',
-    image: '/images/nettles-herbs-logo.png',
-    description:
-      'Business site built using JavaScript. Includes Stripe for payments and nodemailer for emails. Backend built using NodeJS with MongoDB.',
-    link: 'https://nettles-herbs.herokuapp.com/home',
-    date: '2021',
-    github: 'https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx',
-  },
+  // {
+  //   name: "Nettle's Herbs",
+  //   id: '2a34',
+  //   image: '/images/nettles-herbs-logo.png',
+  //   description:
+  //     'Business site built using JavaScript. Includes Stripe for payments and nodemailer for emails. Backend built using NodeJS with MongoDB.',
+  //   link: 'https://nettles-herbs.herokuapp.com/home',
+  //   date: '2021',
+  //   github: 'https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx',
+  // },
 ];
 
 export const skills = [
