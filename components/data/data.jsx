@@ -1,12 +1,12 @@
 export const links = [
   {
     id: '13gfdd',
-    name: 'Forum',
+    name: 'Main',
     url: '/',
   },
   {
     id: '13gfgg',
-    name: 'Library',
+    name: 'About',
     url: '/about',
   },
   {
