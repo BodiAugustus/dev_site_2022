@@ -15,12 +15,14 @@ const Showcase = () => {
         return (
           <div
             key={id}
-            className="flex flex-col justify-center border-4 border-indigo-300 rounded-md bg-slate-400 items-center mt-6 mx-auto
-        xxs:w-[90vw] 
-        sm:w-[85vw]
-        md:w-[45vw]
-        lg:w-[22vw]
-        "
+            className={`flex flex-col justify-center border-4 border-indigo-300 rounded-md bg-slate-400 items-center mt-6 mx-auto
+            xxs:w-[90vw] 
+            sm:w-[85vw]
+            md:w-[45vw]
+            lg:w-[22vw]
+            lg:h-[75vh]
+            ${readMore[id] ? 'lg:h-[79vh]' : 'lg:h-[75vh]'} 
+            `}
           >
             <div className="items-center justify-center xs:p-3 sm:p-3">
               {!toggleMenu && (
@@ -55,7 +57,7 @@ const Showcase = () => {
                 <h4 className="">
                   {readMore[id]
                     ? description
-                    : `${description.substring(0, 130)}...`}{' '}
+                    : `${description.substring(0, 95)}...`}{' '}
                   <button
                     key={id}
                     className="px-2 my-1 py-[0.5]  text-md  text-sky-900 pb-1 bg-slate-200 rounded-xl font-medium md:text-lg lg:text-base xl:mt-3  "

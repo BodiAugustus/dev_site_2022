@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { links } from '../data/data';
 import MobMenu from './MobMenu';
 import { NavbarContext } from '../providers/NavContext';
-import { GiGreekTemple } from 'react-icons/gi';
+import { GiGreekTemple, GiAbstract066 } from 'react-icons/gi';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -16,10 +16,11 @@ export const NavItem = ({ title, classProps, url, id }) => {
       <a
         href={url}
         key={id}
-        className={` cursor-pointer font-marcellus tracking-wider first-letter:underline transition-all  rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2  first-letter:decoration-sky-200 border-transparent border-2 
+        className={` cursor-pointer font-marcellus tracking-wider first-letter:underline transition-all  rounded-xl hover:rounded-md first-letter:underline-offset-4 first-letter:decoration-2  first-letter:decoration-sky-200 border-transparent border-2
            xxs:first-letter:text-5xl 
            sm:container sm:first-letter:text-6xl sm:mt-12 sm:text-xl
-           md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-3  md:hover:bg-blue-600 md:hover:border-sky-400 md:hover:border-2
+           md:text-xl md:first-letter:text-2xl md:first-letter:no-underline md:tracking-wide md:p-3  md:hover:bg-blue-600 md:hover:border-sky-400
+           md:active:bg-sky-500 md:hover:border-2
            lg:text-2xl lg:first-letter:text-2xl lg:first-letter:no-underline lg:tracking-wide lg:relative lg:left-10 
            xl:text-3xl xl:first-letter:text-4xl   
          ${classProps}`}
@@ -41,27 +42,22 @@ const Navbar = () => {
     <nav className="w-full justify-between items-center">
       <div className="flex relative lg:justify-between justify-between items-center">
         {/* {account} */}
-        <div className="ml-2 mt-2 inline-block md:pl-3 lg:ml-[4%]">
-          <Image
-            src="/images/mmmm.png"
-            alt="logo"
-            height={60}
-            width={45}
-            layout="fixed"
-            className="rounded-lg cursor-pointer   transition-all duration-300  hover:scale-105 active:scale-100"
-            onClick={() => router.push(sprucey)}
-          />
+        <div className="ml-2 mt-0 inline-block md:pl-3 lg:ml-[4%]">
+          <a href="https://www.sprucey.dev" target="_blank" rel="noreferrer">
+            {' '}
+            <GiAbstract066 className="text-white text-4xl animate-spin-slow" />
+          </a>
         </div>
         <div className="flex gap-3 xs:text-center sm:ml-30 ">
           <h1
             className="text-white  font-bold tracking-wide uppercase first-letter:text-3xl lg:first-letter:text-4xl 
               
-                first-letter:text-stone-100 font-cinzel  xl:text-2xl "
+                first-letter:text-indigo-200 font-cinzel  xl:text-2xl "
           >
             Seth
           </h1>
           {/* {account} */}
-          <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-stone-100 lg:first-letter:text-4xl xl:text-2xl">
+          <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-indigo-200 lg:first-letter:text-4xl xl:text-2xl">
             Nettles
           </h1>
         </div>

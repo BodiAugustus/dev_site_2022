@@ -152,8 +152,8 @@ const Hero = () => {
                     xl:text-7xl xl:-mt-8
                     2xl:mt-10"
           >
-            Front End <br /> <span className="font-fatFace">Web</span>{' '}
-            Developer.
+            Front <span>End</span> <br />{' '}
+            <span className="font-fatFace">Web</span> Developer
           </h1>
           <h4
             className="text-slate-50 mt-1 font-cinzel 
