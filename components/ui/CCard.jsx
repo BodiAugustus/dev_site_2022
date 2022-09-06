@@ -37,7 +37,7 @@ const CryptoCard = () => {
             </div>
             {requireInstall && (
               <div
-                className="bg-yellow-400 p-2 rounded-lg w-[60%] text-white font-semibold text-center
+                className="bg-yellow-400 p-2 rounded-lg w-[60%] text-white font-semibold text-center mx-auto
                         md:text-xl 
                         lg:text-base 
                         xl:text-xl
@@ -63,6 +63,7 @@ const CryptoCard = () => {
           <div>
             <p
               className="text-white font-light text-sm text-center relative 
+              sm:-top-4
               ms:text-xl 
               md:text-2xl 
               lg:text-base 

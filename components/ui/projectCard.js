@@ -6,7 +6,7 @@ const ProjectCard = () => {
       className=" bg-gradient-to-b from-sky-800 to-stone-300 
         xxs:h-[275vh]
         xs:h-[268vh]
-        sm:h-[280vh]
+        sm:h-[270vh]
         md:h-[117vh]
         lg:h-[110vh]
         xl:h-[100vh]

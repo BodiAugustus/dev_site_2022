@@ -146,7 +146,7 @@ const Hero = () => {
             className="bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace 
                     xxs:text-5xl 
                     xs:text-center
-                    sm:text-6xl  sm:-mt-6 
+                    
                     md:text-7xl md:-mt-0 
                     lg:text-6xl 
                     xl:text-7xl xl:-mt-8
@@ -202,7 +202,7 @@ const Hero = () => {
             <ButtonHero
               className="
                     xs:w-[180px] 
-                    sm:w-[45%]"
+                    sm:w-[47%]"
               onClick={connect}
             >
               Connect MetaMask
