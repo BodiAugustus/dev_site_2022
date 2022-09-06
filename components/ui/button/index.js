@@ -65,7 +65,7 @@ export const ButtonSend = ({
       className={`w-[39%] bg-blue-600 shadow-md shadow-blue-500/75 mt-4 border-[2px] p-2 rounded-full cursor-pointer font-russon transition-all hover:scale-110 active:scale-100 tracking-wide 
         xs:pb-[8px] 
         xxs:w-[45%] 
-        sm:px-3 sm:pb-[9px] sm:w-[55%]
+        sm:px-3 sm:pb-[9px] sm:w-[45%]
         md:w-[35%] md:pb-[11px] md:text-2xl md:py-2 md:mt-8 
         lg:w-[40%] lg:pb-3"
         xl:w-[35%]
