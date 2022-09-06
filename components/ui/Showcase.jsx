@@ -22,8 +22,8 @@ const Showcase = () => {
             lg:w-[22vw]
             lg:h-[75vh]
             lg:${readMore[id] ? 'lg:h-[79vh]' : 'lg:h-[75vh]'} 
-            xl:h-[54vh]
-            xl:${readMore[id] ? 'xl:h-[54vh]' : 'xl:h-[58vh]'} 
+            xl:h-[60vh]
+            xl:${readMore[id] ? 'xl:h-[60vh]' : 'xl:h-[60vh]'} 
             `}
           >
             <div className="items-center justify-center xs:p-3 sm:p-3">
