@@ -212,7 +212,7 @@ const Hero = () => {
           {!toggleMenu && <CryptoCard />}
           <div
             className="p-5 -mt-5 w-full flex flex-col justify-start items-center rounded-lg
-                    sm:w-[80%] sm:mx-auto
+                    sm:w-[95%] sm:mx-auto
                     md:w-[80%] 
                     lg:w-[100%]
                     xl:w-[90%]
