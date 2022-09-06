@@ -5,7 +5,7 @@ const Modal4 = () => {
   const { openModal, showModal4, closeModal4 } = useContext(HeroContext);
   return (
     <div
-      className={` fixed top-0 left-0 w-full h-full bg-slate-400 bg-opacity-90 -z-10  items-center transition-all ${
+      className={` fixed top-0 left-0 w-full max-w-[1536px] h-full bg-slate-400 bg-opacity-90 -z-10  items-center transition-all ${
         showModal4 ? 'show-modal' : 'hide-modal'
       }`}
     >
