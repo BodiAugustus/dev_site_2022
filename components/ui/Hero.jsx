@@ -376,41 +376,47 @@ const Hero = () => {
                         sm:grid-cols-2 sm:w-[90%] sm:mx-auto 
                         md:w-[95%] md:ml-4
                         lg:ml-8 lg:h-[28vh]
-                        xl:w-[90%] xl:h-[40vh] xl:mx-auto "
+                        xl:w-[90%] xl:h-[40vh] xl:mx-auto  "
             >
               <div
                 onClick={openModal}
-                className={`rounded-tl-2xl ${commonStyles}`}
+                className={`rounded-tl-2xl 2xl:text-2xl ${commonStyles}`}
               >
                 Developing{' '}
               </div>
               <Modal className="text-white" />
               <div
-                className={`${commonStyles} rounded-tr-2xl`}
+                className={`${commonStyles} rounded-tr-2xl 2xl:text-2xl `}
                 onClick={openModal2}
               >
                 Web3.0
               </div>
               <Modal2 message="Hi from 2" />
 
-              <div className={`${commonStyles} `} onClick={openModal3}>
+              <div
+                className={`${commonStyles} 2xl:text-2xl `}
+                onClick={openModal3}
+              >
                 dApps
               </div>
               <Modal3 message="hi from 3" />
 
-              <div className={`${commonStyles} `} onClick={openModal4}>
+              <div
+                className={`${commonStyles} 2xl:text-2xl `}
+                onClick={openModal4}
+              >
                 Storage
               </div>
               <Modal4 message="hi from 4" />
               <div
-                className={`${commonStyles} rounded-bl-2xl`}
+                className={`${commonStyles} rounded-bl-2xl 2xl:text-2xl `}
                 onClick={openModal5}
               >
                 DeFi | Crypto
               </div>
               <Modal5 message="hi from 5" />
               <div
-                className={`${commonStyles} rounded-br-2xl`}
+                className={`${commonStyles} rounded-br-2xl 2xl:text-2xl `}
                 onClick={openModal6}
               >
                 Hosting

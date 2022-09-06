@@ -29,9 +29,13 @@ export default function EthRates({ eth, xmr, ftm, spirit, scrt, btc }) {
         "
     >
       <div className="text-center">
-        <div className="p-2 drop-shadow rounded-md">
+        <div
+          className="p-2 drop-shadow rounded-md
+        "
+        >
           <div
             className="flex items-center
+            2xl:ml-2
                     
                     "
           >
@@ -118,7 +122,7 @@ export default function EthRates({ eth, xmr, ftm, spirit, scrt, btc }) {
       </div>
       <div className=" text-center">
         <div className="p-2drop-shadow rounded-md">
-          <div className="flex items-center">
+          <div className="flex items-center 2xl:ml-3">
             {spirit ? (
               <div className="flex">
                 <Image
@@ -196,7 +200,10 @@ export default function EthRates({ eth, xmr, ftm, spirit, scrt, btc }) {
       </div>
       <div className=" text-center">
         <div className="p-2drop-shadow rounded-md">
-          <div className="flex items-center">
+          <div
+            className="flex items-center 2xl
+          ml-3"
+          >
             {scrt ? (
               <div className="flex">
                 <Image

@@ -68,7 +68,7 @@ export const ButtonSend = ({
         sm:px-3 sm:pb-[9px] sm:w-[45%]
         md:w-[35%] md:pb-[11px] md:text-2xl md:py-2 md:mt-8 
         lg:w-[40%] lg:pb-3"
-        xl:w-[35%]
+        xl:w-[45%]
         2xl:w-[70vw]" ${className}`}
     >
       {children}
