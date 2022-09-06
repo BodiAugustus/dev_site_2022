@@ -68,7 +68,7 @@ const ImgBox = () => {
                       <h4 className="text-white text-center text-2xl xs:mt-2 mt-7 md:text-4xl ">
                         {title}
                       </h4>
-                      <p className="text-white text-center text-lg md:text-xl">
+                      <p className="text-white text-center text-lg md:text-xl xl:-mt-1">
                         {location}
                       </p>
                     </div>
