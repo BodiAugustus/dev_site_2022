@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-
+import { useWeb3 } from '@components/providers/web3';
 import {
   Navbar,
   Hero,
@@ -25,6 +25,7 @@ const Loadera = () => {
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const { isLoadingWeb3, connect, requireInstall, contract } = useWeb3();
 
   const loaded = () => {
     setTimeout(() => {
@@ -32,8 +33,10 @@ export default function Home() {
     }, 2500);
   };
   useEffect(() => {
-    loaded();
-  }, []);
+    if (loading) {
+      return loaded();
+    }
+  }, [loading]);
 
   return (
     <div>

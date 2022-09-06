@@ -99,7 +99,7 @@ const Navbar = () => {
           {!toggleMenu && (
             <GiGreekTemple
               fontSize={48}
-              className="text-white md:hidden cursor-pointer mr-4 hover:scale-105 active:scale-100"
+              className="text-white md:hidden cursor-pointer mr-4 mt-2 hover:scale-105 active:scale-100"
               onClick={() => setToggleMenu(true)}
             />
           )}

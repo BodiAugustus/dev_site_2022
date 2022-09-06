@@ -61,7 +61,13 @@ const CryptoCard = () => {
           </div>
 
           <div>
-            <p className="text-white font-light text-sm text-center relative -top-10 ms:text-xl md:text-2xl lg:text-base xl:text-xl">
+            <p
+              className="text-white font-light text-sm text-center relative 
+              ms:text-xl 
+              md:text-2xl 
+              lg:text-base 
+              xl:text-xl xl:-top-10"
+            >
               <strong>Hello, </strong>
               {account.data
                 ? account.isAdmin
@@ -70,7 +76,7 @@ const CryptoCard = () => {
                 : 'Not Connected - Connect to MetaMask'}
               {/* Hi {account.data} */}
             </p>
-            <p className="text-white font-medium text-md relative top-3 text-center ms:text-lg md:text-xl mt-0 lg:text-sm xl:text-lg">
+            <p className="text-white font-medium text-md relative top-2 text-center ms:text-lg md:text-xl mt-0 lg:text-sm xl:text-lg xl:top-3">
               Currently on{' '}
               <span className="md:text-xl lg:text-sm xl:text-xl">
                 {network.data ? network.data : 'NOT CONNECTED'}

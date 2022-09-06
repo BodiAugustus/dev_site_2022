@@ -242,8 +242,7 @@ const Hero = () => {
                       addressTo: value,
                     });
                   }}
-                  value={paymentData.addressTo}
-                  placeholder="FTM Address: 0x4060F32FABB04344E9BaF8C1A5b873356498f70f"
+                  value="FTM Address: 0x4060F32FABB04344E9BaF8C1A5b873356498f70f"
                   name="addressTo"
                   type="text"
                   id="addressTo"
@@ -259,8 +258,8 @@ const Hero = () => {
                       amount: value,
                     });
                   }}
-                  value={paymentData.amount}
-                  placeholder="ETH Address: 0x7bDE2b0B4499c7206fB2A3AB437DF250203281ce"
+                  value="ETH Address: 0x7bDE2b0B4499c7206fB2A3AB437DF250203281ce"
+                  //   {paymentData.amount}
                   name="amount"
                   type="text"
                   id="amount"
@@ -276,8 +275,7 @@ const Hero = () => {
                       message: value,
                     });
                   }}
-                  value={paymentData.message}
-                  placeholder="BTC Address: 32RZRUpH6g62rWYLu4K6CaFfkGzmR2zuxt"
+                  value="BTC Address: 32RZRUpH6g62rWYLu4K6CaFfkGzmR2zuxt"
                   name="message"
                   type="text"
                   id="message"
@@ -321,7 +319,7 @@ const Hero = () => {
 
                 //   }
               >
-                Connect MetaMask
+                Send Payment
               </ButtonSend>
             )}
           </div>
