@@ -39,7 +39,7 @@ export default function Home() {
   }, [loading]);
 
   return (
-    <div className="max-w-[1536px]">
+    <div className="max-w-[1536px] mx-auto">
       <Head>
         <title>Seth&apos;s Place</title>
 
