@@ -10,7 +10,7 @@ const ProjectCard = () => {
         md:h-[117vh]
         lg:h-[110vh]
         xl:h-[100vh]
-        2xl:h-[78vh]
+        2xl:h-[75vh]
         "
     >
       <h1

@@ -11,7 +11,7 @@ import { Blog } from '../components';
 
 export default function About() {
   return (
-    <div className="bg-sky-900 overflow-hidden">
+    <div className="bg-sky-900 overflow-hidden max-w-[1536px]">
       <Head>
         <title>About Me</title>
         <meta

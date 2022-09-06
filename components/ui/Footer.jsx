@@ -15,7 +15,10 @@ const Footer = () => {
       </Link>
       <div className=" w-full text-center translate-y-5 md:translate-y-16 lg:translate-y-2  ">
         {!toggleMenu && (
-          <p className="bg-sky-900 xxs:relative xxs:top-10 md:top-0 md:-mt-4 text-xs lg:mt-2 xl:top-5 ">
+          <p
+            className="bg-sky-900 xxs:relative xxs:top-10 md:top-0 md:-mt-4 text-xs  lg:top-4
+          2xl:top-5 "
+          >
             Web3 Developer - &#169; {time.getFullYear()}{' '}
           </p>
         )}

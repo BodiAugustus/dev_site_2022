@@ -39,7 +39,7 @@ export default function Home() {
   }, [loading]);
 
   return (
-    <div>
+    <div className="max-w-[1536px]">
       <Head>
         <title>Seth&apos;s Place</title>
 

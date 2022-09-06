@@ -48,7 +48,7 @@ const Contact = () => {
   }
 
   return (
-    <>
+    <div className="max-w-[1536px]">
       <Link href="/">
         <a className="text-white text-medium bg-sky-400 p-2 mx-4 absolute top-4   rounded-lg border-4 border-blue-300 hover:scale-105 active:scale-100 md:text-xl transition-all ease-in-out duration-300">
           Home
@@ -192,7 +192,7 @@ const Contact = () => {
           </form>
         </div>
       </main>
-    </>
+    </div>
 
     // {/* <Link to="/" classNameName="btn">
     //   Back to Lodge
