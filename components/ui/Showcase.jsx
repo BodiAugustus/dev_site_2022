@@ -15,7 +15,7 @@ const Showcase = () => {
         return (
           <div
             key={id}
-            className={`flex flex-col justify-center border-4 border-indigo-300 rounded-md bg-slate-400 items-center mt-6 mx-auto
+            className={`flex flex-col justify-center border-4 border-indigo-300 rounded-md bg-slate-400 items-center mt-6 mx-auto max-w-[380px]
             xxs:w-[90vw] 
             sm:w-[85vw]
             md:w-[45vw]
