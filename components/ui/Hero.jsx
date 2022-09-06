@@ -145,7 +145,7 @@ const Hero = () => {
           <h1
             className="bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-slate-50 text-gradient font-fatFace 
                     xxs:text-5xl 
-                    xs:text-center
+                    xxs:text-center
                     
                     md:text-7xl md:-mt-0 
                     lg:text-6xl 
@@ -158,7 +158,7 @@ const Hero = () => {
           <h4
             className="text-slate-50 mt-1 font-cinzel 
                     xxs:text-2xl 
-                    xs:mx-auto 
+                    xxs:mx-auto 
                     md:text-3xl 
                     xl:mx-auto"
           >
@@ -190,7 +190,7 @@ const Hero = () => {
           ) : requireInstall ? (
             <ButtonHero
               className="
-                    xs:w-[160px] 
+                    xxs:w-[160px] 
                     sm:w-[42%] sm:pb-[6px]"
               onClick={() =>
                 window.open('https://metamask.io/download.html', '_blank')
@@ -201,7 +201,7 @@ const Hero = () => {
           ) : (
             <ButtonHero
               className="
-                    xs:w-[180px] 
+                    xxs:w-[180px] 
                     sm:w-[47%]"
               onClick={connect}
             >
@@ -226,7 +226,7 @@ const Hero = () => {
                         "
             >
               Send a Payment{' '}
-              <span className="font-bebes">
+              <span className="font-bebes xxs:text-sm xs:text-base">
                 ( Only FTM, BTC, or ETH Accepted )
               </span>
               :
