@@ -380,13 +380,13 @@ const Hero = () => {
             >
               <div
                 onClick={openModal}
-                className={`rounded-tl-2xl 2xl:text-2xl ${commonStyles}`}
+                className={`rounded-tl-2xl xl:text-2xl ${commonStyles}`}
               >
                 Developing{' '}
               </div>
               <Modal className="text-white" />
               <div
-                className={`${commonStyles} rounded-tr-2xl 2xl:text-2xl `}
+                className={`${commonStyles} rounded-tr-2xl xl:text-2xl `}
                 onClick={openModal2}
               >
                 Web3.0
@@ -394,7 +394,7 @@ const Hero = () => {
               <Modal2 message="Hi from 2" />
 
               <div
-                className={`${commonStyles} 2xl:text-2xl `}
+                className={`${commonStyles} xl:text-2xl `}
                 onClick={openModal3}
               >
                 dApps
@@ -402,21 +402,21 @@ const Hero = () => {
               <Modal3 message="hi from 3" />
 
               <div
-                className={`${commonStyles} 2xl:text-2xl `}
+                className={`${commonStyles} xl:text-2xl `}
                 onClick={openModal4}
               >
                 Storage
               </div>
               <Modal4 message="hi from 4" />
               <div
-                className={`${commonStyles} rounded-bl-2xl 2xl:text-2xl `}
+                className={`${commonStyles} rounded-bl-2xl xl:text-2xl `}
                 onClick={openModal5}
               >
                 DeFi | Crypto
               </div>
               <Modal5 message="hi from 5" />
               <div
-                className={`${commonStyles} rounded-br-2xl 2xl:text-2xl `}
+                className={`${commonStyles} rounded-br-2xl xl:text-2xl `}
                 onClick={openModal6}
               >
                 Hosting
