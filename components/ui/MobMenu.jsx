@@ -12,10 +12,10 @@ const MobMenu = () => {
   const { toggleMenu, setToggleMenu } = useContext(NavbarContext);
 
   return (
-    <>
+    <div>
       {toggleMenu && (
         <div>
-          <ul className="fixed top-0 -right-0 p-3 w-[100vw] h-[100vh] overscroll-none shadow-2xl md:hidden list-none flex flex-col justify-start rounded-md z-10">
+          <ul className="fixed top-0 -right-0 p-3 w-[100vw] h-[100vh] overscroll-none shadow-2xl md:hidden list-none flex flex-col justify-start rounded-md z-10 ">
             {/* <Sparkles
       color=""
       count={50}
@@ -109,7 +109,7 @@ const MobMenu = () => {
           onClick={() => setToggleMenu(true)}
         />
       )}
-    </>
+    </div>
   );
 };
 

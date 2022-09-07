@@ -24,19 +24,22 @@ const Loadera = () => {
 };
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-  const { isLoadingWeb3, connect, requireInstall, contract } = useWeb3();
+  const [loading, setLoading] = useState({
+    load: true,
+    loadedOnce: false,
+  });
 
   const loaded = () => {
     setTimeout(() => {
-      setLoading(false);
-    }, 2500);
+      setLoading({
+        load: false,
+        loadedOnce: true,
+      });
+    }, 1500);
   };
   useEffect(() => {
-    if (loading) {
-      return loaded();
-    }
-  }, [loading]);
+    loaded();
+  }, []);
 
   return (
     <div className="max-w-[1536px] mx-auto">
@@ -48,7 +51,7 @@ export default function Home() {
           content="width=device-width, initial-scale=1"
         ></meta>
       </Head>
-      {loading ? (
+      {loading.load && !loading.loadedOnce ? (
         <Loadera />
       ) : (
         <div className="min-h-screen">
