@@ -152,7 +152,7 @@ const Hero = () => {
                     xl:text-7xl xl:-mt-8
                     2xl:mt-10"
           >
-            Front <span>End</span> <br />{' '}
+            Full <span>Stack</span> <br />{' '}
             <span className="font-fatFace">Web</span> Developer
           </h1>
           <h4
