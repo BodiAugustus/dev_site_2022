@@ -77,7 +77,7 @@ const MobMenu = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/spruceydev/"
+                href="https://www.linkedin.com/in/bodi-augustus-359044230/"
                 target="_blank"
                 rel="noreferrer"
                 className="z-50 cursor-pointer"
