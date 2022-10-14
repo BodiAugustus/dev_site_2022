@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div className="max-w-[1536px] mx-auto">
       <Head>
-        <title>Seth&apos;s Place</title>
+        <title>Bodi&apos;s Place</title>
 
         <meta
           name="viewport"

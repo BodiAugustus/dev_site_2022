@@ -54,11 +54,11 @@ const Navbar = () => {
               
                 first-letter:text-indigo-200 font-cinzel  xl:text-2xl "
           >
-            Seth
+            Bodi
           </h1>
           {/* {account} */}
           <h1 className="text-white font-bold tracking-wide uppercase first-letter:text-3xl font-cinzel first-letter:text-indigo-200 lg:first-letter:text-4xl xl:text-2xl">
-            Nettles
+            Augustus
           </h1>
         </div>
 
