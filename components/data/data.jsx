@@ -18,14 +18,14 @@ export const links = [
 
 export const showcase = [
   {
-    name: 'The Shepherd',
-    id: '2a39',
-    image: '/images/ShepherdHeroAlt.jpg',
+    name: 'Code World',
+    id: '2a36',
+    image: '/images/cw1.png',
     description:
-      'SPA built using latest version of React with Tailwind CSS for an upcoming novel. Includes email and form functionality.',
-    link: 'https://www.theshepherdnovel.com',
+      'Full-stack web application that uses Stripe for payments. Built using NextJS with Tailwind CSS and MongoDB & Firebase for data storage.',
+    link: 'https://www.codeworld.io',
     date: '2022',
-    github: 'https://github.com/MagentaSpruce/shepherd',
+    github: 'https://github.com/BodiAugustus/codeWorld',
   },
   {
     name: 'Ashley Capital',
@@ -38,6 +38,16 @@ export const showcase = [
     github: 'https://github.com/BodiAugustus/ashley_defi',
   },
   {
+    name: 'The Shepherd',
+    id: '2a39',
+    image: '/images/ShepherdHeroAlt.jpg',
+    description:
+      'SPA built using latest version of React with Tailwind CSS for an upcoming novel. Includes email and form functionality.',
+    link: 'https://www.theshepherdnovel.com',
+    date: '2022',
+    github: 'https://github.com/MagentaSpruce/shepherd',
+  },
+  {
     name: 'Portfolio Site',
     id: '1a3f',
     image: '/images/sprucey-logo.png',
@@ -47,16 +57,7 @@ export const showcase = [
     date: '2021',
     github: 'https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx',
   },
-  {
-    name: 'Hot in the Biscuit',
-    id: '3a34',
-    image: '/images/bonnie.jpg',
-    description:
-      'A multi-page front-end business website for a local restaraunt in Koh Samui, Thailand. Built using vanilla JavaScript, HTML and CSS.',
-    link: 'https://www.hotinthebiscuit.com',
-    date: '2021',
-    github: 'https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx',
-  },
+
   // {
   //   name: "Nettle's Herbs",
   //   id: '2a34',
