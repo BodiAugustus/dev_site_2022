@@ -28,7 +28,7 @@ const Profile = () => {
             />
           </div>
           <h1 className="text-white mx-auto text-5xl font-marcellus rounded-full mt-2 mb-8 md:mb-12 lg:text-6xl">
-            I&apos;m Seth.
+            I&apos;m Bodi.
           </h1>
           <hr className="md:-mt-10" />
         </div>
