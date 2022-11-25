@@ -37,16 +37,7 @@ export const showcase = [
     date: '2022',
     github: 'https://github.com/BodiAugustus/ashley_defi',
   },
-  {
-    name: 'The Shepherd',
-    id: '2a39',
-    image: '/images/ShepherdHeroAlt.jpg',
-    description:
-      'SPA built using latest version of React with Tailwind CSS for an upcoming novel. Includes email and form functionality.',
-    link: 'https://www.theshepherdnovel.com',
-    date: '2022',
-    github: 'https://github.com/MagentaSpruce/shepherd',
-  },
+
   {
     name: 'Portfolio Site',
     id: '1a3f',
@@ -57,6 +48,26 @@ export const showcase = [
     date: '2021',
     github: 'https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx',
   },
+  {
+    name: 'Hot in the Biscuit',
+    id: '2a39',
+    image: '/images/bonnie.jpg',
+    description:
+      'Built using vanilla JavaScript for a local business. Includes full menu with link to food delivery app.',
+    link: 'https://www.hotinthebiscuit.com',
+    date: '2022',
+    github: 'https://github.com/TrissNepps/hotinthebiscuitsamui',
+  },
+  // {
+  //   name: 'The Shepherd',
+  //   id: '2a39',
+  //   image: '/images/ShepherdHeroAlt.jpg',
+  //   description:
+  //     'SPA built using latest version of React with Tailwind CSS for an upcoming novel. Includes email and form functionality.',
+  //   link: 'https://www.theshepherdnovel.com',
+  //   date: '2022',
+  //   github: 'https://github.com/MagentaSpruce/shepherd',
+  // },
 
   // {
   //   name: "Nettle's Herbs",
