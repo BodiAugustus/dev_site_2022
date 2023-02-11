@@ -38,15 +38,25 @@ export const showcase = [
     github: 'https://github.com/BodiAugustus/ashley_defi',
   },
 
+  // {
+  //   name: 'Portfolio Site',
+  //   id: '1a3f',
+  //   image: '/images/sprucey-logo.png',
+  //   description:
+  //     'Custom made portfolio site built with React. Includes email functionality, project list, and custom built animated sidebar.',
+  //   link: 'https://www.sprucey.dev',
+  //   date: '2021',
+  //   github: 'https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx',
+  // },
   {
-    name: 'Portfolio Site',
-    id: '1a3f',
-    image: '/images/sprucey-logo.png',
+    name: 'The Shepherd',
+    id: '2a39',
+    image: '/images/ShepherdHeroAlt.jpg',
     description:
-      'Custom made portfolio site built with React. Includes email functionality, project list, and custom built animated sidebar.',
-    link: 'https://www.sprucey.dev',
-    date: '2021',
-    github: 'https://github.com/MagentaSpruce/mysite/blob/main/src/Card.jsx',
+      'SPA built using latest version of React with Tailwind CSS for an upcoming novel. Includes email and form functionality.',
+    link: 'https://www.theshepherdnovel.com',
+    date: '2022',
+    github: 'https://github.com/MagentaSpruce/shepherd',
   },
   {
     name: 'Hot in the Biscuit',
@@ -58,16 +68,6 @@ export const showcase = [
     date: '2022',
     github: 'https://github.com/TrissNepps/hotinthebiscuitsamui',
   },
-  // {
-  //   name: 'The Shepherd',
-  //   id: '2a39',
-  //   image: '/images/ShepherdHeroAlt.jpg',
-  //   description:
-  //     'SPA built using latest version of React with Tailwind CSS for an upcoming novel. Includes email and form functionality.',
-  //   link: 'https://www.theshepherdnovel.com',
-  //   date: '2022',
-  //   github: 'https://github.com/MagentaSpruce/shepherd',
-  // },
 
   // {
   //   name: "Nettle's Herbs",
