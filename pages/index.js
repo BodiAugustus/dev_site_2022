@@ -47,7 +47,7 @@ export default function Home() {
         <title>Tristan&apos;s Place</title>
         <meta
           name="description"
-          content="This is the personal developer website for Tristan Nettles. This online portfolio includes an array of recent and ongoing projects which were all made with the latest frameworks and up to date technology. The future is digital."
+          content="This is the personal developer website for Tristan Nettles. This online portfolio includes an array of recent and ongoing projects which were all made with the latest frameworks and up to date technology. "
         />
         <meta
           name="viewport"
