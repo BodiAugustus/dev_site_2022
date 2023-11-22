@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="h-[34vh] flex flex-col justify-center items-center text-2xl text-white bg-sky-900 pt-6 pb-2">
       <Link href="/" className="transition-all">
         <a className="neontext neonP font-marcellus text-4xl sm:text-4xl md:text-7xl lg:text-8xl cursor-pointer lg:mt-4 pb-10">
-          Bodi Augustus
+          Tristan Nettles
         </a>
       </Link>
       <div className=" w-full text-center translate-y-5 md:translate-y-16 lg:translate-y-2  ">

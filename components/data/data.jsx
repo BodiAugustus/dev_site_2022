@@ -24,7 +24,7 @@ export const showcase = [
     description:
       'Full-stack web application that uses Stripe for payments. Built using NextJS with Tailwind CSS and MongoDB & Firebase for data storage.',
     link: 'https://www.codeworld.io',
-    date: '2022',
+    date: '2023',
     github: 'https://github.com/BodiAugustus/codeWorld',
   },
   {
@@ -34,7 +34,7 @@ export const showcase = [
     description:
       'Decentralized web application that runs on the blockchain. Built using NextJS with Tailwind CSS and Truffle Suites with Solidity.',
     link: 'https://www.ashleydefi.com',
-    date: '2022',
+    date: '2023',
     github: 'https://github.com/BodiAugustus/ashley_defi',
   },
 
@@ -55,7 +55,7 @@ export const showcase = [
     description:
       'SPA built using latest version of React with Tailwind CSS for an upcoming novel. Includes email and form functionality.',
     link: 'https://www.theshepherdnovel.com',
-    date: '2022',
+    date: '2023',
     github: 'https://github.com/MagentaSpruce/shepherd',
   },
   {

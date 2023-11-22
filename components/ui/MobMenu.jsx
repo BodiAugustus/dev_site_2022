@@ -91,7 +91,7 @@ const MobMenu = () => {
             <div className="text-center xxs:mt-20 sm:mt-16">
               <Link href="/">
                 <a className="text-white cursor-pointer tracking-wider font-cinzel text-4xl underline underline-offset-4 decoration-sky-300 decoration-2 z-50 hover:transition-all hover:scale-105 active:scale-100">
-                  Bodi Augustus
+                  Tristan Nettles
                 </a>
               </Link>
               <h4 className="text-white font-thin">

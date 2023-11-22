@@ -44,8 +44,11 @@ export default function Home() {
   return (
     <div className="max-w-[1536px] mx-auto">
       <Head>
-        <title>Bodi&apos;s Place</title>
-
+        <title>Tristan&apos;s Place</title>
+        <meta
+          name="description"
+          content="This is the personal developer website for Tristan Nettles. This online portfolio includes an array of recent and ongoing projects which were all made with the latest frameworks and up to date technology."
+        />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1"
